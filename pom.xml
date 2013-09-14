@@ -14,7 +14,15 @@
             <artifactId>jetty-server</artifactId>
             <version>9.0.5.v20130815</version>
         </dependency>
+        <dependency>
+            <groupId>org.freemarker</groupId>
+            <artifactId>freemarker</artifactId>
+            <version>2.3.19</version>
+        </dependency>
     </dependencies>
 
-    
+
+
+
+
 </project>
