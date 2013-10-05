@@ -2,6 +2,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -20,7 +21,7 @@ public class Frontend extends HttpServlet{
     Map<String, Long> nameToUserId = new HashMap<String, Long>();
     Map<Long, Long> SessionIdToUserId = new HashMap<Long, Long>();
     Map<String, Object> data = new HashMap<String, Object>();
-    Date date = new Date();
+    Calendar date;
 
     public Frontend(){
         nameToUserId.put("user", 1L);
@@ -29,18 +30,23 @@ public class Frontend extends HttpServlet{
 
     public void doGet(HttpServletRequest request, HttpServletResponse response){
         try{
-            date.getTime();
-            HttpSession session = request.getSession();
-            Long sessionId = (Long) session.getAttribute("sessionId");
-            data.put("time", date.toString());
-            if (sessionId != null) {    //если обновили страницу после авторизации
-                data.put("sessionId",sessionId);
-                data.put("userId",SessionIdToUserId.get(sessionId));
-                response.getWriter().print(PageGenerator.getPage("index.html", data));
-            }else{ //пришли аторизовываться
-                response.getWriter().print(PageGenerator.getPage("login.html", data));
+            if (request.getRequestURI().equals("/time")){
+                date = Calendar.getInstance();
+                response.getWriter().print(date.getTime());
+            }else{
+                date = Calendar.getInstance();
+                HttpSession session = request.getSession();
+                Long sessionId = (Long) session.getAttribute("sessionId");
+                data.put("time", date.getTime().toString());
+                if (sessionId != null) {    //если обновили страницу после авторизации
+                    data.put("sessionId",sessionId);
+                    data.put("userId",SessionIdToUserId.get(sessionId));
+                    response.getWriter().print(PageGenerator.getPage("index.html", data));
+                }else{ //пришли аторизовываться
+                    response.getWriter().print(PageGenerator.getPage("login.html", data));
+                }
             }
-        } catch (Exception e){}
+        } catch (Exception e){System.out.println(e.toString());}
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response){

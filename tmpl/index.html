@@ -1,12 +1,31 @@
 <html>
 <head>
+    <script type="text/javascript">
+        function call(outputElement){
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'http://localhost:8077/time', 'true');
+            xhr.addEventListener("load", load, false);
+            function load(event){
+                outputElement.innerHTML = event.target.responseText;
+                console.log(outputElement.innerHTML);
+            }
+            xhr.send(null);
+        }
+    </script>
 </head>
 
 <body>
 Hello, user!!! <br/>
 Your user ID:    ${userId}<br/>
 Your session Id: ${sessionId} <br/>
-Time: ${time} <br/>
+Time: <span id="server_time"></span> <br/>
+<input type="button" onclick="clearInterval(timer)" value="STOP!"><br/>
+<script type="text/javascript">
+    var timer = setInterval(function(){call(document.getElementById("server_time"))},1000);
+    function clear(){
+    clearInterval(timer);
+    }
+</script>
 <img src="/calm.png" width="10%" />
 
 </body>
