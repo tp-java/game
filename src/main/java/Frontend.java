@@ -16,28 +16,45 @@ import java.util.concurrent.atomic.AtomicLong;
  * To change this template use File | Settings | File Templates.
  */
 
-public class Frontend extends HttpServlet{
+public class Frontend extends HttpServlet implements Runnable{
     private AtomicLong userIdGenerator = new AtomicLong();
     Map<String, Long> nameToUserId = new HashMap<String, Long>();
     Map<Long, Long> SessionIdToUserId = new HashMap<Long, Long>();
     Map<String, Object> data = new HashMap<String, Object>();
     Calendar date;
 
+	private static int handleCount = 0; //количество запросов
+
     public Frontend(){
         nameToUserId.put("user", 1L);
         nameToUserId.put("user2", 2L);
     }
+	//<ДЗ №3.3 Frontend implements Runnable, логирование количества запросов, вывод каждые 5 сек>
+	public void run(){
+		try {
+			while (true){
+					System.out.println("количество запросов:" + handleCount);
+					Thread.sleep(5000);
+			}
+		} catch (Exception e){}
+	}
+	//</ДЗ №3.3 Frontend implements Runnable, логирование количества запросов, вывод каждые 5 сек>
 
     public void doGet(HttpServletRequest request, HttpServletResponse response){
         try{
+			//счетчик подключений. Логируется каждые 5 секунд
+			handleCount++;
+
             if (request.getRequestURI().equals("/time")){
                 date = Calendar.getInstance();
                 response.getWriter().print(date.getTime());
             }else{
                 date = Calendar.getInstance();
+				data.put("time", date.getTime().toString());
+
                 HttpSession session = request.getSession();
                 Long sessionId = (Long) session.getAttribute("sessionId");
-                data.put("time", date.getTime().toString());
+
                 if (sessionId != null) {    //если обновили страницу после авторизации
                     data.put("sessionId",sessionId);
                     data.put("userId",SessionIdToUserId.get(sessionId));
@@ -50,7 +67,8 @@ public class Frontend extends HttpServlet{
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response){
-        date.getTime();
+		handleCount++;
+		date.getTime();
         //если POST-запрос не пустой
         if (nameToUserId.get(request.getParameter("name")) != null){
             try{
