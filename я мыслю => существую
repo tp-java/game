@@ -29,3 +29,80 @@
 создали lockObject.
 в цикле создаем потоки, в каждый передаем i и lockObject 
 		и сразу стартуем.
+
+
+
+<lecture3 name="MessageSystem">
+	А. Создаем MessageSystem ms
+
+	Б. Создаем Frontend frontend = Frontend(ms)
+	  Б.1 Инициализируется this.MessageSystem = ms;
+	
+	  Б.2 Инициализируется this.address = new Address();
+		Б.2.1 В конструкторе Address создался адрес с уникальным инкрементируемым abonentId
+	
+	  В.3 Frontend добавляет себя в ms.addService(this/*abonent*/)
+		В.3.1 messages.put(abonent.getAddress(), new ConcurrentLinkedQueue<Msg>());
+	
+	Г. Создаем AccountService accountService = AccountService(ms)
+	  Г.1 Инициализируется this.MessageSystem = ms;
+	
+	  Г.2 Инициализируется this.address = new Address();
+		Г.2.1 В конструкторе Address создался адрес с уникальным инкрементируемым abonentId
+	
+	  Г.3 AccountService добавляет себя в ms.addService(this)
+		Г.3.1 messages.put(abonent.getAddress(), new ConcurrentLinkedQueue<Msg>());
+	
+	  Г.4 Создаются фейковые пользователи с userId 
+	
+	Д.Запускается в потоке frontend
+	  Д.1.В бесконечном цикле запускается ms.execForAbonent(this);
+	    Д.1.1 messageQueue = messages.get(abonent.getAddress()); //берем очередь абонента
+		Д.1.2 if(messageQueue == null){ return; }
+		Д.1.3 while(!messageQueue.isEmpty()){
+				Msg message = messageQueue.poll();
+				message.exec(abonent);
+			  }
+
+	Е.Запускается в потоке accountService
+
+													   
+-------------------------------------------------------------------------------------------
+													   
+	1.Приходит пользователь (username захардкожен)
+
+	2.У него нет сессии(постоянной) => выдаем ему сессию:
+	  2.1.Берем из request: login, sessionId = request.getSession().getId() (из HTTP-сессии)
+	
+	  2.2.Создаем userSession = new UserSession(sessionId, login, ms.getAddressService())
+		2.2.1  ms.getAddressService() возвращает инструмент для работы с Address. 
+	
+	  2.3 sessionIdToUserSession.put(sessionId/*HTTP-Session*/, userSession);
+
+	3.Отправляем сообщение на AccountService (MsgGetUserId)
+	  3.1 Address frontendAddress = getAddress();
+	  3.2 Address accountServiceAddress = userSession.getAccountService();
+
+	  3.3 ms.sendMessage(new MsgGetUserId(frontendAddress, accountServiceAddress, login, sessionId));
+
+	4.Отправляем пользователю страничку, что "авторизация идет"
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+	Тем временем в ms...
+	sendMessage(Msg message){
+		Queue<Msg> messageQueue = messages.get(message.getTo()); //взяли очередь адресата
+		messageQueue.add(message);								//добавили туда сообщение
+	}
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+	Тем временем в потоке accountService в бесконечном цикле ждет, пока ему дадут работу
+	и
+	работает
+	отсылает сообщение обратно
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+	
+
+
+
+
+
+
+</lecture3>

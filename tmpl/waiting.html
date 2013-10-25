@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Самолётики</title>
+	<meta charset="utf-8"/>
+	<style type="text/css">
+	</style>
+	<style type="text/css">
+			body{
+				padding-top: 100px;
+				background-color: #fcfcfc;
+				font-family: Verdana, Arial, sans-serif;
+				font-size: 1.2em;
+				color: #222222;
+			}
+			.page{
+				width: 450px;
+				min-height: 200px;
+				margin: auto;
+				text-align: center;
+				border-radius: 10px;
+				border: 2px solid #111111; 
+			}
+			.row{
+				padding: 13px;
+			}
+			.row__title{
+				margin-bottom: 8px;
+			}
+			.response{
+				font-size: 0.8em;
+				border-radius: 5px;
+				background-color: rgba(45, 232, 17, 0.5);
+				display: inline-block;
+				padding: 5px;
+			}
+			.row__input{
+				padding: 4px;
+				display: block;
+				margin: auto;
+				margin-bottom: 8px;
+				border: 2px solid rgba(45, 232, 17, 0.8);
+				border-radius: 5px;
+				background-color: #f4f4f4;
+			}
+			.row__button{
+				border: 2px solid #111111;
+				border-radius: 5px;
+				color: #222222;
+				background-color: #dfdfdf;
+				cursor: pointer;
+			}
+			.capture{
+				display: inline-block;
+
+			}
+			.capture__text{
+				font-size: 11px;
+				line-height: 12px;
+				display: inline-block;
+				min-width: 50px;
+				background-color: black;
+				color: white;
+				padding: 2px;
+				position: relative;
+				
+			}
+			.capture__text_bottom{
+				top: -8px;
+			}
+			.capture__text_top{
+				top: 1px;
+			}
+
+			.capture__corner{
+				position: relative;
+				width: 0px;
+				border-right: 5px solid transparent;
+				border-left: 5px solid transparent;
+				margin: auto;
+			}
+			.capture__corner_bottom{
+				border-bottom: 5px solid black;
+			}
+			.capture__corner_top{
+				border-top: 5px solid black;
+			}
+
+			.counter-block{
+				display: inline-block;
+			    height: 20px;
+			    position: relative;
+			    top: 0px;
+			    vertical-align: top;
+			}
+			
+			.counter-blocks{
+				margin: auto;
+			}
+		</style>
+</head>
+<body>
+	<div class="page">
+		<div class="row">
+			<div class="row__title">ID Вашей сессии:</div>
+			<div class="response">${sessionId}</div>
+		</div>
+	
+		<div class="row">
+			<div class="row__title">Ответ сервера: <span id="message" class="response">${message}</span></div>	
+			<div class="counter-blocks">
+				<span class="capture">
+					<span id="counter">0</span>
+					<div class="capture__corner capture__corner_bottom"></div>
+					<div class="capture__text capture__text_bottom">запросов</div>
+				</span>
+				<span class="capture">
+					<div class="counterr">0</div>
+					<div class="capture__corner capture__corner_bottom"></div>					
+					<div class="capture__text capture__text_bottom">ответов</div>
+				</span>							
+			</div>
+
+			<button onclick="stop()" class="row__button">Прекратить!</button>
+			
+		</div>		
+	</div>
+
+	<script type="text/javascript">
+	var message = document.getElementById("message");
+		function call (outputElement) {
+			var xhr = XMLHttpRequest();
+			xhr.open('GET', 'http://localhost:8077/message', 'true');
+			xhr.addEventListener("load", load, false);
+			function load (event) {
+				var responseText = event.target.responseText;
+				outputElement.innerHTML = responseText;
+				if (responseText.indexOf("userId") == 0) {
+					clearTimeout(window.timer);
+					setTimeout("document.location.href = 'http://localhost:8077/greeting';", 2000);
+					
+				};
+			}
+			xhr.send(null);
+			var counter = +(document.getElementById("counter").innerHTML);
+			counter++;
+			document.getElementById("counter").innerHTML = counter;
+		}
+		
+		window.timer = setInterval(function(){call(document.getElementById("message")); },500)
+		function stop () {
+			clearTimeout(timer);
+		}	
+	</script>
+</body>
+</html>

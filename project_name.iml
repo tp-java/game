@@ -21,6 +21,8 @@
     <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-xml:9.0.5.v20130815" level="project" />
     <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-servlet:9.0.5.v20130815" level="project" />
     <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-security:9.0.5.v20130815" level="project" />
+    <orderEntry type="library" name="Maven: org.makito:mokito-all:1.8.4" level="project" />
+    <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-java:2.4.0" level="project" />
   </component>
 </module>
 

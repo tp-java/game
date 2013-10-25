@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>ldskg</title>
+		<meta charset="utf-8"/>
+		<style type="text/css">
+			body{
+				padding-top: 100px;
+				background-color: #fcfcfc;
+				font-family: Verdana, Arial, sans-serif;
+				font-size: 1.2em;
+				color: #222222;
+			}
+			.page{
+				width: 400px;
+				min-height: 200px;
+				margin: auto;
+				text-align: center;
+				border-radius: 10px;
+				border: 2px solid #111111; 
+			}
+			.row{
+				padding: 13px;
+			}
+			.row__title{
+				margin-bottom: 8px;
+			}
+			.row__id{
+				font-size: 0.8em;
+				border-radius: 5px;
+				background-color: rgba(45, 232, 17, 0.5);
+				display: inline-block;
+				padding: 5px;
+			}
+			.row__input{
+				padding: 4px;
+				display: block;
+				margin: auto;
+				margin-bottom: 8px;
+				border: 2px solid rgba(45, 232, 17, 0.8);
+				border-radius: 5px;
+				background-color: #f4f4f4;
+			}
+			.row__button{
+				border: 2px solid #111111;
+				border-radius: 5px;
+				color: #222222;
+				background-color: #dfdfdf;
+				cursor: pointer;
+			}
+			.capture{
+				display: inline-block;
+				position: relative;
+				top: -20px;
+			}
+			.capture__text{
+				font-size: 10px;
+				display: inline-block;
+				line-height: 20px;
+				min-width: 50px;
+				background-color: black;
+				color: white;
+			}
+			.capture__corner{
+				width: 0px;
+				border-top: 5px solid black;
+				border-right: 5px solid transparent;
+				border-left: 5px solid transparent;
+				margin: auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="page">
+			<div class="row">
+				<div class="row__title">ID Вашей сессии:</div>
+				<div class="row__id">${sessionId}</div>
+			</div>
+			<div class="row">
+				<div class="row__title">Введите свое имя:</div>
+				<form action="/" method="POST">
+					<input name="name" type="text" class="row__input" autofocus/>
+					<button type="submit" class="row__button">Отправить</button>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

@@ -4,6 +4,9 @@ import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.ConcurrentLinkedQueue;
 
 /**
  * Created with IntelliJ IDEA.
@@ -14,7 +17,14 @@ import java.util.ArrayList;
  */
 public class Main {
     public static void main(String[] args) throws Exception{
-        Frontend frontend = new Frontend();
+        //messagesystem
+		MessageSystem ms = new MessageSystem();
+
+		Frontend frontend = new Frontend(ms);
+		AccountService accountService = new AccountService(ms);
+
+		(new Thread(frontend)).start();
+		(new Thread(accountService)).start();
 
         Server server = new Server(8078);
 
@@ -45,8 +55,8 @@ public class Main {
 		//</ДЗ №3.1 threadPool>
 
 		//<ДЗ №3.3 запуск Frontend в отдельном потоке>
-		Thread thread1 = new Thread(frontend);
-		thread1.start();
+		/*Thread thread1 = new Thread(frontend);
+		thread1.start();*/
 		//</ДЗ №3.3 запуск Frontend в отдельном потоке>
 
 
