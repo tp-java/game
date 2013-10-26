@@ -2,27 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="691c52f7-7e8c-47d9-898e-644776978d33" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Abonent.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/AccountService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Address.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/AddressService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/MessageSystem.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Msg.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/MsgGetUserId.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/MsgToAS.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/MsgToFrontend.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/MsgUpdateUserId.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/SessionIdGenerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Frontend.java" afterPath="$PROJECT_DIR$/src/main/java/Frontend.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Main.java" afterPath="$PROJECT_DIR$/src/main/java/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project_name.iml" afterPath="$PROJECT_DIR$/project_name.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Address.java" afterPath="$PROJECT_DIR$/src/main/java/Address.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/я мыслю =&gt; существую" afterPath="$PROJECT_DIR$/я мыслю =&gt; существую" />
     </list>
     <ignored path="project_name.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1382549643344" ignored="false" />
+    <file path="/Dummy.txt" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1382766851414" ignored="false" />
     <file path="/Main.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1382527264424" ignored="false" />
     <file path="/Frontend.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1382653127719" ignored="false" />
     <file path="/JettyServer.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1379746592289" ignored="false" />
@@ -106,10 +91,10 @@
     <splitter split-orientation="horizontal" split-proportion="0.4812749">
       <split-first>
         <leaf>
-          <file leaf-file-name="UserSession.java" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="UserSession.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/UserSession.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="33" column="20" selection-start="716" selection-end="716" vertical-scroll-proportion="0.9860558">
+                <state line="33" column="20" selection-start="716" selection-end="716" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -124,10 +109,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Address.java" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="Address.java" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/Address.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="9" column="14" selection-start="217" selection-end="217" vertical-scroll-proportion="0.0">
+                <state line="12" column="0" selection-start="326" selection-end="326" vertical-scroll-proportion="0.70866144">
                   <folding />
                 </state>
               </provider>
@@ -182,10 +167,7 @@
             <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state line="26" column="45" selection-start="802" selection-end="802" vertical-scroll-proportion="0.0">
-                  <folding>
-                    <element signature="imports" expanded="false" />
-                    <element signature="e#1517#1525#0" expanded="false" />
-                  </folding>
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -203,10 +185,10 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="Frontend.java" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="Frontend.java" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/Frontend.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="84" column="30" selection-start="2787" selection-end="2787" vertical-scroll-proportion="0.28544775">
+                <state line="84" column="30" selection-start="2787" selection-end="2787" vertical-scroll-proportion="0.044378698">
                   <folding />
                 </state>
               </provider>
@@ -241,7 +223,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/tmpl/login.html" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/Adress.java" />
         <option value="$PROJECT_DIR$/src/main/java/AdressService.java" />
@@ -257,6 +238,7 @@
         <option value="$PROJECT_DIR$/src/main/java/AccountService.java" />
         <option value="$PROJECT_DIR$/src/main/java/UserSession.java" />
         <option value="$PROJECT_DIR$/src/main/java/Frontend.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Address.java" />
       </list>
     </option>
   </component>
@@ -406,9 +388,9 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -455,6 +437,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -480,19 +475,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -576,7 +558,7 @@
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3968" sideWeight="0.4996016" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3968" sideWeight="0.4996016" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3968" sideWeight="0.5003984" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -659,13 +641,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/MsgUpdateUserId.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="23" selection-start="400" selection-end="400" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/MsgToFrontend.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="76" selection-start="408" selection-end="408" vertical-scroll-proportion="0.0">
@@ -691,9 +666,7 @@
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-util/9.0.5.v20130815/jetty-util-9.0.5.v20130815.jar!/org/eclipse/jetty/util/AttributesMap.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="16" selection-start="845" selection-end="845" vertical-scroll-proportion="-3.88">
-          <folding />
-        </state>
+        <state line="19" column="16" selection-start="845" selection-end="845" vertical-scroll-proportion="-3.88" />
       </provider>
     </entry>
     <entry file="jar:///usr/java/jdk1.7.0_40/src.zip!/java/lang/String.java">
@@ -705,51 +678,37 @@
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-http/9.0.5.v20130815/jetty-http-9.0.5.v20130815.jar!/org/eclipse/jetty/http/HttpURI.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="28" selection-start="3081" selection-end="3081" vertical-scroll-proportion="0.6232877">
-          <folding />
-        </state>
+        <state line="90" column="28" selection-start="3081" selection-end="3081" vertical-scroll-proportion="0.6232877" />
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-server/9.0.5.v20130815/jetty-server-9.0.5.v20130815.jar!/org/eclipse/jetty/server/Request.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="306" column="28" selection-start="13614" selection-end="13614" vertical-scroll-proportion="0.3321918">
-          <folding />
-        </state>
+        <state line="306" column="28" selection-start="13614" selection-end="13614" vertical-scroll-proportion="0.3321918" />
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-servlet/9.0.5.v20130815/jetty-servlet-9.0.5.v20130815.jar!/org/eclipse/jetty/servlet/Holder.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="28" selection-start="3625" selection-end="3625" vertical-scroll-proportion="0.35958904">
-          <folding />
-        </state>
+        <state line="77" column="28" selection-start="3625" selection-end="3625" vertical-scroll-proportion="0.35958904" />
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-util/9.0.5.v20130815/jetty-util-9.0.5.v20130815.jar!/org/eclipse/jetty/util/log/StdErrLog.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="19" selection-start="3067" selection-end="3067" vertical-scroll-proportion="0.35958904">
-          <folding />
-        </state>
+        <state line="71" column="19" selection-start="3067" selection-end="3067" vertical-scroll-proportion="0.35958904" />
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-servlet/9.0.5.v20130815/jetty-servlet-9.0.5.v20130815.jar!/org/eclipse/jetty/servlet/ServletHandler.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="16" selection-start="3785" selection-end="3785" vertical-scroll-proportion="0.30990416">
-          <folding />
-        </state>
+        <state line="64" column="16" selection-start="3785" selection-end="3785" vertical-scroll-proportion="0.30990416" />
       </provider>
     </entry>
     <entry file="jar:///usr/java/jdk1.7.0_40/src.zip!/java/lang/Enum.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="142" column="0" selection-start="4359" selection-end="4359" vertical-scroll-proportion="0.3133903">
-          <folding />
-        </state>
+        <state line="142" column="0" selection-start="4359" selection-end="4359" vertical-scroll-proportion="0.3133903" />
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-servlet/9.0.5.v20130815/jetty-servlet-9.0.5.v20130815.jar!/org/eclipse/jetty/servlet/ServletHolder.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="16" selection-start="4756" selection-end="4756" vertical-scroll-proportion="0.30990416">
-          <folding />
-        </state>
+        <state line="101" column="16" selection-start="4756" selection-end="4756" vertical-scroll-proportion="0.30990416" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/AccountService.java">
@@ -761,14 +720,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/UserSession.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="20" selection-start="716" selection-end="716" vertical-scroll-proportion="0.9860558">
+        <state line="33" column="20" selection-start="716" selection-end="716" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Frontend.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="30" selection-start="2787" selection-end="2787" vertical-scroll-proportion="0.28544775">
+        <state line="84" column="30" selection-start="2787" selection-end="2787" vertical-scroll-proportion="0.044378698">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Address.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="326" selection-end="326" vertical-scroll-proportion="0.70866144">
           <folding />
         </state>
       </provider>
