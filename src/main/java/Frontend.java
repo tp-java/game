@@ -21,8 +21,6 @@ public class Frontend extends HttpServlet implements Runnable, Abonent{
 	private Address address;
 	private Map<String, UserSession> sessionIdToUserSession= new HashMap<>();
 
-	private AtomicLong userIdGenerator = new AtomicLong();
-
     Map<Long, Long> SessionIdToUserId = new HashMap<Long, Long>();
     Map<String, Object> data = new HashMap<String, Object>();
     Calendar date;
@@ -42,21 +40,15 @@ public class Frontend extends HttpServlet implements Runnable, Abonent{
 			ms.execForAbonent(this);
 		}
 	}
-	//<ДЗ №3.3 Frontend implements Runnable, логирование количества запросов, вывод каждые 5 сек>
-	/*public void run(){
-		try {
-			while (true){
-					System.out.println("количество запросов:" + handleCount);
-					Thread.sleep(5000);
-			}
-		} catch (Exception e){}
-	} */
-	//</ДЗ №3.3 Frontend implements Runnable, логирование количества запросов, вывод каждые 5 сек>
 
     void setId(String sessionId, Long userId){
 		UserSession userSession = sessionIdToUserSession.get(sessionId);
 		if (userSession == null) {
 			System.out.append("Can't find user session for: ").append(sessionId);
+			return;
+		}
+		if (userId == null) {
+			userSession.setUserId(-1L);
 			return;
 		}
 		userSession.setUserId(userId);
@@ -67,51 +59,50 @@ public class Frontend extends HttpServlet implements Runnable, Abonent{
 			//счетчик подключений. Логируется каждые 5 секунд
 			handleCount++;
 			response.setContentType("text/html;charset=utf-8");
+
+			//запрос времени сервера
             if (request.getRequestURI().equals("/time")){
                 date = Calendar.getInstance();
                 response.getWriter().print(date.getTime());
+			//запрос сообщения от сервера (найден или нет userId) (аяксом фигачит)
             }else if (request.getRequestURI().equals("/message")){
 				HttpSession session = request.getSession();
 				UserSession userSession = sessionIdToUserSession.get(session.getId());
 				if (userSession.getUserId() == null) {
 					response.getWriter().print("Ждите авторизации");
 					return;
-				} else {
+				} else if(userSession.getUserId() == -1L){
+					response.getWriter().print("Неправильный username");
+				} else{
 					response.getWriter().print("userId = " + userSession.getUserId());
 				}
+			//финально окошечко приветствия
 			}else if (request.getRequestURI().equals("/greeting")){
 				HttpSession session = request.getSession();
 				UserSession userSession = sessionIdToUserSession.get(session.getId());
 				data.put("username", userSession.getUsername());
 				data.put("userId", userSession.getUserId());
 				response.getWriter().print(PageGenerator.getPage("greeting.html", data));
+			//первый приход юзера
 			} else {
-                /*date = Calendar.getInstance();
-				data.put("time", date.getTime().toString());
-
-                HttpSession session = request.getSession();
-                Long sessionId = (Long) session.getAttribute("sessionId");
-
-                if (sessionId != null) {    //если обновили страницу после авторизации
-                    data.put("sessionId",sessionId);
-                    data.put("userId",SessionIdToUserId.get(sessionId));
-                    response.getWriter().print(PageGenerator.getPage("index.html", data));
-                }else{ //пришли аторизовываться
-                    response.getWriter().print(PageGenerator.getPage("login.html", data));
-                } */
-
+				HttpSession session = request.getSession();
+				UserSession userSession = sessionIdToUserSession.get(session.getId());
+				if( (sessionIdToUserSession.get(request.getSession().getId()) == null) || (userSession.getUserId() == -1L))
+				{
 				data.put("sessionId", request.getSession().getId());
 				try {
 					response.setContentType("text/html;charset=utf-8");
 					response.getWriter().print(PageGenerator.getPage("index1.html", data));
 				} catch (Exception e){}
+				} else {
+					response.sendRedirect("/greeting");
+				}
 			}
         } catch (Exception e){System.out.println(e.toString());}
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response){
 		handleCount++;
-		//date.getTime();
         if(request.getParameter("name") != null){
 			String username = request.getParameter("name");
 			String sessionId = request.getSession().getId();
@@ -129,34 +120,6 @@ public class Frontend extends HttpServlet implements Runnable, Abonent{
 				response.getWriter().print(PageGenerator.getPage("waiting.html", data));
 			} catch (Exception e){}
 		}
-
-
-
-        //если POST-запрос не пустой
-        /*if (nameToUserId.get(request.getParameter("name")) != null){
-            try{
-                Long userId = nameToUserId.get(request.getParameter("name"));
-                HttpSession session = request.getSession();
-                Long sessionId = (Long) session.getAttribute("sessionId");
-
-                if (sessionId == null) {
-                    sessionId = userIdGenerator.getAndIncrement();
-                    SessionIdToUserId.put(sessionId, userId);
-                    session.setAttribute("sessionId", sessionId);
-                }
-                data.put("userId", userId);
-                data.put("sessionId", sessionId);
-                data.put("time", date.toString());
-                response.getWriter().print(PageGenerator.getPage("index.html", data));
-            } catch (Exception e){}
-        } else {    //если POST-запрос пустой, или неправильный username
-            try{
-                data.put("time", date.toString());
-                response.getWriter().print(PageGenerator.getPage("login.html", data));
-            }catch (Exception e){}
-        }
-        */
-
 
     }
 }

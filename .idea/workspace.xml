@@ -2,14 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="691c52f7-7e8c-47d9-898e-644776978d33" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Address.java" afterPath="$PROJECT_DIR$/src/main/java/Address.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/AccountService.java" afterPath="$PROJECT_DIR$/src/main/java/AccountService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Frontend.java" afterPath="$PROJECT_DIR$/src/main/java/Frontend.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Main.java" afterPath="$PROJECT_DIR$/src/main/java/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmpl/index1.html" afterPath="$PROJECT_DIR$/tmpl/index1.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmpl/waiting.html" afterPath="$PROJECT_DIR$/tmpl/waiting.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="project_name.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1382766851414" ignored="false" />
+    <file path="/Dummy.txt" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1383146677001" ignored="false" />
     <file path="/Main.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1382527264424" ignored="false" />
-    <file path="/Frontend.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1382653127719" ignored="false" />
+    <file path="/Frontend.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1383146133114" ignored="false" />
     <file path="/JettyServer.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1379746592289" ignored="false" />
     <file path="/PageGenerator.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1379745594490" ignored="false" />
     <file path="/index.html" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1381007930553" ignored="false" />
@@ -22,7 +26,7 @@
     <file path="/Msg.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1382197262484" ignored="false" />
     <file path="/MsgToAS.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1382197436234" ignored="false" />
     <file path="/MsgGetUserId.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1382197525085" ignored="false" />
-    <file path="/AccountService.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1382531039375" ignored="false" />
+    <file path="/AccountService.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1383145084355" ignored="false" />
     <file path="/MsgUpdateUserId.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1382204852052" ignored="false" />
     <file path="/MsgToFrontend.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1382197398418" ignored="false" />
     <file path="/MessageSystem.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1382529683461" ignored="false" />
@@ -42,7 +46,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -80,6 +83,7 @@
       </breakpoint>
     </breakpoint_any>
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -109,10 +113,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Address.java" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="Address.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/Address.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="12" column="0" selection-start="326" selection-end="326" vertical-scroll-proportion="0.70866144">
+                <state line="12" column="0" selection-start="326" selection-end="326" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -163,10 +167,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="26" column="45" selection-start="802" selection-end="802" vertical-scroll-proportion="0.0">
+                <state line="27" column="1" selection-start="803" selection-end="803" vertical-scroll-proportion="0.68700266">
                   <folding />
                 </state>
               </provider>
@@ -185,19 +189,42 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="Frontend.java" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="Frontend.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/Frontend.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="84" column="30" selection-start="2787" selection-end="2787" vertical-scroll-proportion="0.044378698">
+                <state line="37" column="0" selection-start="1055" selection-end="1055" vertical-scroll-proportion="-6.3">
+                  <folding>
+                    <element signature="e#725#737#0" expanded="true" />
+                    <element signature="e#783#799#0" expanded="true" />
+                    <element signature="method#getAddress#0;class#Frontend#0" expanded="false" />
+                    <element signature="method#run#0;class#Frontend#0" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="MessageSystem.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/MessageSystem.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="28" column="56" selection-start="832" selection-end="832" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="AccountService.java" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="MsgToFrontend.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/MsgToFrontend.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="7" column="22" selection-start="174" selection-end="174" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="AccountService.java" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/AccountService.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="38" column="26" selection-start="817" selection-end="817" vertical-scroll-proportion="0.0">
+                <state line="36" column="37" selection-start="767" selection-end="767" vertical-scroll-proportion="0.5833333">
                   <folding />
                 </state>
               </provider>
@@ -232,13 +259,13 @@
         <option value="$PROJECT_DIR$/src/main/java/MsgToAS.java" />
         <option value="$PROJECT_DIR$/src/main/java/MsgGetUserId.java" />
         <option value="$PROJECT_DIR$/src/main/java/MsgUpdateUserId.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/SessionIdGenerator.java" />
         <option value="$PROJECT_DIR$/src/main/java/MessageSystem.java" />
-        <option value="$PROJECT_DIR$/src/main/java/AccountService.java" />
         <option value="$PROJECT_DIR$/src/main/java/UserSession.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Frontend.java" />
         <option value="$PROJECT_DIR$/src/main/java/Address.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Frontend.java" />
+        <option value="$PROJECT_DIR$/src/main/java/AccountService.java" />
       </list>
     </option>
   </component>
@@ -264,10 +291,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="65" />
-    <option name="y" value="24" />
-    <option name="width" value="1301" />
-    <option name="height" value="744" />
+    <option name="x" value="64" />
+    <option name="y" value="-4" />
+    <option name="width" value="1303" />
+    <option name="height" value="773" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -551,14 +578,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="24" width="1301" height="744" extended-state="6" />
+    <frame x="64" y="-4" width="1303" height="773" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3968" sideWeight="0.4996016" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3136" sideWeight="0.4996016" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3968" sideWeight="0.5003984" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -567,8 +594,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988048" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21992032" sideWeight="0.6032" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2496" sideWeight="0.4996016" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21752988" sideWeight="0.6704" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2672" sideWeight="0.4996016" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -641,29 +668,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/MsgToFrontend.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="76" selection-start="408" selection-end="408" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/MessageSystem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="56" selection-start="832" selection-end="832" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/MsgGetUserId.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="34" selection-start="611" selection-end="611" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-util/9.0.5.v20130815/jetty-util-9.0.5.v20130815.jar!/org/eclipse/jetty/util/AttributesMap.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="16" selection-start="845" selection-end="845" vertical-scroll-proportion="-3.88" />
@@ -711,13 +715,6 @@
         <state line="101" column="16" selection-start="4756" selection-end="4756" vertical-scroll-proportion="0.30990416" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/AccountService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="26" selection-start="817" selection-end="817" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/UserSession.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="33" column="20" selection-start="716" selection-end="716" vertical-scroll-proportion="0.0">
@@ -725,16 +722,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Frontend.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Address.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="30" selection-start="2787" selection-end="2787" vertical-scroll-proportion="0.044378698">
+        <state line="12" column="0" selection-start="326" selection-end="326" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Address.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="326" selection-end="326" vertical-scroll-proportion="0.70866144">
+        <state line="27" column="1" selection-start="803" selection-end="803" vertical-scroll-proportion="0.68700266">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MsgToFrontend.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="22" selection-start="174" selection-end="174" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Frontend.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="0" selection-start="1055" selection-end="1055" vertical-scroll-proportion="-6.3">
+          <folding>
+            <element signature="e#725#737#0" expanded="true" />
+            <element signature="e#783#799#0" expanded="true" />
+            <element signature="method#getAddress#0;class#Frontend#0" expanded="false" />
+            <element signature="method#run#0;class#Frontend#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MessageSystem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="56" selection-start="832" selection-end="832" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/AccountService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="37" selection-start="767" selection-end="767" vertical-scroll-proportion="0.5833333">
           <folding />
         </state>
       </provider>

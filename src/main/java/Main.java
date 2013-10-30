@@ -34,32 +34,6 @@ public class Main {
         //сервлетик
         server.setHandler(context);
 
-
-        //если надо одинаково обрабатывать все, создаем просто джетти сервер, если нет, то делаем кучу сервлетов
-        //server.setHandler(new JettyServer());
-
-        /*ResourceHandler resource_handler = new ResourceHandler();
-        resource_handler.setDirectoriesListed(true);
-        resource_handler.setResourceBase("static");  */
-
-
-		//<ДЗ №3.1 threadPool>
-        ArrayList<Thread> threadPool = new ArrayList<Thread>();
-		Object lockObject = new Object();
-        //кладем треды в тред пулл и запускаем
-        for (int i = 0; i < 10; i++){
-			Thread thread = new HelloThread(i, lockObject);
-			threadPool.add(thread);
-			thread.start();
-		}
-		//</ДЗ №3.1 threadPool>
-
-		//<ДЗ №3.3 запуск Frontend в отдельном потоке>
-		/*Thread thread1 = new Thread(frontend);
-		thread1.start();*/
-		//</ДЗ №3.3 запуск Frontend в отдельном потоке>
-
-
         server.start();
         server.join();
     }

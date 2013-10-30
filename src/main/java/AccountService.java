@@ -36,9 +36,10 @@ public class AccountService implements Abonent, Runnable{
 		//TODO: sleep!!!
 		try {
 			System.out.println("sleep");
-			Thread.sleep(8000);
+			Thread.sleep(3000);
 		} catch (Exception e){}
 		System.out.println("wake");
+		System.out.println(	nameToUserId.get(name));
 		return nameToUserId.get(name);
 	}
 	MessageSystem getMessageSystem(){
