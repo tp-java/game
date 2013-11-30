@@ -2,24 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="691c52f7-7e8c-47d9-898e-644776978d33" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/base/AddressService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/base/Frontend.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/base/MessageSystem.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/source/Abonent.java" afterPath="$PROJECT_DIR$/src/main/java/base/Abonent.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/source/AccountService.java" afterPath="$PROJECT_DIR$/src/main/java/accountService/AccountServiceImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/source/Address.java" afterPath="$PROJECT_DIR$/src/main/java/base/Address.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/source/AddressService.java" afterPath="$PROJECT_DIR$/src/main/java/messageSystem/AddressServiceImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/source/Frontend.java" afterPath="$PROJECT_DIR$/src/main/java/frontend/FrontendImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/source/Main.java" afterPath="$PROJECT_DIR$/src/main/java/accountService/Main.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/source/MessageSystem.java" afterPath="$PROJECT_DIR$/src/main/java/messageSystem/MessageSystemImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/source/Msg.java" afterPath="$PROJECT_DIR$/src/main/java/base/Msg.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/source/MsgGetUserId.java" afterPath="$PROJECT_DIR$/src/main/java/frontend/MsgGetUserId.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/source/MsgToAS.java" afterPath="$PROJECT_DIR$/src/main/java/messageSystem/MsgToAS.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/source/MsgToFrontend.java" afterPath="$PROJECT_DIR$/src/main/java/messageSystem/MsgToFrontend.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/source/MsgUpdateUserId.java" afterPath="$PROJECT_DIR$/src/main/java/frontend/MsgUpdateUserId.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/gameMech/Bullet.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/gameMech/Direction.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/gameMech/GameMech.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/frontend/MsgChangeState.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/messageSystem/MsgToGM.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/frontend/MsgUpdateState.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/gameMech/Plane.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/gameMech/Position.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/source/UserSession.java" afterPath="$PROJECT_DIR$/src/main/java/gameMech/UserSession.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/frontend/FrontendImpl.java" afterPath="$PROJECT_DIR$/src/main/java/frontend/FrontendImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/source/FrontendTest.java" afterPath="$PROJECT_DIR$/src/main/java/source/FrontendTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/source/UserSession.java" afterPath="$PROJECT_DIR$/src/main/java/source/UserSession.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hs_err_pid6970.log" afterPath="$PROJECT_DIR$/hs_err_pid6970.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="project_name.iws" />
@@ -32,7 +25,7 @@
     <file path="/index.html" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1381007930553" ignored="false" />
     <file path="/login.html" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1381007971782" ignored="false" />
     <file path="/fragment.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1384454093278" ignored="false" />
-    <file path="/UserSession.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1385772539415" ignored="false" />
+    <file path="/UserSession.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1385778791878" ignored="false" />
     <file path="/SessionIdGenerator.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1381601630200" ignored="false" />
     <file path="/Adress.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1382196235069" ignored="false" />
     <file path="/Abonent.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1382196387434" ignored="false" />
@@ -50,6 +43,14 @@
     <file path="/AddressService.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1385761230181" ignored="false" />
     <file path="/FrontendImpl.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1385772416132" ignored="false" />
     <file path="/AccountServiceImpl.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1385766327151" ignored="false" />
+    <file path="/GameMech.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1385779224565" ignored="false" />
+    <file path="/MsgToGM.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1385773399010" ignored="false" />
+    <file path="/MsgUpdateState.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1385773525482" ignored="false" />
+    <file path="/Plane.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1385775851222" ignored="false" />
+    <file path="/Position.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1385775762128" ignored="false" />
+    <file path="/Direction.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1385779184936" ignored="false" />
+    <file path="/GameSession.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1385776098401" ignored="false" />
+    <file path="/MsgChangeState.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1385778385441" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,11 +114,99 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="MessageSystem.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/base/MessageSystem.java">
+          <file leaf-file-name="GameMech.java" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/java/gameMech/GameMech.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="17" column="0" selection-start="297" selection-end="297" vertical-scroll-proportion="0.0">
+                <state line="47" column="42" selection-start="1277" selection-end="1277" vertical-scroll-proportion="0.7079646">
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Direction.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/gameMech/Direction.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="25" column="35" selection-start="390" selection-end="390" vertical-scroll-proportion="0.0">
                   <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="MsgChangeState.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/frontend/MsgChangeState.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="19" column="16" selection-start="388" selection-end="388" vertical-scroll-proportion="0.0">
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="MsgUpdateState.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/frontend/MsgUpdateState.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="18" column="10" selection-start="198" selection-end="311" vertical-scroll-proportion="0.0">
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Bullet.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/gameMech/Bullet.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="7" column="20" selection-start="94" selection-end="94" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Plane.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/gameMech/Plane.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="21" column="45" selection-start="339" selection-end="345" vertical-scroll-proportion="0.0">
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Position.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/gameMech/Position.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="16" column="34" selection-start="291" selection-end="291" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="UserSession.java" pinned="false" current="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/java/gameMech/UserSession.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="44" column="0" selection-start="877" selection-end="877" vertical-scroll-proportion="0.7081911">
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="FrontendImpl.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/frontend/FrontendImpl.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="31" column="42" selection-start="862" selection-end="862" vertical-scroll-proportion="0.0">
+                  <folding>
+                    <element signature="e#862#878#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -133,104 +222,13 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/accountService/Main.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="19" column="32" selection-start="547" selection-end="547" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Abonent.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/base/Abonent.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="9" column="17" selection-start="184" selection-end="184" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Msg.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/base/Msg.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="19" column="10" selection-start="381" selection-end="381" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="MsgToFrontend.java" pinned="false" current="true" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/messageSystem/MsgToFrontend.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="13" column="22" selection-start="241" selection-end="241" vertical-scroll-proportion="0.49744898">
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="UserSession.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/source/UserSession.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="37" column="11" selection-start="775" selection-end="775" vertical-scroll-proportion="-14.16">
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="MessageSystemImpl.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/messageSystem/MessageSystemImpl.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="24" column="62" selection-start="709" selection-end="709" vertical-scroll-proportion="0.0">
-                  <folding>
-                    <element signature="e#454#491#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="MsgUpdateUserId.java" pinned="false" current="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/frontend/MsgUpdateUserId.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="22" column="11" selection-start="488" selection-end="488" vertical-scroll-proportion="0.80862534">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="FrontendImpl.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/frontend/FrontendImpl.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="89" column="61" selection-start="2513" selection-end="2513" vertical-scroll-proportion="-4.32">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="MsgGetUserId.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/frontend/MsgGetUserId.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="24" column="11" selection-start="522" selection-end="522" vertical-scroll-proportion="0.0">
+                <state line="8" column="33" selection-start="150" selection-end="150" vertical-scroll-proportion="0.0">
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="AccountServiceImpl.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/accountService/AccountServiceImpl.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="26" column="13" selection-start="630" selection-end="630" vertical-scroll-proportion="0.0">
-                  <folding />
                 </state>
               </provider>
             </entry>
@@ -255,22 +253,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/source/MessageSystemImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/source/MsgUpdateUserId.java" />
-        <option value="$PROJECT_DIR$/src/main/java/source/Frontend.java" />
-        <option value="$PROJECT_DIR$/src/main/java/source/MsgGetUserId.java" />
-        <option value="$PROJECT_DIR$/src/main/java/source/AccountService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/source/AccountServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/source/MessageSystem.java" />
-        <option value="$PROJECT_DIR$/src/main/java/source/FrontendImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/source/MsgToFrontend.java" />
-        <option value="$PROJECT_DIR$/src/main/java/source/MsgToAS.java" />
         <option value="$PROJECT_DIR$/src/main/java/base/Msg.java" />
         <option value="$PROJECT_DIR$/src/main/java/source/UserSession.java" />
         <option value="$PROJECT_DIR$/src/main/java/messageSystem/MsgToAS.java" />
         <option value="$PROJECT_DIR$/src/main/java/frontend/MsgGetUserId.java" />
         <option value="$PROJECT_DIR$/src/main/java/messageSystem/MsgToFrontend.java" />
         <option value="$PROJECT_DIR$/src/main/java/frontend/MsgUpdateUserId.java" />
+        <option value="$PROJECT_DIR$/src/main/java/messageSystem/MsgToGM.java" />
+        <option value="$PROJECT_DIR$/src/main/java/gameMech/MsgUpdateState.java" />
+        <option value="$PROJECT_DIR$/src/main/java/gameMech/Position.java" />
+        <option value="$PROJECT_DIR$/src/main/java/gameMech/Plane.java" />
+        <option value="$PROJECT_DIR$/src/main/java/gameMech/Bullet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/gameMech/GameSession.java" />
+        <option value="$PROJECT_DIR$/src/main/java/frontend/MsgChangeState.java" />
+        <option value="$PROJECT_DIR$/src/main/java/gameMech/UserSession.java" />
+        <option value="$PROJECT_DIR$/src/main/java/gameMech/Direction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/gameMech/GameMech.java" />
       </list>
     </option>
   </component>
@@ -383,6 +381,84 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="source" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project_name" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project_name" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project_name" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project_name" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gameMech" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project_name" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project_name" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frontend" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -644,8 +720,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988048" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21673307" sideWeight="0.7232" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2768" sideWeight="0.74940145" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21673307" sideWeight="0.688" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2768" sideWeight="0.74940145" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -717,90 +793,36 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/base/Frontend.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/frontend/MsgUpdateUserId.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="11" selection-start="108" selection-end="108" vertical-scroll-proportion="0.2003339">
+        <state line="22" column="11" selection-start="488" selection-end="488" vertical-scroll-proportion="0.5514706">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/messageSystem/AddressServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/messageSystem/MsgToFrontend.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="26" selection-start="223" selection-end="223" vertical-scroll-proportion="0.25951558">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/base/AccountService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="39" selection-start="187" selection-end="187" vertical-scroll-proportion="0.2754591">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/base/AddressService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="40" selection-start="198" selection-end="198" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="13" column="22" selection-start="241" selection-end="241" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/base/MessageSystem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="297" selection-end="297" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/base/Abonent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="17" selection-start="184" selection-end="184" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/accountService/AccountServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="13" selection-start="630" selection-end="630" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/accountService/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="32" selection-start="547" selection-end="547" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="17" column="0" selection-start="297" selection-end="297" vertical-scroll-proportion="0.44117647">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/messageSystem/MessageSystemImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="62" selection-start="709" selection-end="709" vertical-scroll-proportion="0.0">
+        <state line="24" column="62" selection-start="709" selection-end="709" vertical-scroll-proportion="0.4159292">
           <folding>
             <element signature="e#454#491#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/base/Msg.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="10" selection-start="381" selection-end="381" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/frontend/FrontendImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="61" selection-start="2513" selection-end="2513" vertical-scroll-proportion="-4.32">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/source/UserSession.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="11" selection-start="775" selection-end="775" vertical-scroll-proportion="-14.16">
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -814,25 +836,93 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/frontend/MsgGetUserId.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/messageSystem/MsgToGM.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="11" selection-start="522" selection-end="522" vertical-scroll-proportion="0.0">
+        <state line="21" column="20" selection-start="400" selection-end="400" vertical-scroll-proportion="0.5449827">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/frontend/MsgUpdateUserId.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/frontend/MsgGetUserId.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="11" selection-start="488" selection-end="488" vertical-scroll-proportion="0.80862534">
+        <state line="8" column="33" selection-start="150" selection-end="150" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/gameMech/Bullet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="20" selection-start="94" selection-end="94" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/messageSystem/MsgToFrontend.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/gameMech/Plane.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="22" selection-start="241" selection-end="241" vertical-scroll-proportion="0.49744898">
+        <state line="21" column="45" selection-start="339" selection-end="345" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/gameMech/Position.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="34" selection-start="291" selection-end="291" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/frontend/MsgUpdateState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="10" selection-start="198" selection-end="311" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/frontend/MsgChangeState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="16" selection-start="388" selection-end="388" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/frontend/FrontendImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="42" selection-start="862" selection-end="862" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#862#878#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/gameMech/UserSession.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="0" selection-start="877" selection-end="877" vertical-scroll-proportion="0.7081911">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/gameMech/Direction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="35" selection-start="390" selection-end="390" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/gameMech/GameMech.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="42" selection-start="1277" selection-end="1277" vertical-scroll-proportion="0.7079646">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

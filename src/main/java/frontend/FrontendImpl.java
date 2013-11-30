@@ -4,6 +4,7 @@ import base.Abonent;
 import base.Address;
 import base.Frontend;
 import base.MessageSystem;
+import gameMech.UserSession;
 import messageSystem.MessageSystemImpl;
 import source.*;
 

@@ -1,4 +1,4 @@
-package source;
+package gameMech;
 
 import base.Address;
 import base.AddressService;
@@ -16,6 +16,9 @@ public class UserSession {
 	private String name; // Имя юзера
 	private String sessionId;
 	private Long userId;
+
+	private Position position;
+	private Direction direction;
 
 	public UserSession(String sessionId, String name, AddressService addressService){
 		this.sessionId = sessionId;
@@ -37,6 +40,17 @@ public class UserSession {
 
 	public String getUsername(){
 		return name;
+	}
+
+
+	public void move(Direction direction){
+		this.position.move(direction);
+	}
+	public Position getPosition(){
+		return position;
+	}
+	public Direction getDirection(){
+		return direction;
 	}
 
 }
