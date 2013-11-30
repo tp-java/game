@@ -1,4 +1,11 @@
-package source;
+package frontend;
+
+import base.Abonent;
+import base.Address;
+import base.Frontend;
+import base.MessageSystem;
+import messageSystem.MessageSystemImpl;
+import source.*;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -16,8 +23,8 @@ import java.util.Map;
  * To change this template use File | Settings | File Templates.
  */
 
-public class Frontend extends HttpServlet implements Runnable, Abonent{
-    private MessageSystem ms;
+public class FrontendImpl extends HttpServlet implements Runnable, Abonent, Frontend {
+    private MessageSystemImpl ms;
 	private Address address;
 	private Map<String, UserSession> sessionIdToUserSession= new HashMap<>();
 
@@ -26,8 +33,8 @@ public class Frontend extends HttpServlet implements Runnable, Abonent{
 
 	private static int handleCount = 0; //количество запросов
 
-    public Frontend(MessageSystem ms){
-		this.ms = ms;
+    public FrontendImpl(MessageSystem ms){
+		this.ms = (MessageSystemImpl)ms;
 		this.address = new Address();
 		ms.addService(this);
     }
@@ -50,7 +57,7 @@ public class Frontend extends HttpServlet implements Runnable, Abonent{
 		return sessionIdToUserSession.get(sessionId);
 	}
 
-    void setId(String sessionId, Long userId){
+    public void setId(String sessionId, Long userId){
 		UserSession userSession = getUserSession(sessionId);
 		if (userSession == null) {
 			Writter.printConsole("Can't find user session for: " + sessionId);

@@ -1,4 +1,7 @@
-package source;
+package messageSystem;
+
+import base.*;
+import messageSystem.AddressServiceImpl;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -10,11 +13,11 @@ import java.util.concurrent.ConcurrentLinkedQueue;
  * Date: 18.10.13
  * Time: 22:54
  */
-public class MessageSystem {
-	AddressService addressService = new AddressService();
+public class MessageSystemImpl implements MessageSystem {
+	AddressServiceImpl addressService = new AddressServiceImpl();
 	private Map<Address, ConcurrentLinkedQueue<Msg>> messages = new HashMap<Address, ConcurrentLinkedQueue<Msg>>();
 
-	void addService(Abonent abonent){
+	public void addService(Abonent abonent){
 		messages.put(abonent.getAddress(), new ConcurrentLinkedQueue<Msg>());
 	}
 

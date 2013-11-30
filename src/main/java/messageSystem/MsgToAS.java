@@ -1,4 +1,10 @@
-package source;
+package messageSystem;
+
+import accountService.AccountServiceImpl;
+import base.Abonent;
+import base.AccountService;
+import base.Address;
+import base.Msg;
 
 /**
  * Created with IntelliJ IDEA.
@@ -12,9 +18,9 @@ public abstract class MsgToAS extends Msg {
 		super(from, to);
 	}
 	public void exec(Abonent abonent){
-		if(abonent instanceof AccountService){
+		if(abonent instanceof AccountServiceImpl){
 			exec((AccountService)abonent);
 		}
 	}
-	abstract void exec(AccountService accountService);
+	public abstract void exec(AccountService accountService);
 }

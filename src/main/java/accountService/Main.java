@@ -1,8 +1,10 @@
-package source;
+package accountService;
 
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
+import frontend.FrontendImpl;
+import messageSystem.MessageSystemImpl;
 
 /**
  * Created with IntelliJ IDEA.
@@ -14,10 +16,10 @@ import org.eclipse.jetty.servlet.ServletHolder;
 public class Main {
     public static void main(String[] args) throws Exception{
         //messagesystem
-		MessageSystem ms = new MessageSystem();
+		MessageSystemImpl ms = new MessageSystemImpl();
 
-		Frontend frontend = new Frontend(ms);
-		AccountService accountService = new AccountService(ms);
+		FrontendImpl frontend = new FrontendImpl(ms);
+		AccountServiceImpl accountService = new AccountServiceImpl(ms);
 
 		(new Thread(frontend)).start();
 		(new Thread(accountService)).start();

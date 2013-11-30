@@ -1,6 +1,14 @@
 package source;
 
 import static org.mockito.Mockito.*;
+
+import accountService.AccountServiceImpl;
+import base.Address;
+import base.Msg;
+import frontend.FrontendImpl;
+import frontend.MsgUpdateUserId;
+import messageSystem.AddressServiceImpl;
+import messageSystem.MessageSystemImpl;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -10,8 +18,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.util.Map;
 
-import source.Writter;
-
 
 /**
  * User: maxim
@@ -19,8 +25,9 @@ import source.Writter;
  * Time: 22:35
  */
 public class FrontendTest {
-	MessageSystem mockedMs;
-	Frontend frontend;
+	MessageSystemImpl mockedMs;
+	FrontendImpl frontend;
+	AccountServiceImpl mockedAccountService;
 	Address from;
 	Address to;
 	String username;
@@ -34,22 +41,23 @@ public class FrontendTest {
 	HttpServletResponse mockedResponse;
 	Map<String, UserSession> mockedSessionIdToUserSession;
 	UserSession userSession;
-	AddressService addressService;
+	AddressServiceImpl addressService;
 	Writter w;
 	Msg msg;
 	UserSession mockedUserSession;
+	MsgUpdateUserId msgUpdateUserId;
 	@Before
 	public void setUp() throws Exception {
 		w = mock(Writter.class);
-		addressService = new AddressService();
+		addressService = new AddressServiceImpl();
 		sessionId = "5mn7m7bgm38t16e769b6thqyr";
 
 		msg = mock(Msg.class);
 
-		mockedMs = spy(new MessageSystem());
+		mockedMs = spy(new MessageSystemImpl());
 
 
-		frontend = new Frontend(mockedMs);
+		frontend = new FrontendImpl(mockedMs);
 
 		Address address = new Address();
 		userSession = mock(UserSession.class);
@@ -80,6 +88,13 @@ public class FrontendTest {
 
 		//testSetId
 		mockedUserSession = mock(UserSession.class);
+
+		//testRun
+		from = mock(Address.class);
+		//when(from)
+		mockedAccountService = mock(AccountServiceImpl.class);
+		when(mockedAccountService.getAddress()).thenReturn(from);
+
 	}
 
 	@After
@@ -90,6 +105,7 @@ public class FrontendTest {
 	@Test
 	public void testRun() throws Exception {
 		//frontend.ms.sendMessage(new MsgGetUserId(frontendAddress, accountServiveAddress, username, sessionId));
+		msgUpdateUserId = new MsgUpdateUserId(mockedAccountService.getAddress(), frontend.getAddress(), sessionId, 1L);
 
 	}
 
@@ -100,7 +116,7 @@ public class FrontendTest {
 
 	@Test
 	public void testSetId() throws Exception {
-		Frontend frontendSet = spy(frontend);
+		FrontendImpl frontendSet = spy(frontend);
 
 		//нормальный вариант
 		when(frontendSet.getUserSession(sessionId)).thenReturn(mockedUserSession);

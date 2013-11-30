@@ -1,4 +1,10 @@
-package source;
+package accountService;
+
+import base.Abonent;
+import base.AccountService;
+import base.Address;
+import base.MessageSystem;
+import messageSystem.MessageSystemImpl;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -10,14 +16,14 @@ import java.util.Map;
  * Time: 22:22
  * To change this template use File | Settings | File Templates.
  */
-public class AccountService implements Abonent, Runnable{
+public class AccountServiceImpl implements Abonent, Runnable, AccountService {
 
 	Map<String, Long> nameToUserId = new HashMap<String, Long>();
 	Address address;
-	MessageSystem ms;
+	MessageSystemImpl ms;
 
-	AccountService(MessageSystem ms){
-		this.ms = ms;
+	AccountServiceImpl(MessageSystem ms){
+		this.ms = (MessageSystemImpl)ms;
 		this.address = new Address();
 		ms.addService(this);
 		ms.getAddresService().setAccountService(address);
@@ -34,7 +40,7 @@ public class AccountService implements Abonent, Runnable{
 		}
 	}
 
-	Long getUserId(String name){
+	public Long getUserId(String name){
 		//TODO: sleep!!!
 		try {
 			System.out.println("sleep");
@@ -44,7 +50,7 @@ public class AccountService implements Abonent, Runnable{
 		System.out.println(	nameToUserId.get(name));
 		return nameToUserId.get(name);
 	}
-	MessageSystem getMessageSystem(){
+	public MessageSystem getMessageSystem(){
 		 return ms;
 	}
 }

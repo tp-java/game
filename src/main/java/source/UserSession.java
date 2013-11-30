@@ -1,5 +1,8 @@
 package source;
 
+import base.Address;
+import base.AddressService;
+
 /**
  * Created with IntelliJ IDEA.
  * User: maxim
@@ -20,19 +23,19 @@ public class UserSession {
 		this.accountService = addressService.getAccountService();
 	}
 
-	void setUserId(Long userId){
+	public void setUserId(Long userId){
 		this.userId = userId;
 	}
 
-	Address getAccountService(){
+	public Address getAccountService(){
 		return accountService;
 	}
 
-	Long getUserId(){
+	public Long getUserId(){
 		return userId;
 	}
 
-	String getUsername(){
+	public String getUsername(){
 		return name;
 	}
 

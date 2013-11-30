@@ -1,4 +1,9 @@
-package source;
+package frontend;
+
+import base.AccountService;
+import base.Address;
+import base.Msg;
+import messageSystem.MsgToAS;
 
 /**
  * Created with IntelliJ IDEA.
@@ -17,7 +22,7 @@ public class MsgGetUserId extends MsgToAS {
 		this.sessionId = sessionId;
 	}
 
-	void exec(AccountService accountService){
+	public void exec(AccountService accountService){
 		Long id = accountService.getUserId(name);
 		Msg back = new MsgUpdateUserId(getTo(), getFrom(), sessionId, id);
 		accountService.getMessageSystem().sendMessage(back);

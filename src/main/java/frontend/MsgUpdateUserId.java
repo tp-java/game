@@ -1,4 +1,8 @@
-package source;
+package frontend;
+
+import base.Address;
+import base.Frontend;
+import messageSystem.MsgToFrontend;
 
 /**
  * Created with IntelliJ IDEA.
@@ -7,7 +11,7 @@ package source;
  * Time: 22:34
  * To change this template use File | Settings | File Templates.
  */
-public class MsgUpdateUserId extends MsgToFrontend{
+public class MsgUpdateUserId extends MsgToFrontend {
 	Long id;
 	String sessionId;
 	public MsgUpdateUserId(Address from, Address to, String sessionId, Long id){
@@ -16,7 +20,7 @@ public class MsgUpdateUserId extends MsgToFrontend{
 		this.sessionId = sessionId;
 	}
 
-	void exec(Frontend frontend){
+	public void exec(Frontend frontend){
 		frontend.setId(sessionId, id);
 	}
 }

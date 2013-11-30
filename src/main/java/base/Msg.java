@@ -1,4 +1,4 @@
-package source;
+package base;
 
 /**
  * Created with IntelliJ IDEA.
@@ -14,10 +14,10 @@ public abstract class Msg {
 		this.from = from;
 		this.to = to;
 	}
-	protected Address getFrom(){
+	public Address getFrom(){
 		return from;
 	}
-	protected Address getTo(){
+	public Address getTo(){
 		return to;
 	}
 	public abstract void exec(Abonent abonent);
