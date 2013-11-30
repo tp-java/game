@@ -17,6 +17,6 @@ public class MsgChangeState extends MsgToGM {
 	}
 
 	public void exec(GameMech gameMech){
-		gameMech
+		//gameMech
 	}
 }
