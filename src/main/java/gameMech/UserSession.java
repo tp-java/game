@@ -16,6 +16,8 @@ public class UserSession {
 	private String name; // Имя юзера
 	private String sessionId;
 	private Long userId;
+	//угол здесь, координаты
+	//чендж отправляется
 
 	private Position position;
 	private Direction direction;

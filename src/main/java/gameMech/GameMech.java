@@ -26,10 +26,15 @@ public class GameMech implements Runnable, Abonent{
 		userSessions = new ArrayList<UserSession>();
 		userIdToPosition = new HashMap<>();
 		userIdToDirection = new HashMap<>();
+		// класс gameSession - обсчет текущего положения userIdToGameSession
 	}
 
 	public void run(){
-
+		while (true){
+			//обработка сообщений id, изменения, может ли применить измения
+			//расчет следующего кадра - применение физики, самолеты сдвинулись на 1 шаг
+			//отправка реплики на frontend - 1 msg для changes
+		}
 	}
 	public Address getAddress(){
 		return this.address;
