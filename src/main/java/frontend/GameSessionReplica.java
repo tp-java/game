@@ -12,10 +12,13 @@ import gameMech.Position;
 public class GameSessionReplica {
 	private Position positionL, positionR;
 	private Integer rotationL, rotationR;
-	private Integer healthL, healthR;
+	//private Integer healthL, healthR;
 
 	public GameSessionReplica(/*TODO написать  конструктор не по умолчанию*/){
-
+		this.positionL = new Position(0, 0);
+		this.positionR = new Position(900, 0);
+		this.rotationR = 0;
+		this.rotationL = 0;
 	}
 
 	public void setRotate(Boolean left, Integer degree){

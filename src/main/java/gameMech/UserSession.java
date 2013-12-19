@@ -2,6 +2,7 @@ package gameMech;
 
 import base.Address;
 import base.AddressService;
+import base.Frontend;
 import frontend.GameSessionReplica;
 
 /**
@@ -27,12 +28,15 @@ public class UserSession {
 
 	private Boolean left; //TODO push in constructor
 	private Integer gameSessionId;
-	private GameSessionReplica gameSessionReplica;
+	private GameSessionReplica gameSessionReplica = new GameSessionReplica();
+
+	private Boolean ready = false;
 
 	public UserSession(String sessionId, String name, AddressService addressService){
 		this.sessionId = sessionId;
 		this.name = name;
 		this.accountService = addressService.getAccountService();
+		this.gameMech = addressService.getGameMech();
 	}
 
 	public Boolean getLeft(){
@@ -61,6 +65,20 @@ public class UserSession {
 
 	public String getUsername(){
 		return name;
+	}
+
+	public void setGameReady(Long userId, Frontend frontend){
+		this.ready = true;
+		frontend.setReady(userId);
+		System.out.println("userSession.ready = " + this.ready + " zaglushechka called.");
+	}
+
+	public void setLeft(Boolean left){
+		this.left = left;
+	}
+
+	public void setGameSessionId(Integer gameSessionId){
+		this.gameSessionId = gameSessionId;
 	}
 
 

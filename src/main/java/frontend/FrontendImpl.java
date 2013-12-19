@@ -5,6 +5,7 @@ import base.Address;
 import base.Frontend;
 import base.MessageSystem;
 import gameMech.MsgChangeState;
+import gameMech.MsgStandToQueue;
 import gameMech.Position;
 import gameMech.UserSession;
 import messageSystem.MessageSystemImpl;
@@ -77,10 +78,20 @@ public class FrontendImpl extends HttpServlet implements Runnable, Abonent, Fron
 		}
 		userSession.setUserId(userId);
 		userIdToUserSession.put(userId, userSession);
+
+		Address frontendAddress = getAddress();
+		Address gameMechAddress = userSession.getGameMech();
+		System.out.println("frontend.setId(){");
+		ms.sendMessage(new MsgStandToQueue(frontendAddress, gameMechAddress, userId, this ));
+		System.out.println("ms.sendMessage(new MsgStandToQueue), userId= " + userId);
 	}
 
 	public void setGameSession(Long userId, GameSessionReplica gameSessionReplica){
 		getUserSession(userId).setGameSession(gameSessionReplica);
+	}
+
+	public void setReady(Long userId){
+		/*здесь берется сокет по userId и ему кидается сообщение 2.1.1.1.1.1*/
 	}
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response){
@@ -132,7 +143,7 @@ public class FrontendImpl extends HttpServlet implements Runnable, Abonent, Fron
 					response.sendRedirect("/greeting");
 				}
 			}
-        } catch (Exception e){System.out.println(e.toString());}
+        } catch (Exception e){System.out.println(e.toString()); e.printStackTrace();}
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response){
