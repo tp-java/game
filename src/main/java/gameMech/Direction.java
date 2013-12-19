@@ -21,9 +21,17 @@ public class Direction {
 		return Y;
 	}
 
-	public void sum(Direction direction){
-		this.X += direction.getX();
-		this.Y += direction.getY();
+	public void changeDirection(Integer x, Integer y){
+		//TODO: тут не просто надо X у вектора прибавлять. надо вектор изменять - x и y
+		//TODO  аргумент x - изменение градуса. Отсюда sin - y, cos - x;
+		if (this.X == 0){  //если не двигаемся, то начинаем двигаться
+			this.X += x;
+		}
+		this.Y += y;
 	}
 
+//	public void sum(Direction direction){
+//		this.X += direction.getX();
+//		this.Y += direction.getY();
+//	}
 }

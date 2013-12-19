@@ -2,6 +2,7 @@ package gameMech;
 
 import base.Address;
 import base.AddressService;
+import frontend.GameSessionReplica;
 
 /**
  * Created with IntelliJ IDEA.
@@ -12,6 +13,7 @@ import base.AddressService;
  */
 public class UserSession {
 	Address accountService;  //адрес аккаунт-сервиса (Ваш Кэп)
+	Address gameMech; //TODO push in constructor
 
 	private String name; // Имя юзера
 	private String sessionId;
@@ -19,13 +21,26 @@ public class UserSession {
 	//угол здесь, координаты
 	//чендж отправляется
 
-	private Position position;
-	private Direction direction;
+	//private Position position;
+	private Integer rotation;
+	private Integer health;
+
+	private Boolean left; //TODO push in constructor
+	private Integer gameSessionId;
+	private GameSessionReplica gameSessionReplica;
 
 	public UserSession(String sessionId, String name, AddressService addressService){
 		this.sessionId = sessionId;
 		this.name = name;
 		this.accountService = addressService.getAccountService();
+	}
+
+	public Boolean getLeft(){
+		return left;
+	}
+
+	public Integer getGameSessionId(){
+		return gameSessionId;
 	}
 
 	public void setUserId(Long userId){
@@ -34,6 +49,10 @@ public class UserSession {
 
 	public Address getAccountService(){
 		return accountService;
+	}
+
+	public Address getGameMech(){
+		return gameMech;
 	}
 
 	public Long getUserId(){
@@ -45,14 +64,34 @@ public class UserSession {
 	}
 
 
-	public void move(Direction direction){
-		this.position.move(direction);
+//	public void move(Direction direction){
+//		this.position.move(direction);
+//	}
+//	public Position getPosition(){
+//		return position;
+//	}
+
+	public void setRotate(Boolean left, Integer rotation){
+		gameSessionReplica.setRotate(left, rotation);
 	}
-	public Position getPosition(){
-		return position;
+
+	public void setGameSession(GameSessionReplica gameSessionReplica){
+		this.gameSessionReplica = gameSessionReplica;
 	}
-	public Direction getDirection(){
-		return direction;
+
+	public String getJSON(){
+		String result = "{";
+		result += "L:{";
+			result += "X:" + gameSessionReplica.getPositionL().getX() + ",";
+			result += "Y:" + gameSessionReplica.getPositionL().getY() + ",";
+			result += "R:" + gameSessionReplica.getRotationL() + "},";
+		result += "R:{";
+			result += "X:" + gameSessionReplica.getPositionR().getX() + ",";
+			result += "Y:" + gameSessionReplica.getPositionR().getY() + ",";
+			result += "R:" + gameSessionReplica.getRotationR() + "}";
+		result += "}";
+
+		return result;
 	}
 
 }

@@ -4,14 +4,13 @@ import base.Abonent;
 import base.Address;
 import base.Frontend;
 import base.MessageSystem;
+import gameMech.MsgChangeState;
+import gameMech.Position;
 import gameMech.UserSession;
 import messageSystem.MessageSystemImpl;
 import source.*;
 
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+import javax.servlet.http.*;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
@@ -28,6 +27,7 @@ public class FrontendImpl extends HttpServlet implements Runnable, Abonent, Fron
     private MessageSystemImpl ms;
 	private Address address;
 	private Map<String, UserSession> sessionIdToUserSession= new HashMap<>();
+	private Map<Long, UserSession> userIdToUserSession = new HashMap<>();
 
     Map<String, Object> data = new HashMap<String, Object>();
     Calendar date;
@@ -45,6 +45,9 @@ public class FrontendImpl extends HttpServlet implements Runnable, Abonent, Fron
 	public void run(){
 		while(true){
 			ms.execForAbonent(this);
+			try {
+				Thread.sleep(10);
+			} catch (Exception e){}
 		}
 	}
 	public Long getUserId(String sessionId){
@@ -58,6 +61,10 @@ public class FrontendImpl extends HttpServlet implements Runnable, Abonent, Fron
 		return sessionIdToUserSession.get(sessionId);
 	}
 
+	public UserSession getUserSession(Long userId){
+		return userIdToUserSession.get(userId);
+	}
+
     public void setId(String sessionId, Long userId){
 		UserSession userSession = getUserSession(sessionId);
 		if (userSession == null) {
@@ -69,6 +76,11 @@ public class FrontendImpl extends HttpServlet implements Runnable, Abonent, Fron
 			return;
 		}
 		userSession.setUserId(userId);
+		userIdToUserSession.put(userId, userSession);
+	}
+
+	public void setGameSession(Long userId, GameSessionReplica gameSessionReplica){
+		getUserSession(userId).setGameSession(gameSessionReplica);
 	}
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response){
@@ -97,6 +109,9 @@ public class FrontendImpl extends HttpServlet implements Runnable, Abonent, Fron
 					Writter.print(response, "Неправильный username");
 				} else{
 					Writter.print(response, "userId = " + userId);
+					Cookie cookie = new Cookie("id", userId.toString());
+					cookie.setMaxAge(3600 * 24 * 30);
+					response.addCookie(cookie);
 				}
 			//финально окошечко приветствия
 			}else if (requestURI.equals("/greeting")){
@@ -106,7 +121,9 @@ public class FrontendImpl extends HttpServlet implements Runnable, Abonent, Fron
 				data.put("userId",userId);
 				Writter.print(response, PageGenerator.getPage("greeting.html", data));
 			//первый приход юзера
-			} else {
+			} else if (requestURI.equals("/getstate")){
+				Writter.print(response, userSession.getJSON());
+			} else	{
 				if( (userSession == null) || (userSession.getUserId() == -1L)) {
 					data.put("sessionId", sessionId);
 					response.setContentType("text/html;charset=utf-8");
@@ -119,25 +136,42 @@ public class FrontendImpl extends HttpServlet implements Runnable, Abonent, Fron
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response){
-		handleCount++;
-		String requestUsername = request.getParameter("name");
-        if(requestUsername != null){
-			String requestSessionId = request.getSession().getId();
-			UserSession userSession = new UserSession(requestSessionId, requestUsername, ms.getAddresService());
-			sessionIdToUserSession.put(requestSessionId, userSession);
+		String requestURI = request.getRequestURI();
+		String requestSessionId = request.getSession().getId();
+		if (requestURI.equals("/")){
+			handleCount++;
+			String requestUsername = request.getParameter("name");
+			if(requestUsername != null){
+				UserSession userSession = new UserSession(requestSessionId, requestUsername, ms.getAddresService());
+				sessionIdToUserSession.put(requestSessionId, userSession);
 
+				Address frontendAddress = getAddress();
+				Address accountServiveAddress = userSession.getAccountService();
+
+				ms.sendMessage(new MsgGetUserId(frontendAddress, accountServiveAddress, requestUsername, requestSessionId));
+
+				try {
+					response.setContentType("text/html;charset=utf-8");
+					response.setStatus(HttpServletResponse.SC_OK);
+					data.put("message","Ждите авторизации");
+					Writter.print(response,PageGenerator.getPage("waiting.html", data));
+				} catch (Exception e){}
+			}
+    	} else if(requestURI.equals("/change")){
+			Integer u = request.getIntHeader("u"),
+					d = request.getIntHeader("d"),
+					r = request.getIntHeader("r"),
+					l = request.getIntHeader("l");
+			Position pos = new Position(r-l, u-d);
+			Long userId = Long.parseLong(request.getCookies()[2].getValue());
+			System.out.println(userId+100500);
+			UserSession us = userIdToUserSession.get(userId);
+			Boolean usLeft = us.getLeft();
+			Integer gsId = us.getGameSessionId();
 			Address frontendAddress = getAddress();
-			Address accountServiveAddress = userSession.getAccountService();
+			Address gameMechAddress = us.getGameMech();
 
-			ms.sendMessage(new MsgGetUserId(frontendAddress, accountServiveAddress, requestUsername, requestSessionId));
-
-			try {
-				response.setContentType("text/html;charset=utf-8");
-				response.setStatus(HttpServletResponse.SC_OK);
-				data.put("message","Ждите авторизации");
-				Writter.print(response,PageGenerator.getPage("waiting.html", data));
-			} catch (Exception e){}
+			ms.sendMessage(new MsgChangeState(frontendAddress, gameMechAddress, gsId, pos, userId, usLeft));
 		}
-
-    }
+	}
 }

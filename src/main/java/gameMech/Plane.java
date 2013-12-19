@@ -15,12 +15,12 @@ import java.util.ArrayList;
 public class Plane {
 	Direction direction;
 	Position position;
-	Integer health;
 	Boolean left;
-	Integer damage;
+	//Integer health;
+	//Integer damage;
 
-	public Plane(Boolean left, Integer damage){
-		this.damage = damage;
+	public Plane(Boolean left/*, Integer damage*/){
+		//this.damage = damage;
 		this.left = left;
 		if (left){
 			position = new Position(0, 0);
@@ -29,10 +29,20 @@ public class Plane {
 		}
 		direction = new Direction(0, 0);
 	}
-	public void damage(Integer minusHealth){
-		health -= minusHealth;
-	}
+
 	public void move(){
 		position.move(direction);
 	}
+
+	public void changeDirection(Integer x, Integer y){
+		direction.changeDirection(x, y);
+	}
+
+	public Direction getDirection(){
+		return direction;
+	}
+
+	//	public void damage(Integer minusHealth){
+//		health -= minusHealth;
+//	}
 }

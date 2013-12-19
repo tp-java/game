@@ -16,4 +16,10 @@ public class Position {
 		this.X += direction.getX();
 		this.Y +=direction.getY();
 	}
+	public Integer getX(){
+		return X;
+	}
+	public Integer getY(){
+		return Y;
+	}
 }
