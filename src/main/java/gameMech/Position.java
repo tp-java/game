@@ -22,4 +22,12 @@ public class Position {
 	public Integer getY(){
 		return Y;
 	}
+
+	@Override
+	public String toString() {
+		return "Position{" +
+				"X=" + X +
+				", Y=" + Y +
+				'}';
+	}
 }

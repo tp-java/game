@@ -15,19 +15,29 @@ import messageSystem.MsgToGM;
 
 //TODO удалить ненужные import-ы
 public class MsgUpdateState extends MsgToFrontend{
-	private Integer rotate;
-	private Boolean left;
-	private Long userId;
+	private Integer gameSessionId;
+	GameSessionReplica gameSessionReplica;
 
-	public MsgUpdateState(Address from, Address to, Integer rotate, Boolean left, Long userId){
+	public MsgUpdateState(Address from, Address to, Integer gameSessionId, GameSessionReplica gameSessionReplica){
 		super(from, to);
-		this.rotate = rotate;
-		this.left = left;
-		this.userId = userId;
+		this.gameSessionId = gameSessionId;
+		this.gameSessionReplica = gameSessionReplica;
+		System.out.println("MsgUpdateState has been created.");
+		System.out.println(toString());
+	}
+
+	@Override
+	public String toString() {
+		return "MsgUpdateState{" +
+				"gameSessionId=" + gameSessionId +
+				", gameSessionReplica=" + gameSessionReplica +
+				'}';
 	}
 
 	public void exec(Frontend frontend){
-		UserSession userSession = frontend.getUserSession(userId);
-		userSession.setRotate(left, rotate);
+		//UserSession userSession = frontend.getUserSession(userId);
+		//userSession.setRotate(left, rotate);
+		frontend.setGameSessionReplica(gameSessionId, gameSessionReplica);
+		System.out.println("frontend.setGameSessionReplica(gameSessionId, gameSessionReplica); gameSessionId= " + gameSessionId + "gameSessionReplica" + gameSessionReplica);
 	}
 }

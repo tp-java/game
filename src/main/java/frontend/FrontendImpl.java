@@ -29,6 +29,7 @@ public class FrontendImpl extends HttpServlet implements Runnable, Abonent, Fron
 	private Address address;
 	private Map<String, UserSession> sessionIdToUserSession= new HashMap<>();
 	private Map<Long, UserSession> userIdToUserSession = new HashMap<>();
+	private Map<Integer, GameSessionReplica> gameSessionIdToReplica = new HashMap<>();
 
     Map<String, Object> data = new HashMap<String, Object>();
     Calendar date;
@@ -94,6 +95,10 @@ public class FrontendImpl extends HttpServlet implements Runnable, Abonent, Fron
 		/*здесь берется сокет по userId и ему кидается сообщение 2.1.1.1.1.1*/
 	}
 
+	public void setGameSessionReplica(Integer gameSessionReplicaId, GameSessionReplica gameSessionReplica){
+		gameSessionIdToReplica.put(gameSessionReplicaId, gameSessionReplica);
+	}
+
 	public void doGet(HttpServletRequest request, HttpServletResponse response){
         try{
 			//счетчик подключений. Логируется каждые 5 секунд
@@ -133,7 +138,8 @@ public class FrontendImpl extends HttpServlet implements Runnable, Abonent, Fron
 				Writter.print(response, PageGenerator.getPage("greeting.html", data));
 			//первый приход юзера
 			} else if (requestURI.equals("/getstate")){
-				Writter.print(response, userSession.getJSON());
+				System.out.println("state requested. gameSessionIdToReplica.get(userSession.getGameSessionId()).getJSON()");
+				Writter.print(response, gameSessionIdToReplica.get(userSession.getGameSessionId()).getJSON());
 			} else	{
 				if( (userSession == null) || (userSession.getUserId() == -1L)) {
 					data.put("sessionId", sessionId);
@@ -169,20 +175,32 @@ public class FrontendImpl extends HttpServlet implements Runnable, Abonent, Fron
 				} catch (Exception e){}
 			}
     	} else if(requestURI.equals("/change")){
-			Integer u = request.getIntHeader("u"),
-					d = request.getIntHeader("d"),
-					r = request.getIntHeader("r"),
-					l = request.getIntHeader("l");
+			System.out.println("post-request on /change");
+			Integer u = Integer.parseInt(request.getParameter("u")),
+					d = Integer.parseInt(request.getParameter("d")),
+					r = Integer.parseInt(request.getParameter("r")),
+					l = Integer.parseInt(request.getParameter("l"));
 			Position pos = new Position(r-l, u-d);
-			Long userId = Long.parseLong(request.getCookies()[2].getValue());
-			System.out.println(userId+100500);
+			System.out.println("position change: " + pos.toString());
+			Cookie cookie[] = request.getCookies();
+			Long userId = -1L;
+			for (int i = 0; i < cookie.length; i++){
+				if (cookie[i].getName().equals("id")){
+					userId = Long.parseLong(cookie[i].getValue());
+				}
+			}
+			System.out.println("userId: " + userId);
 			UserSession us = userIdToUserSession.get(userId);
 			Boolean usLeft = us.getLeft();
+			System.out.println("userSession.left: " + usLeft);
 			Integer gsId = us.getGameSessionId();
+			System.out.println("gsId " + gsId);
 			Address frontendAddress = getAddress();
 			Address gameMechAddress = us.getGameMech();
 
 			ms.sendMessage(new MsgChangeState(frontendAddress, gameMechAddress, gsId, pos, userId, usLeft));
+			System.out.println("MsgChangeState has been sent. ");
+			System.out.println("MsgChangeState(frontendAddress, gameMechAddress, gsId, pos, userId, usLeft); ");
 		}
 	}
 }

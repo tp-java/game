@@ -2,25 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="691c52f7-7e8c-47d9-898e-644776978d33" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/gameMech/GameSessionFactory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/frontend/MsgSetGameSessionId.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/frontend/MsgSetLeft.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/console.log()" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/frontend/MsgSetGameSession.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/base/AddressService.java" afterPath="$PROJECT_DIR$/src/main/java/base/AddressService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/messageSystem/AddressServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/messageSystem/AddressServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/log().txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/base/Frontend.java" afterPath="$PROJECT_DIR$/src/main/java/base/Frontend.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/frontend/FrontendImpl.java" afterPath="$PROJECT_DIR$/src/main/java/frontend/FrontendImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/gameMech/GameMech.java" afterPath="$PROJECT_DIR$/src/main/java/gameMech/GameMech.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/gameMech/GameSession.java" afterPath="$PROJECT_DIR$/src/main/java/gameMech/GameSession.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/frontend/GameSessionReplica.java" afterPath="$PROJECT_DIR$/src/main/java/frontend/GameSessionReplica.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/gameMech/MsgStandToQueue.java" afterPath="$PROJECT_DIR$/src/main/java/gameMech/MsgStandToQueue.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/gameMech/MsgChangeState.java" afterPath="$PROJECT_DIR$/src/main/java/gameMech/MsgChangeState.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/frontend/MsgUpdateState.java" afterPath="$PROJECT_DIR$/src/main/java/frontend/MsgUpdateState.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/gameMech/Plane.java" afterPath="$PROJECT_DIR$/src/main/java/gameMech/Plane.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/gameMech/Position.java" afterPath="$PROJECT_DIR$/src/main/java/gameMech/Position.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/gameMech/UserSession.java" afterPath="$PROJECT_DIR$/src/main/java/gameMech/UserSession.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmpl/greeting.html" afterPath="$PROJECT_DIR$/tmpl/greeting.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="project_name.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387488611983" ignored="false" />
+    <file path="/Dummy.txt" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387534681070" ignored="false" />
     <file path="/Main.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387392150021" ignored="false" />
     <file path="/Frontend.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387478306179" ignored="false" />
     <file path="/JettyServer.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1379746592289" ignored="false" />
@@ -28,7 +24,7 @@
     <file path="/index.html" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1381007930553" ignored="false" />
     <file path="/login.html" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1381007971782" ignored="false" />
     <file path="/fragment.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387483304113" ignored="false" />
-    <file path="/UserSession.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387489993027" ignored="false" />
+    <file path="/UserSession.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387534870162" ignored="false" />
     <file path="/SessionIdGenerator.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1381601630200" ignored="false" />
     <file path="/Adress.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1382196235069" ignored="false" />
     <file path="/Abonent.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1382196387434" ignored="false" />
@@ -44,19 +40,19 @@
     <file path="/FrontendTest.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1385759844030" ignored="false" />
     <file path="/Writter.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1384706165088" ignored="false" />
     <file path="/AddressService.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387481895267" ignored="false" />
-    <file path="/FrontendImpl.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387490844239" ignored="false" />
+    <file path="/FrontendImpl.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387540678618" ignored="false" />
     <file path="/AccountServiceImpl.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1385766327151" ignored="false" />
-    <file path="/GameMech.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387489910967" ignored="false" />
+    <file path="/GameMech.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387539731569" ignored="false" />
     <file path="/MsgToGM.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1385773399010" ignored="false" />
-    <file path="/MsgUpdateState.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387391160365" ignored="false" />
-    <file path="/Plane.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387306617651" ignored="false" />
+    <file path="/MsgUpdateState.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387538847700" ignored="false" />
+    <file path="/Plane.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387540866899" ignored="false" />
     <file path="/Position.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387218339526" ignored="false" />
     <file path="/Direction.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387222543443" ignored="false" />
-    <file path="/GameSession.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387482201486" ignored="false" />
-    <file path="/MsgChangeState.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387390581513" ignored="false" />
+    <file path="/GameSession.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387538631781" ignored="false" />
+    <file path="/MsgChangeState.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387538705283" ignored="false" />
     <file path="/MsgSetState.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387302319290" ignored="false" />
     <file path="/MsgGetState.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387302870162" ignored="false" />
-    <file path="/GameSessionReplica.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387476584161" ignored="false" />
+    <file path="/GameSessionReplica.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387536451797" ignored="false" />
     <file path="/MsgStandToQueue.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387488828833" ignored="false" />
     <file path="/MsgSetGameSession.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387396083769" ignored="false" />
     <file path="/MessageSystemImpl.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387395303845" ignored="false" />
@@ -80,6 +76,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -147,7 +144,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/frontend/FrontendImpl.java" line="84" class="frontend.FrontendImpl" package="frontend">
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/frontend/FrontendImpl.java" line="85" class="frontend.FrontendImpl" package="frontend">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -192,37 +189,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/gameMech/GameMech.java" line="86" class="gameMech.GameMech" package="gameMech">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/gameMech/GameMech.java" line="102" class="gameMech.GameMech" package="gameMech">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/gameMech/GameMech.java" line="88" class="gameMech.GameMech" package="gameMech">
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/gameMech/GameMech.java" line="104" class="gameMech.GameMech" package="gameMech">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -252,67 +219,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/gameMech/GameMech.java" line="90" class="gameMech.GameMech" package="gameMech">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/gameMech/GameMech.java" line="92" class="gameMech.GameMech" package="gameMech">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/gameMech/GameMech.java" line="94" class="gameMech.GameMech" package="gameMech">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/gameMech/GameMech.java" line="96" class="gameMech.GameMech" package="gameMech">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/gameMech/GameMech.java" line="104" class="gameMech.GameMech" package="gameMech">
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/gameMech/GameMech.java" line="106" class="gameMech.GameMech" package="gameMech">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -328,7 +235,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </line_breakpoints>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -337,22 +243,13 @@
     <favorites_list name="project_name" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.44480875">
+    <splitter split-orientation="horizontal" split-proportion="0.46192893">
       <split-first>
         <leaf>
           <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/accountService/Main.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state line="24" column="13" selection-start="659" selection-end="659" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="MsgUpdateUserId.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/frontend/MsgUpdateUserId.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="23" column="38" selection-start="550" selection-end="550" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -379,25 +276,16 @@
           <file leaf-file-name="GameSessionReplica.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/frontend/GameSessionReplica.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="14" column="6" selection-start="268" selection-end="268" vertical-scroll-proportion="0.0">
+                <state line="27" column="35" selection-start="732" selection-end="732" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="MsgStandToQueue.java" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="MsgStandToQueue.java" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/gameMech/MsgStandToQueue.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="24" column="92" selection-start="653" selection-end="653" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="FrontendImpl.java" pinned="false" current="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/frontend/FrontendImpl.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="134" column="37" selection-start="4118" selection-end="4118" vertical-scroll-proportion="0.24464832">
+                <state line="23" column="23" selection-start="523" selection-end="523" vertical-scroll-proportion="0.72126436">
                   <folding />
                 </state>
               </provider>
@@ -421,68 +309,34 @@
               </provider>
             </entry>
           </file>
+          <file leaf-file-name="MsgChangeState.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/gameMech/MsgChangeState.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="52" column="29" selection-start="1573" selection-end="1573" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
         </leaf>
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="GameSession.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/gameMech/GameSession.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="13" column="23" selection-start="181" selection-end="181" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="MessageSystemImpl.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/messageSystem/MessageSystemImpl.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="39" column="5" selection-start="1058" selection-end="1058" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="UserSession.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/gameMech/UserSession.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="72" column="87" selection-start="1646" selection-end="1646" vertical-scroll-proportion="0.0">
-                  <folding />
+                <state line="65" column="26" selection-start="1430" selection-end="1430" vertical-scroll-proportion="0.0">
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="AddressService.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/base/AddressService.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="10" column="0" selection-start="197" selection-end="271" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="AccountServiceImpl.java" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="AccountServiceImpl.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/accountService/AccountServiceImpl.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="42" column="21" selection-start="975" selection-end="975" vertical-scroll-proportion="0.38235295">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="AddressServiceImpl.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/messageSystem/AddressServiceImpl.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="17" column="14" selection-start="379" selection-end="379" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Frontend.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/base/Frontend.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="15" column="38" selection-start="434" selection-end="434" vertical-scroll-proportion="0.0">
+                <state line="42" column="21" selection-start="975" selection-end="975" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -500,7 +354,7 @@
           <file leaf-file-name="GameMech.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/gameMech/GameMech.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="101" column="48" selection-start="3583" selection-end="3583" vertical-scroll-proportion="0.0">
+                <state line="98" column="84" selection-start="3381" selection-end="3381" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -510,6 +364,53 @@
             <entry file="file://$PROJECT_DIR$/src/main/java/frontend/MsgGetUserId.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state line="14" column="13" selection-start="281" selection-end="281" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="FrontendImpl.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/frontend/FrontendImpl.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="185" column="29" selection-start="6502" selection-end="6502" vertical-scroll-proportion="0.0">
+                  <folding>
+                    <element signature="e#966#982#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="MsgUpdateState.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/frontend/MsgUpdateState.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="39" column="30" selection-start="1047" selection-end="1047" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="GameSession.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/gameMech/GameSession.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="12" column="6" selection-start="170" selection-end="170" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Plane.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/gameMech/Plane.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="62" column="32" selection-start="1149" selection-end="1149" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="log().txt" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/log().txt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="128" column="0" selection-start="13074" selection-end="13074" vertical-scroll-proportion="0.9511494">
                   <folding />
                 </state>
               </provider>
@@ -535,22 +436,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/frontend/MsgSetGameSession.java" />
-        <option value="$PROJECT_DIR$/src/main/java/frontend/GameSessionReplica.java" />
-        <option value="$PROJECT_DIR$/src/main/java/base/Frontend.java" />
-        <option value="$PROJECT_DIR$/src/main/java/gameMech/GameSessionFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/frontend/MsgSetGameSessionId.java" />
-        <option value="$PROJECT_DIR$/src/main/java/base/AddressService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/messageSystem/AddressServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/gameMech/GameSession.java" />
         <option value="$PROJECT_DIR$/tmpl/greeting.html" />
         <option value="$PROJECT_DIR$/src/main/java/frontend/MsgSetLeft.java" />
         <option value="$PROJECT_DIR$/src/main/java/gameMech/MsgStandToQueue.java" />
         <option value="$PROJECT_DIR$/src/main/java/frontend/MsgSetGameReady.java" />
+        <option value="$PROJECT_DIR$/src/console.log()" />
         <option value="$PROJECT_DIR$/src/main/java/gameMech/UserSession.java" />
+        <option value="$PROJECT_DIR$/src/main/java/base/Frontend.java" />
+        <option value="$PROJECT_DIR$/src/main/java/frontend/GameSessionReplica.java" />
+        <option value="$PROJECT_DIR$/src/main/java/gameMech/Position.java" />
+        <option value="$PROJECT_DIR$/src/main/java/gameMech/GameSession.java" />
+        <option value="$PROJECT_DIR$/src/main/java/gameMech/MsgChangeState.java" />
+        <option value="$PROJECT_DIR$/src/main/java/frontend/MsgUpdateState.java" />
         <option value="$PROJECT_DIR$/src/main/java/gameMech/GameMech.java" />
         <option value="$PROJECT_DIR$/src/main/java/frontend/FrontendImpl.java" />
-        <option value="$PROJECT_DIR$/src/console.log()" />
+        <option value="$PROJECT_DIR$/src/main/java/gameMech/Plane.java" />
+        <option value="$PROJECT_DIR$/src/log().txt" />
       </list>
     </option>
   </component>
@@ -607,6 +508,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -830,7 +732,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -851,9 +752,9 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -951,6 +852,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -976,19 +890,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -1070,7 +971,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-4" width="1303" height="773" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1085,8 +986,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988048" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27091634" sideWeight="0.72" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28" sideWeight="0.7493937" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22071713" sideWeight="0.72" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28" sideWeight="0.7493937" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277311" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1159,30 +1060,16 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/base/AddressService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/gameMech/Direction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="197" selection-end="271" vertical-scroll-proportion="0.0">
+        <state line="23" column="16" selection-start="305" selection-end="305" vertical-scroll-proportion="0.45054945">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/messageSystem/AddressServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/gameMech/Position.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="14" selection-start="379" selection-end="379" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/gameMech/GameSession.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="23" selection-start="181" selection-end="181" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/frontend/MsgSetGameSessionId.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="11" selection-start="287" selection-end="287" vertical-scroll-proportion="0.0">
+        <state line="26" column="18" selection-start="400" selection-end="408" vertical-scroll-proportion="0.6779964">
           <folding />
         </state>
       </provider>
@@ -1194,34 +1081,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tmpl/greeting.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="30" selection-start="346" selection-end="346" vertical-scroll-proportion="0.5689655">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/java/jdk1.7.0_40/src.zip!/java/util/PriorityQueue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="304" column="19" selection-start="11479" selection-end="11479" vertical-scroll-proportion="0.3312102">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/frontend/MsgSetLeft.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="29" selection-start="397" selection-end="397" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/gameMech/MsgStandToQueue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="92" selection-start="653" selection-end="653" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/frontend/MsgSetGameReady.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="26" selection-start="560" selection-end="560" vertical-scroll-proportion="0.0">
@@ -1229,44 +1088,90 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/gameMech/UserSession.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/frontend/GameSessionReplica.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="87" selection-start="1646" selection-end="1646" vertical-scroll-proportion="0.0">
+        <state line="27" column="35" selection-start="732" selection-end="732" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/gameMech/GameMech.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/base/Frontend.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="48" selection-start="3583" selection-end="3583" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/frontend/MsgGetUserId.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="13" selection-start="281" selection-end="281" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/console.log()">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="0" selection-start="10396" selection-end="10396" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/frontend/FrontendImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="134" column="37" selection-start="4118" selection-end="4118" vertical-scroll-proportion="0.24464832">
+        <state line="16" column="16" selection-start="448" selection-end="448" vertical-scroll-proportion="0.41208792">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/accountService/AccountServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="21" selection-start="975" selection-end="975" vertical-scroll-proportion="0.38235295">
+        <state line="42" column="21" selection-start="975" selection-end="975" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/frontend/MsgUpdateState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="30" selection-start="1047" selection-end="1047" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/gameMech/MsgChangeState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="29" selection-start="1573" selection-end="1573" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/gameMech/MsgStandToQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="23" selection-start="523" selection-end="523" vertical-scroll-proportion="0.72126436">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/gameMech/GameMech.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="98" column="84" selection-start="3381" selection-end="3381" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/frontend/FrontendImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="185" column="29" selection-start="6502" selection-end="6502" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#966#982#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/gameMech/UserSession.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="26" selection-start="1430" selection-end="1430" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/gameMech/GameSession.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="6" selection-start="170" selection-end="170" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/gameMech/Plane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="32" selection-start="1149" selection-end="1149" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/log().txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="128" column="0" selection-start="13074" selection-end="13074" vertical-scroll-proportion="0.9511494">
           <folding />
         </state>
       </provider>

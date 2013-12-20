@@ -96,20 +96,4 @@ public class UserSession {
 	public void setGameSession(GameSessionReplica gameSessionReplica){
 		this.gameSessionReplica = gameSessionReplica;
 	}
-
-	public String getJSON(){
-		String result = "{";
-		result += "L:{";
-			result += "X:" + gameSessionReplica.getPositionL().getX() + ",";
-			result += "Y:" + gameSessionReplica.getPositionL().getY() + ",";
-			result += "R:" + gameSessionReplica.getRotationL() + "},";
-		result += "R:{";
-			result += "X:" + gameSessionReplica.getPositionR().getX() + ",";
-			result += "Y:" + gameSessionReplica.getPositionR().getY() + ",";
-			result += "R:" + gameSessionReplica.getRotationR() + "}";
-		result += "}";
-
-		return result;
-	}
-
 }

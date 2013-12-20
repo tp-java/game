@@ -14,4 +14,5 @@ public interface Frontend {
 	public UserSession getUserSession(Long userId);
 	public void setGameSession(Long userId, GameSessionReplica gameSessionReplica);
 	public void setReady(Long userId);
-}
+	public void setGameSessionReplica(Integer gameSessionReplicaId, GameSessionReplica gameSessionReplica);
+	}

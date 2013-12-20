@@ -42,6 +42,27 @@ public class Plane {
 		return direction;
 	}
 
+	public Position getPosition(){
+		return position;
+	}
+
+	@Override
+	public String toString() {
+		return "Plane{" +
+				"direction=" + direction +
+				", position=" + position +
+				", left=" + left +
+				'}';
+	}
+
+	public Integer getRotation(){
+		//тут пересчет в rotation
+		//надо добавить класс,
+		// от которого будет наследоваться plane,
+		// чтобы пули тоже так же обсчитывались
+		return direction.getY();
+	}
+
 	//	public void damage(Integer minusHealth){
 //		health -= minusHealth;
 //	}

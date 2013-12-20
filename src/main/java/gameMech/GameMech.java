@@ -73,10 +73,11 @@ public class GameMech implements Runnable, Abonent{
 		return gameSessionIdToGameSession.get(gameSessionId);
 	}
 
+	/* - теперь в plane
 	public static Integer getDegree(Direction direction){
 		//TODO: пересчет direction в градусы для фронтенда(!!!)
 		return null;
-	}
+	} */
 
 	public MessageSystem getMessageSystem(){
 		return ms;
@@ -95,6 +96,7 @@ public class GameMech implements Runnable, Abonent{
 			Integer gameSessionId = gameSessionFactory.getLastNumber();
 			System.out.println("gameSessionId= " + gameSessionId);
 			gameSessionIdToGameSession.put(gameSessionId, gameSession);
+			frontend.setGameSessionReplica(gameSessionId, gameSession.getReplica());
 			System.out.println("put()'ed gsIdToGS ");
 			ms.sendMessage(new MsgSetGameSessionId(gameMech, frontendAddr, userId, gameSessionId));
 			System.out.println("MsgSetGameSessionId has been sent. userId= " + userId + "gameSessionId= " + gameSessionId);
