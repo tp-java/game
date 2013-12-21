@@ -25,8 +25,8 @@
             <version>9.0.5.v20130815</version>
         </dependency>
 		<dependency>
-			<groupId>org.makito</groupId>
-			<artifactId>mokito-all</artifactId>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-all</artifactId>
 			<version>1.8.4</version>
 		</dependency>
 		<dependency>
@@ -34,7 +34,13 @@
 			<artifactId>selenium-java</artifactId>
 			<version>2.4.0</version>
 		</dependency>
-    </dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+		</dependency>
+
+	</dependencies>
 
 
 

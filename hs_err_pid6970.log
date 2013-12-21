@@ -476,7 +476,7 @@ ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsysca
 
 VM Arguments:
 jvm_args: -agentlib:jdwp=transport=dt_socket,address=127.0.0.1:57546,suspend=y,server=n -Dfile.encoding=UTF-8 
-java_command: Main
+java_command: accountService.Main
 Launcher Type: SUN_STANDARD
 
 Environment Variables:

@@ -1,0 +1,128 @@
+body{
+	padding-top: 100px;
+	background-color: #fcfcfc;
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 1.2em;
+	color: #222222;
+}
+.page{
+	width: 450px;
+	min-height: 200px;
+	margin: auto;
+	text-align: center;
+	border-radius: 10px;
+	border: 2px solid #111111; 
+}
+
+.row{
+	padding: 13px;
+}
+
+.row__title{
+	margin-bottom: 8px;
+}
+.row__title_greeting{
+			margin-top: 70px;
+			vertical-align: middle;
+			font-size: 22px;
+}
+.row__title__greeting__name{
+			font-weight: bold;
+}
+
+.row__id{
+	font-size: 0.8em;
+	border-radius: 5px;
+	background-color: rgba(45, 232, 17, 0.5);
+	display: inline-block;
+	padding: 5px;
+}
+
+.row__input{
+	padding: 4px;
+	display: block;
+	margin: auto;
+	margin-bottom: 8px;
+	border: 2px solid rgba(45, 232, 17, 0.8);
+	border-radius: 5px;
+	background-color: #f4f4f4;
+	outline:none;
+}
+.row__button{
+	border: 2px solid #111111;
+	border-radius: 5px;
+	color: #222222;
+	background-color: #dfdfdf;
+	cursor: pointer;
+	font-family: Verdana, Arial;
+	font-size: 14.6px;
+	padding: 2px 7px 2px 6px;
+	width: 93px;
+	height: 19px;
+	margin: auto;
+}
+.row__button > a{
+	text-decoration: none;
+	color: inherit;
+}
+.row__button_index{
+	border: 2px solid #111111;
+	border-radius: 5px;
+	color: #222222;
+	background-color: #dfdfdf;
+	cursor: pointer;
+}
+
+.response{
+	font-size: 0.8em;
+	border-radius: 5px;
+	background-color: rgba(45, 232, 17, 0.5);
+	display: inline-block;
+	padding: 5px;
+}
+
+.capture{
+	display: inline-block;
+}
+.capture__text{
+	font-size: 11px;
+	line-height: 12px;
+	display: inline-block;
+	min-width: 50px;
+	background-color: black;
+	color: white;
+	padding: 2px;
+	position: relative;
+}
+.capture__text_bottom{
+	top: -8px;
+}
+.capture__text_top{
+	top: 1px;
+}
+
+.capture__corner{
+	position: relative;
+	width: 0px;
+	border-right: 5px solid transparent;
+	border-left: 5px solid transparent;
+	margin: auto;
+}
+.capture__corner_bottom{
+	border-bottom: 5px solid black;
+}
+.capture__corner_top{
+	border-top: 5px solid black;
+}
+
+.counter-block{
+	display: inline-block;
+	height: 20px;
+	position: relative;
+	top: 0px;
+	vertical-align: top;
+}
+
+.counter-blocks{
+	margin: auto;
+}
