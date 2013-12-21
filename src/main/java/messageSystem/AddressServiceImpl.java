@@ -10,10 +10,17 @@ import base.AddressService;
  */
 public class AddressServiceImpl implements AddressService {
 	private Address accountService;
+	private Address gameMech;
 	public Address getAccountService(){
 		return accountService;
 	}
 	public void setAccountService(Address accountService){
 		this.accountService = accountService;
+	}
+	public void setGameMech(Address gameMech){
+		this.gameMech = gameMech;
+	}
+	public Address getGameMech(){
+		return gameMech;
 	}
 }
