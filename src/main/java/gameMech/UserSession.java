@@ -49,6 +49,7 @@ public class UserSession {
 
 	public void setUserId(Long userId){
 		this.userId = userId;
+		System.out.println("\tpublic void setUserId(Long userId){\n");
 	}
 
 	public Address getAccountService(){
@@ -89,7 +90,7 @@ public class UserSession {
 //		return position;
 //	}
 
-	public void setRotate(Boolean left, Integer rotation){
+	public void setRotate(Boolean left, double rotation){
 		gameSessionReplica.setRotate(left, rotation);
 	}
 

@@ -9,12 +9,24 @@ import gameMech.MsgStandToQueue;
 import gameMech.Position;
 import gameMech.UserSession;
 import messageSystem.MessageSystemImpl;
+import org.codehaus.jackson.JsonNode;
+import org.codehaus.jackson.map.ObjectMapper;
+import org.json.JSONException;
+import org.json.JSONObject;
 import source.*;
 
 import javax.servlet.http.*;
+import java.io.IOException;
+import java.net.HttpCookie;
 import java.util.Calendar;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+
+import org.eclipse.jetty.websocket.api.Session;
+import org.eclipse.jetty.websocket.api.WebSocketListener;
+import org.eclipse.jetty.websocket.servlet.*;
+
 
 /**
  * Created with IntelliJ IDEA.
@@ -24,12 +36,13 @@ import java.util.Map;
  * To change this template use File | Settings | File Templates.
  */
 
-public class FrontendImpl extends HttpServlet implements Runnable, Abonent, Frontend {
+public class FrontendImpl extends WebSocketServlet implements Runnable, Abonent, Frontend {
     private MessageSystemImpl ms;
 	private Address address;
 	private Map<String, UserSession> sessionIdToUserSession= new HashMap<>();
 	private Map<Long, UserSession> userIdToUserSession = new HashMap<>();
 	private Map<Integer, GameSessionReplica> gameSessionIdToReplica = new HashMap<>();
+	private Map<Long, SocketConnect> userIdToSocket = new HashMap<>();
 
     Map<String, Object> data = new HashMap<String, Object>();
     Calendar date;
@@ -99,6 +112,230 @@ public class FrontendImpl extends HttpServlet implements Runnable, Abonent, Fron
 		gameSessionIdToReplica.put(gameSessionReplicaId, gameSessionReplica);
 	}
 
+
+	// TODO: fix WebSockets from here
+	@Override
+	public void configure(WebSocketServletFactory webSocketServletFactory) {
+		webSocketServletFactory.getPolicy().setIdleTimeout(100000);
+		webSocketServletFactory.setCreator(new WebSocketCreator() {
+			@Override
+			public Object createWebSocket(ServletUpgradeRequest servletUpgradeRequest, ServletUpgradeResponse servletUpgradeResponse) {
+//				String path = servletUpgradeRequest.getRequestPath();
+//				String room = path.substring("/gamemechanics".length() + 1);
+// servletUpgradeResponse.addHeader("roomName",room);
+
+
+				List<HttpCookie> cookieList = servletUpgradeRequest.getCookies();
+				Long userId = -1L;
+				for (int i = 0; i < cookieList.size(); i++){
+					System.out.println(cookieList.get(i).getName());
+					if (cookieList.get(i).getName().equals("id")){
+						userId = Long.parseLong(cookieList.get(i).getValue());
+					}
+				}
+
+
+				SocketConnect socket = new SocketConnect("sss", userId);
+				// msg to GM -> room / count player
+//				if (nameToRoom.get(room) == null) {
+//					Set roomSet = new HashSet();
+//					roomSet.add(socket);
+//					nameToRoom.put(room, roomSet);
+//				} else {
+//					nameToRoom.get(room).add(socket);
+//				}
+				return socket;
+			}
+		});
+	}
+
+	private class SocketConnect implements WebSocketListener {
+		private Session session;
+		private String roomName;
+		private Long userId;
+
+		public SocketConnect(String roomName, Long userId) {
+			this.roomName = roomName;
+			this.userId = userId;
+		}
+
+		private void sendMessage(String message) {
+			try {
+				session.getRemote().sendString(message);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+
+		private void broadcast(String message) {
+//			for (SocketConnect socket : nameToRoom.get(roomName)) {
+//				if (this == socket)
+//					continue;
+//				socket.sendMessage(message);
+//			}
+		}
+
+		@Override
+		public void onWebSocketConnect(Session session) {
+			this.session = session;
+			userIdToSocket.put(userId, this);
+//			messageSystem.sendMessage(new MsgUserAdded(messageSystem.getAddressService().getAddressFE(), messageSystem.getAddressService().getAddressGM(), roomName, userId));
+			System.out.println("Socket opened. userId= " + userId);
+		}
+
+		@Override
+		public void onWebSocketBinary(byte[] payload, int offset, int len) {
+
+		}
+
+		@Override
+		public void onWebSocketClose(int statusCode, String reason) {
+//			if (nameToRoom.get(roomName) != null) {
+//				nameToRoom.get(roomName).remove(this);
+//			}
+
+		}
+
+
+
+		@Override
+		public void onWebSocketError(Throwable cause) {
+			System.out.println("Cause: " + cause);
+//			if (nameToRoom.get(roomName) != null) {
+//				nameToRoom.get(roomName).remove(this);
+//			}
+		}
+
+		@Override
+		public void onWebSocketText(String message) {
+			/*JSONObject jsonObject = new JSONObject(message);
+			String id = jsonObject.getString("id");
+			String msg = jsonObject.getString("message");
+			System.out.println(" id: " + id);
+			System.out.println(" message: " + msg);
+
+			UserSession userSession = idToUserSession.get(Long.parseLong(id));
+			String gamerLogin = userSession.getLogin();
+			Address frontend = messageSystem.getAddressService().getAddressFE();
+			Address gameMechanics = messageSystem.getAddressService().getAddressGM();
+			messageSystem.sendMessage(new MsgSendEvent(frontend, gameMechanics, gamerLogin + ": " + msg));
+			System.out.println("Socket session:");
+			System.out.println(session);
+			System.out.println("User session");
+			System.out.println(userSession);*/
+
+
+			try {
+				JSONObject jsonObject = new JSONObject(message);
+
+				double r = Double.parseDouble(jsonObject.getString("r")),
+						l = Double.parseDouble(jsonObject.getString("l"));
+				double u = Double.parseDouble(jsonObject.getString("u")),
+						d = Double.parseDouble(jsonObject.getString("d"));
+
+			//UserSession userSession = userIdToUserSession.get(Long.parseLong(id));
+			//String gamerLogin = userSession.getLogin();
+			//Address frontend = messageSystem.getAddressService().getAddressFE();
+			//Address gameMechanics = messageSystem.getAddressService().getAddressGM();
+			//messageSystem.sendMessage(new MsgSendEvent(frontend, gameMechanics, gamerLogin + ": " + msg));
+
+				Position pos = new Position(r-l, u-d);
+				System.out.println("position change: " + pos.toString());
+
+				System.out.println("userId: " + userId);
+				UserSession us = userIdToUserSession.get(userId);
+				Boolean usLeft = us.getLeft();
+				System.out.println("userSession.left: " + usLeft);
+				Integer gsId = us.getGameSessionId();
+				System.out.println("gsId " + gsId);
+				Address frontendAddress = getAddress();
+				Address gameMechAddress = us.getGameMech();
+
+				ms.sendMessage(new MsgChangeState(frontendAddress, gameMechAddress, gsId, pos, userId, usLeft));
+				System.out.println("MsgChangeState has been sent. ");
+				System.out.println("MsgChangeState(frontendAddress, gameMechAddress, gsId, pos, userId, usLeft); ");
+
+			} catch (JSONException e) {
+				e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+			}
+			broadcast("Hello");
+		}
+	}
+
+
+
+
+	/*public static void main(String[] args) throws IOException {
+		// create an ObjectMapper instance.
+		ObjectMapper mapper = new ObjectMapper();
+		String testJSON = "{L:{X:4,Y:3,R:1},R:{X:5,Y:11,R:13}}";
+		// use the ObjectMapper to read the json string and create a tree
+		JsonNode node = mapper.readTree(testJSON);
+
+		// lets see what type the node is
+		System.out.println(node.getNodeType()); // prints OBJECT
+		// is it a container
+		System.out.println(node.isContainerNode()); // prints true
+		// lets find out what fields it has
+		Iterator<String> fieldNames = node.fieldNames();
+		while (fieldNames.hasNext()) {
+			String fieldName = fieldNames.next();
+			System.out.println(fieldName);// prints title, message, errors,
+			// total,
+			// total_pages, page, limit, dataset
+		}
+
+		// we now know what elemets the container has. lets get the value for
+		// one of them
+		System.out.println(node.get("title").asText()); // prints
+		// "Free Music Archive".
+
+		// Lets look at the dataset now.
+		JsonNode dataset = node.get("dataset");
+
+		// what is its type?
+		System.out.println(dataset.getNodeType()); // Prints ARRAY
+
+		// so the dataset is an array. Lets iterate through the array and see
+		// what each of the elements are
+		Iterator<JsonNode> datasetElements = dataset.iterator();
+		while (datasetElements.hasNext()) {
+			JsonNode datasetElement = datasetElements.next();
+			// what is its type
+			System.out.println(datasetElement.getNodeType());// Prints Object
+			// it is again a container . what are the elements ?
+			Iterator<String> datasetElementFields = datasetElement.fieldNames();
+			while (datasetElementFields.hasNext()) {
+				String datasetElementField = datasetElementFields.next();
+				System.out.println(datasetElementField); // prints album_id,
+				// album_title,
+				// album_handle,
+				// album_url,
+				// album_type,
+				// artist_name,
+				// artist_url,
+				// album_producer,
+				// album_engineer,
+				// album_information,
+				// album_date_released,
+				// album_comments,
+				// album_favorites,
+				// album_tracks,
+				// album_listens,
+				// album_date_created,
+				// album_image_file,
+				// album_images
+
+			}
+			// break from the loop, since we just want to see the structure
+			break;
+
+		}
+
+	}    */
+
+
+
 	public void doGet(HttpServletRequest request, HttpServletResponse response){
         try{
 			//счетчик подключений. Логируется каждые 5 секунд
@@ -140,7 +377,7 @@ public class FrontendImpl extends HttpServlet implements Runnable, Abonent, Fron
 			} else if (requestURI.equals("/getstate")){
 				System.out.println("state requested. gameSessionIdToReplica.get(userSession.getGameSessionId()).getJSON()");
 				Writter.print(response, gameSessionIdToReplica.get(userSession.getGameSessionId()).getJSON());
-			} else	{
+			} else	if (requestURI.equals("/index")){
 				if( (userSession == null) || (userSession.getUserId() == -1L)) {
 					data.put("sessionId", sessionId);
 					response.setContentType("text/html;charset=utf-8");
@@ -176,10 +413,23 @@ public class FrontendImpl extends HttpServlet implements Runnable, Abonent, Fron
 			}
     	} else if(requestURI.equals("/change")){
 			System.out.println("post-request on /change");
-			Integer u = Integer.parseInt(request.getParameter("u")),
-					d = Integer.parseInt(request.getParameter("d")),
-					r = Integer.parseInt(request.getParameter("r")),
-					l = Integer.parseInt(request.getParameter("l"));
+			try {
+			JSONObject jsonObject = new JSONObject(request.getParameter("ss"));
+			//JSONObject L = jsonObject.getJSONObject("L");
+			//JSONObject R = jsonObject.getJSONObject("R");
+//
+//			Integer lx = Integer.parseInt(L.getString("X"));
+//			Integer ly = Integer.parseInt(L.getString("Y"));
+//			Integer lr = Integer.parseInt(L.getString("R"));
+//			Integer rx = Integer.parseInt(R.getString("X"));
+//			Integer ry = Integer.parseInt(R.getString("Y"));
+//			Integer rr = Integer.parseInt(R.getString("R"));
+
+			double r = Double.parseDouble(jsonObject.getString("r")),
+					l = Double.parseDouble(jsonObject.getString("l"));
+			double	u = Double.parseDouble(jsonObject.getString("u")),
+					d = Double.parseDouble(jsonObject.getString("d"));
+
 			Position pos = new Position(r-l, u-d);
 			System.out.println("position change: " + pos.toString());
 			Cookie cookie[] = request.getCookies();
@@ -201,6 +451,9 @@ public class FrontendImpl extends HttpServlet implements Runnable, Abonent, Fron
 			ms.sendMessage(new MsgChangeState(frontendAddress, gameMechAddress, gsId, pos, userId, usLeft));
 			System.out.println("MsgChangeState has been sent. ");
 			System.out.println("MsgChangeState(frontendAddress, gameMechAddress, gsId, pos, userId, usLeft); ");
+			} catch (JSONException e) {
+				e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+			}
 		}
 	}
 }

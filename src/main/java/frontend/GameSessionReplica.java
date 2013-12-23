@@ -11,24 +11,24 @@ import gameMech.Position;
 //TODO сделать как внутренний класс FrontendImpl
 public class GameSessionReplica {
 	private Position positionL, positionR;
-	private Integer rotationL, rotationR;
+	private double rotationL, rotationR;
 	//private Integer healthL, healthR;
 
 	public GameSessionReplica(/*TODO написать  конструктор не по умолчанию*/){
-		this.positionL = new Position(0, 0);
-		this.positionR = new Position(900, 0);
-		this.rotationR = 0;
-		this.rotationL = 0;
+		this.positionL = new Position(0.0, 0.0);
+		this.positionR = new Position(900.0, 0.0);
+		this.rotationR = 0.0;
+		this.rotationL = 0.0;
 	}
 
-	public GameSessionReplica(Position positionL, Integer rotationL, Position positionR, Integer rotationR){
+	public GameSessionReplica(Position positionL, double rotationL, Position positionR, double rotationR){
 		this.positionL = positionL;
 		this.positionR = positionR;
 		this.rotationR = rotationR;
 		this.rotationL = rotationL;
 	}
 
-	public void setRotate(Boolean left, Integer degree){
+	public void setRotate(Boolean left, double degree){
 		if (left){
 			rotationL = degree;
 		}else {
@@ -44,11 +44,11 @@ public class GameSessionReplica {
 		return positionR;
 	}
 
-	public Integer getRotationL(){
+	public double getRotationL(){
 		return rotationL;
 	}
 
-	public Integer getRotationR(){
+	public double getRotationR(){
 		return rotationR;
 	}
 

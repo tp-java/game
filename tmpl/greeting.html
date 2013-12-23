@@ -2,14 +2,39 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="style_new.css">
+	<script type="text/javascript">
+		var socket = new WebSocket("ws://localhost:8078/game");
+		socket.onopen = function() {
+		  alert("Соединение установлено.");
+		  socket.send("{r:1,l:0,u:1,d:0}")
+		};
+		 
+		socket.onclose = function(event) {
+		  if (event.wasClean) {
+		    alert('Соединение закрыто чисто');
+		  } else {
+		    alert('Обрыв соединения'); // например, "убит" процесс сервера
+		  }
+		  alert('Код: ' + event.code + ' причина: ' + event.reason);
+		};
+		  
+		socket.onmessage = function(event) {
+		  alert("Получены данные " + event.data);
+		};
+		 
+		socket.onerror = function(error) {
+		  alert("Ошибка " + error.message);
+		};
 
+	</script>
 </head>
 <body>
 	<div class="page">
 		<div class="row__title_greeting">
 			Здравствуйте, <span class="row__title__greeting__name">${username}</span>. Ваш userId = <span class="row__title__greeting__name">${userId}</span>
 		</div>
-		<a href="/">на главную</a>
+		<a href="/index">на главную</a>
 	</div>
+
 </body>
 </html>

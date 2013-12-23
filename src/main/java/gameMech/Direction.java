@@ -6,30 +6,46 @@ package gameMech;
  * Time: 5:39
  */
 public class Direction {
-	private Integer X;
-	private Integer Y;
-	public Direction(Integer X, Integer Y){
+	private double X;
+	private double Y;
+	public Direction(double X, double Y){
 		this.X = X;
 		this.Y = Y;
 	}
 
-	public Integer getX(){
+	public double getX(){
 		return X;
 	}
 
-	public Integer getY(){
+	public double getY(){
 		return Y;
 	}
 
-	public void changeDirection(Integer x, Integer y){
+	public void changeY(double y){
 		//TODO: тут не просто надо X у вектора прибавлять. надо вектор изменять - x и y
 		//TODO  аргумент x - изменение градуса. Отсюда sin - y, cos - x;
-		if (this.X == 0){  //если не двигаемся, то начинаем двигаться
-			this.X += x;
-		}
-		this.Y += y;
+		//если не двигаемся, то начинаем двигаться - убрали
+		System.out.println("");
+		System.out.println("");
+		System.out.println("public void changeDirection(double y) y= " + y);
+		System.out.println("");
+		System.out.println("");
+
+		this.Y = y;
 	}
 
+	public void changeX(double x){
+		if (this.X != 0)
+			this.X += x;
+	}
+
+	@Override
+	public String toString() {
+		return "Direction{" +
+				"X=" + X +
+				", Y=" + Y +
+				'}';
+	}
 //	public void sum(Direction direction){
 //		this.X += direction.getX();
 //		this.Y += direction.getY();

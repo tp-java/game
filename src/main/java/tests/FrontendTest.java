@@ -1,4 +1,4 @@
-package source;
+package tests;
 
 import static org.mockito.Mockito.*;
 
@@ -13,6 +13,7 @@ import messageSystem.MessageSystemImpl;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import source.Writter;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

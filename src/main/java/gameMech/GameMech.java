@@ -83,6 +83,29 @@ public class GameMech implements Runnable, Abonent{
 		return ms;
 	}
 
+	public static double findAngle(double aX, double aY, double bX, double bY) { //aX=1 aY=0        тест на параметры 1 0 0 0
+		double cos = ((aX * bX) + (aY * bY))/(Math.pow((Math.pow(aX, 2)) + (Math.pow(aY, 2)), 0.5) *
+				(Math.pow((Math.pow(bX, 2)) + (Math.pow(bY, 2)), 0.5)));
+		if (bX < 0 || bY < 0){
+			return Math.round(Math.toDegrees(Math.acos(cos)));
+		}else{
+			return Math.round(Math.toDegrees(Math.acos(cos)));
+		}
+	}
+
+	public static Direction getVector(double aX, double aY, double degree, Boolean left) {
+		double newX;
+		double newY;
+		if(left){
+			newX = aX * Math.round(Math.cos(Math.toRadians(degree))) - aY * Math.round(Math.sin(Math.toRadians(degree)));
+			newY = aX * Math.round(Math.sin(Math.toRadians(degree))) + aY * Math.round(Math.cos(Math.toRadians(degree)));
+		} else {
+			newX = aX * Math.round(Math.cos(Math.toRadians(degree))) + aY * Math.round(Math.sin(Math.toRadians(degree)));
+			newY = Math.round(-aX * Math.sin(Math.toRadians(degree)) + aY * Math.cos(Math.toRadians(degree)));
+		}
+		return new Direction(newX, newY);
+	}
+
 	public void setToQueue(Long userId, Address gameMech, Address frontendAddr, Frontend frontend){
 		System.out.println("GM.setToQueue is working. userId= " + userId);
 		if (usersQueue.size() == 0){
