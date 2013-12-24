@@ -6,6 +6,9 @@ import frontend.MsgSetGameSessionId;
 import frontend.MsgSetLeft;
 import messageSystem.MessageSystemImpl;
 
+import java.math.BigDecimal;
+import java.math.MathContext;
+import java.math.RoundingMode;
 import java.util.*;
 
 /**
@@ -13,6 +16,8 @@ import java.util.*;
  * Date: 30.11.13
  * Time: 4:55
  */
+
+//TODO: сейчас ограничение: не двигаешься - не стреляешь
 public class GameMech implements Runnable, Abonent{
 	private MessageSystemImpl ms;
 	private Address address;
@@ -24,6 +29,9 @@ public class GameMech implements Runnable, Abonent{
 
 //	private Map<Long,Position> userIdToPosition;
 //	private Map<Long,Direction> userIdToDirection;
+
+	//тригонометрическо-округляющая магия
+	public static final MathContext myMathContext = new MathContext(6, RoundingMode.HALF_UP);
 
 	private GameSessionFactory gameSessionFactory;
 
@@ -46,8 +54,9 @@ public class GameMech implements Runnable, Abonent{
 			//отправка реплики на frontend - 1 msg для changes
 			//for (int i=gameSessionsIds.)
 			ms.execForAbonent(this);
+			move();
 			try {
-				Thread.sleep(10);
+				Thread.sleep(1000);
 			} catch (Exception e){}
 		}
 	}
@@ -62,11 +71,16 @@ public class GameMech implements Runnable, Abonent{
 	}
 
 	//TODO: запилить сюда проверку на столкновение
-	public void move(Long userId, Direction direction){
+	public void move(/*Long userId, Direction direction*/){
 //		Position position = userIdToPosition.get(userId);
 //		Direction userDirection = userIdToDirection.get(userId);
 //		userDirection.sum(direction);// изменили направление движения
 //		position.move(direction);
+		for (int i=0; i<=gameSessionFactory.getLastNumber(); i++){
+			GameSession gameSession = gameSessionIdToGameSession.get(i);
+			gameSession.planeL.move();
+			gameSession.planeR.move();
+		}
 	}
 
 	public GameSession getGameSession(Integer gameSessionId){
@@ -94,16 +108,18 @@ public class GameMech implements Runnable, Abonent{
 	}
 
 	public static Direction getVector(double aX, double aY, double degree, Boolean left) {
-		double newX;
-		double newY;
+		//double newX;
+		//double newY;
+		BigDecimal newX, newY;
 		if(left){
-			newX = aX * Math.round(Math.cos(Math.toRadians(degree))) - aY * Math.round(Math.sin(Math.toRadians(degree)));
-			newY = aX * Math.round(Math.sin(Math.toRadians(degree))) + aY * Math.round(Math.cos(Math.toRadians(degree)));
+			//newX = new BigDecimal(aX, myMathContext).multiply(new BigDecimal(Math.cos(Math.toRadians(degree)), myMathContext), myMathContext).subtract(new BigDecimal(aY, myMathContext).multiply( new BigDecimal(Math.sin(Math.toRadians(degree)), myMathContext), myMathContext), myMathContext);
+			newX = new BigDecimal(aX * Math.cos(Math.toRadians(degree)) - aY * Math.sin(Math.toRadians(degree)), myMathContext);
+			newY = new BigDecimal(aX * Math.sin(Math.toRadians(degree)) + aY * Math.cos(Math.toRadians(degree)), myMathContext);
 		} else {
-			newX = aX * Math.round(Math.cos(Math.toRadians(degree))) + aY * Math.round(Math.sin(Math.toRadians(degree)));
-			newY = Math.round(-aX * Math.sin(Math.toRadians(degree)) + aY * Math.cos(Math.toRadians(degree)));
+			newX = new BigDecimal(aX * Math.cos(Math.toRadians(degree)) + aY * Math.sin(Math.toRadians(degree)), myMathContext);
+			newY = new BigDecimal(-aX * Math.sin(Math.toRadians(degree)) + aY * Math.cos(Math.toRadians(degree)), myMathContext);
 		}
-		return new Direction(newX, newY);
+		return new Direction(newX.setScale(4, RoundingMode.HALF_UP).doubleValue(), newY.setScale(4, RoundingMode.HALF_UP).doubleValue());
 	}
 
 	public void setToQueue(Long userId, Address gameMech, Address frontendAddr, Frontend frontend){

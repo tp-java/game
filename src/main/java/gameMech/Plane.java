@@ -2,6 +2,9 @@ package gameMech;
 
 import javafx.util.Pair;
 
+import java.math.BigDecimal;
+import java.math.MathContext;
+import java.math.RoundingMode;
 import java.util.ArrayList;
 
 /**
@@ -18,7 +21,8 @@ public class Plane {
 	Boolean left;
 	//Integer health;
 	//Integer damage;
-
+	//тригонометрическо-округляющая магия
+	public static final MathContext myMathContext = new MathContext(6, RoundingMode.HALF_UP);
 	public Plane(Boolean left/*, Integer damage*/){
 		//this.damage = damage;
 		this.left = left;
@@ -36,31 +40,52 @@ public class Plane {
 
 	public void changeDirection(double x, double y){
 		System.out.println("changeDirection(double x, double y) x= " + Math.round(x) + " y= " + Math.round(y));
-		double rotate;
-		if (left){
-			rotate = GameMech.findAngle(1.0, 0.0, direction.getX(), direction.getY());
-		} else{
-			rotate = GameMech.findAngle(-1.0, 0.0, direction.getX(), direction.getY());
+//		double rotate;
+//		if (left){
+//			rotate = GameMech.findAngle(1.0, 0.0, direction.getX(), direction.getY());
+//		} else{
+//			rotate = GameMech.findAngle(-1.0, 0.0, direction.getX(), direction.getY());
+//		}
+		if (!(direction.getX() == 0  &&  direction.getY()== 0  &&  x == 0)){
+			double  oldX = direction.getX(),
+					oldY = direction.getY(),
+					length = (new BigDecimal(Math.sqrt(oldX*oldX + oldY*oldY), myMathContext)).setScale(4, RoundingMode.HALF_UP).doubleValue(),
+					newX, newY;
+			if (oldX != 0  || oldY !=0){
+				if (oldX >= 0){
+					newX = oldX + x*oldX/length;
+				} else {
+					newX = oldX - x*oldX/length;
+				}
+
+				if (oldY >= 0){
+					newY = oldY + x*oldY/length;
+				} else {
+					newY = oldY - x*oldY/length;
+				}
+			} else {
+				if (left){
+					newX = 1.0;
+				} else {
+					newX = -1.0;
+				}
+				newY = 0.0;
+			}
+			//newX = (oldX != 0  || oldY !=0)  ?  ((oldX >= 0)? oldX + x*oldX/length : oldX - x*oldX/length)  :  ((left)?1.0:-1.0);
+
+
+			//newY = (oldX != 0  || oldY !=0)  ?  ((oldY >= 0)? oldY + x*oldY/length : oldY - x*oldY/length)  :  0;
+
+			Direction newDirection = new Direction(newX, newY);
+			if (this.left){
+				newDirection = GameMech.getVector(newDirection.getX(), newDirection.getY(), y, true);
+			} else {
+				newDirection = GameMech.getVector(newDirection.getX(), newDirection.getY(), y, false);
+			}
+
+			System.out.println("new Direction: " + newDirection);
+			direction = newDirection;
 		}
-		System.out.println("rotate= " + rotate);
-
-
-		double  oldX = direction.getX(),
-				oldY = direction.getY(),
-				length = Math.round(Math.sqrt(oldX*oldX + oldY*oldY)), //maybe Math.round()
-				newX = ((oldX > 0)? oldX + x*oldX/length : oldX - x*oldX/length),
-				newY = ((oldY > 0)? oldY + x*oldY/length : oldY - x*oldY/length);
-
-		Direction newDirection = new Direction(newX, newY);
-		if (this.left){
-			newDirection = GameMech.getVector(newDirection.getX(), newDirection.getY(), rotate, true);
-		} else {
-			newDirection = GameMech.getVector(newDirection.getX(), newDirection.getY(), rotate, false);
-		}
-		System.out.println("new Direction: " + newDirection);
-		System.out.println("");
-		System.out.println("");
-		direction = newDirection; //x прибавляется, vectorY приравнивается
 	}
 
 	public Direction getDirection(){

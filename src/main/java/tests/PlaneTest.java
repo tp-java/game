@@ -38,9 +38,9 @@ public class PlaneTest {
 		double delta = 0.0,
 				expected,
 				actual;
-
+		System.out.println("planeL test:");
+		System.out.println("planeL.changeDirection(0.0, 45.0);");
 		planeL.changeDirection(0.0, 45.0);
-		planeR.changeDirection(0.0, 45.0);
 
 		actual = planeL.getDirection().getX();
 		expected = 0.0;
@@ -49,7 +49,38 @@ public class PlaneTest {
 		actual = planeL.getDirection().getY();
 		expected = 1.0;
 		assertEquals(expected, actual, delta);
+		System.out.println("\taccept\n");
 
+
+		System.out.println("planeL.changeDirection(1.0, 0.0);");
+		planeL.changeDirection(1.0, 0.0);
+
+		actual = planeL.getDirection().getX();
+		expected = 0.0;
+		assertEquals(expected, actual, delta);
+
+		actual = planeL.getDirection().getY();
+		expected = 2.0;
+		assertEquals(expected, actual, delta);
+		System.out.println("\taccept\n");
+
+
+		System.out.println("planeL.changeDirection(-1.0, -45.0);");
+		planeL.changeDirection(-1.0, -45.0);
+
+		actual = planeL.getDirection().getX();
+		expected = 0.7071;
+		assertEquals(expected, actual, delta);
+
+		actual = planeL.getDirection().getY();
+		expected = 0.7071;
+		assertEquals(expected, actual, delta);
+		System.out.println("\taccept\n");
+
+
+		System.out.println("planeR test.");
+		System.out.println("planeR.changeDirection(0.0, 45.0);");
+		planeR.changeDirection(0.0, 45.0);
 		actual = planeR.getDirection().getX();
 		expected = 0.0;
 		assertEquals(expected, actual, delta);
@@ -57,6 +88,33 @@ public class PlaneTest {
 		actual = planeR.getDirection().getY();
 		expected = 1.0;
 		assertEquals(expected, actual, delta);
+		System.out.println("\taccept\n");
+
+
+		System.out.println("planeR.changeDirection(1.0, 0.0);");
+		planeR.changeDirection(1.0, 0.0);
+
+		actual = planeR.getDirection().getX();
+		expected = 0.0;
+		assertEquals(expected, actual, delta);
+
+		actual = planeR.getDirection().getY();
+		expected = 2.0;
+		assertEquals(expected, actual, delta);
+		System.out.println("\taccept\n");
+
+
+		System.out.println("planeR.changeDirection(-1.0, -45.0);");
+		planeR.changeDirection(-1.0, -45.0);
+
+		actual = planeR.getDirection().getX();
+		expected = -0.7071;
+		assertEquals(expected, actual, delta);
+
+		actual = planeR.getDirection().getY();
+		expected = 0.7071;
+		assertEquals(expected, actual, delta);
+		System.out.println("\taccept\n");
 
 
 	}

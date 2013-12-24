@@ -36,6 +36,7 @@ import org.eclipse.jetty.websocket.servlet.*;
  * To change this template use File | Settings | File Templates.
  */
 
+//TODO поведение, если такой пользователь уже зашел
 public class FrontendImpl extends WebSocketServlet implements Runnable, Abonent, Frontend {
     private MessageSystemImpl ms;
 	private Address address;
@@ -116,7 +117,7 @@ public class FrontendImpl extends WebSocketServlet implements Runnable, Abonent,
 	// TODO: fix WebSockets from here
 	@Override
 	public void configure(WebSocketServletFactory webSocketServletFactory) {
-		webSocketServletFactory.getPolicy().setIdleTimeout(100000);
+		webSocketServletFactory.getPolicy().setIdleTimeout(1000000000);
 		webSocketServletFactory.setCreator(new WebSocketCreator() {
 			@Override
 			public Object createWebSocket(ServletUpgradeRequest servletUpgradeRequest, ServletUpgradeResponse servletUpgradeResponse) {
@@ -261,80 +262,6 @@ public class FrontendImpl extends WebSocketServlet implements Runnable, Abonent,
 			broadcast("Hello");
 		}
 	}
-
-
-
-
-	/*public static void main(String[] args) throws IOException {
-		// create an ObjectMapper instance.
-		ObjectMapper mapper = new ObjectMapper();
-		String testJSON = "{L:{X:4,Y:3,R:1},R:{X:5,Y:11,R:13}}";
-		// use the ObjectMapper to read the json string and create a tree
-		JsonNode node = mapper.readTree(testJSON);
-
-		// lets see what type the node is
-		System.out.println(node.getNodeType()); // prints OBJECT
-		// is it a container
-		System.out.println(node.isContainerNode()); // prints true
-		// lets find out what fields it has
-		Iterator<String> fieldNames = node.fieldNames();
-		while (fieldNames.hasNext()) {
-			String fieldName = fieldNames.next();
-			System.out.println(fieldName);// prints title, message, errors,
-			// total,
-			// total_pages, page, limit, dataset
-		}
-
-		// we now know what elemets the container has. lets get the value for
-		// one of them
-		System.out.println(node.get("title").asText()); // prints
-		// "Free Music Archive".
-
-		// Lets look at the dataset now.
-		JsonNode dataset = node.get("dataset");
-
-		// what is its type?
-		System.out.println(dataset.getNodeType()); // Prints ARRAY
-
-		// so the dataset is an array. Lets iterate through the array and see
-		// what each of the elements are
-		Iterator<JsonNode> datasetElements = dataset.iterator();
-		while (datasetElements.hasNext()) {
-			JsonNode datasetElement = datasetElements.next();
-			// what is its type
-			System.out.println(datasetElement.getNodeType());// Prints Object
-			// it is again a container . what are the elements ?
-			Iterator<String> datasetElementFields = datasetElement.fieldNames();
-			while (datasetElementFields.hasNext()) {
-				String datasetElementField = datasetElementFields.next();
-				System.out.println(datasetElementField); // prints album_id,
-				// album_title,
-				// album_handle,
-				// album_url,
-				// album_type,
-				// artist_name,
-				// artist_url,
-				// album_producer,
-				// album_engineer,
-				// album_information,
-				// album_date_released,
-				// album_comments,
-				// album_favorites,
-				// album_tracks,
-				// album_listens,
-				// album_date_created,
-				// album_image_file,
-				// album_images
-
-			}
-			// break from the loop, since we just want to see the structure
-			break;
-
-		}
-
-	}    */
-
-
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response){
         try{
