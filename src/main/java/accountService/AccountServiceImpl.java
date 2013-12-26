@@ -29,10 +29,7 @@ public class AccountServiceImpl implements Abonent, Runnable, AccountService {
 		ms.addService(this);
 		ms.getAddresService().setAccountService(address);
         Map<String, Long> nameToUserId = new HashMap<String, Long>();
-        connection = Database.getConnect();
-        if (connection != null) {
-            System.out.print("Updated: " + Database.set(connection, nameToUserId, "javabase") + "\n");
-        }
+        connection = Database.getConnect("tp_query", "root", "1234");
 	}
 
 	public Address getAddress(){
@@ -54,8 +51,11 @@ public class AccountServiceImpl implements Abonent, Runnable, AccountService {
 			Thread.sleep(3000);
 		} catch (Exception e){}
 		System.out.println("wake");
-		return Database.get(connection, name, "javabase");
+		return Database.get(connection, name);
 	}
+    public int setUserName (Connection connection, String name, String tableName) {
+        return Database.set(connection, name);
+    }
 	public MessageSystem getMessageSystem(){
 		 return ms;
 	}

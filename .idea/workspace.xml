@@ -2,28 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="691c52f7-7e8c-47d9-898e-644776978d33" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/database/Database.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/source/DatabaseTest.java" />
-      <change type="DELETED" beforePath="C:\Users\Konstantin\IdeaProjects\game\я мыслю =&gt; существую" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/accountService/AccountServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/accountService/AccountServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/frontend/FrontendImpl.java" afterPath="$PROJECT_DIR$/src/main/java/frontend/FrontendImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/accountService/Main.java" afterPath="$PROJECT_DIR$/src/main/java/accountService/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/database/Database.java" afterPath="$PROJECT_DIR$/src/main/java/database/Database.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/source/DatabaseTest.java" afterPath="$PROJECT_DIR$/src/main/java/source/DatabaseTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/gameMech/UserSession.java" afterPath="$PROJECT_DIR$/src/main/java/gameMech/UserSession.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project_name.iml" afterPath="$PROJECT_DIR$/project_name.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="project_name.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387869845283" ignored="false" />
-    <file path="/Main.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387870703184" ignored="false" />
+    <file path="/Dummy.txt" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1388058590085" ignored="false" />
+    <file path="/Main.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1388082127287" ignored="false" />
     <file path="/Frontend.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387478306179" ignored="false" />
     <file path="/JettyServer.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1379746592289" ignored="false" />
     <file path="/PageGenerator.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1379745594490" ignored="false" />
     <file path="/index.html" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1381007930553" ignored="false" />
     <file path="/login.html" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1381007971782" ignored="false" />
     <file path="/fragment.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387832940889" ignored="false" />
-    <file path="/UserSession.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387801351833" ignored="false" />
+    <file path="/UserSession.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1388059905814" ignored="false" />
     <file path="/SessionIdGenerator.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1381601630200" ignored="false" />
     <file path="/Adress.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1382196235069" ignored="false" />
     <file path="/Abonent.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1382196387434" ignored="false" />
@@ -40,7 +35,7 @@
     <file path="/Writter.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1384706165088" ignored="false" />
     <file path="/AddressService.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387481895267" ignored="false" />
     <file path="/FrontendImpl.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387633578805" ignored="false" />
-    <file path="/AccountServiceImpl.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387632570095" ignored="false" />
+    <file path="/AccountServiceImpl.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1388081259537" ignored="false" />
     <file path="/GameMech.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387539731569" ignored="false" />
     <file path="/MsgToGM.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1385773399010" ignored="false" />
     <file path="/MsgUpdateState.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387538847700" ignored="false" />
@@ -61,10 +56,10 @@
     <file path="/MsgSetGameSessionId.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387479254719" ignored="false" />
     <file path="/AddressServiceImpl.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387481965030" ignored="false" />
     <file path="/greeting.html" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387482812799" ignored="false" />
-    <file path="/Database.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387831804930" ignored="false" />
+    <file path="/Database.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1388081764793" ignored="false" />
     <file path="$PROJECT_DIR$/../Mavensample/src/test/java/qqTest.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387623665295" ignored="false" />
     <file path="/qqTest.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387623527036" ignored="false" />
-    <file path="/DatabaseTest.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387834739046" ignored="false" />
+    <file path="/DatabaseTest.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1388080953189" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,10 +197,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file leaf-file-name="DatabaseTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/source/DatabaseTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="31" selection-start="1831" selection-end="1831" vertical-scroll-proportion="0.0">
+            <state line="23" column="40" selection-start="528" selection-end="528" vertical-scroll-proportion="-3.76">
               <folding />
             </state>
           </provider>
@@ -214,18 +209,9 @@
       <file leaf-file-name="Database.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/database/Database.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="86" column="18" selection-start="2929" selection-end="2934" vertical-scroll-proportion="-46.72">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DatabaseTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/source/DatabaseTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="66" selection-start="1141" selection-end="1141" vertical-scroll-proportion="0.0">
+            <state line="37" column="64" selection-start="1157" selection-end="1157" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#698#712#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -235,6 +221,15 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/accountService/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="35" column="45" selection-start="1054" selection-end="1054" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FrontendTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/source/FrontendTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="100" column="10" selection-start="2898" selection-end="2903" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -245,34 +240,7 @@
       <file leaf-file-name="AccountServiceImpl.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/accountService/AccountServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="55" selection-start="1459" selection-end="1459" vertical-scroll-proportion="1.2252252">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AccountService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/base/AccountService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="17" selection-start="115" selection-end="115" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FrontendTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/source/FrontendTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="163" column="0" selection-start="5953" selection-end="5953" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FrontendImpl.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/frontend/FrontendImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="134" column="0" selection-start="4145" selection-end="4145" vertical-scroll-proportion="0.0">
+            <state line="56" column="44" selection-start="1461" selection-end="1461" vertical-scroll-proportion="0.6917148">
               <folding />
             </state>
           </provider>
@@ -281,7 +249,25 @@
       <file leaf-file-name="UserSession.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/gameMech/UserSession.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="55" selection-start="1552" selection-end="1552" vertical-scroll-proportion="0.0">
+            <state line="65" column="78" selection-start="1493" selection-end="1519" vertical-scroll-proportion="-12.48">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MsgUpdateUserId.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/frontend/MsgUpdateUserId.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="19" selection-start="531" selection-end="531" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FrontendImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/frontend/FrontendImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="79" column="35" selection-start="2196" selection-end="2196" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -312,14 +298,14 @@
         <option value="$PROJECT_DIR$/src/log().txt" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/frontend/FrontendImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/accountService/AccountServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/gameMech/UserSession.java" />
         <option value="$PROJECT_DIR$/src/main/java/source/FrontendTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/messageSystem/DatabaseTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/source/DatabaseTestTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/database/Database.java" />
         <option value="$PROJECT_DIR$/src/main/java/database/DatabaseTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/database/Database.java" />
         <option value="$PROJECT_DIR$/src/main/java/source/DatabaseTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/accountService/AccountServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/gameMech/UserSession.java" />
         <option value="$PROJECT_DIR$/src/main/java/accountService/Main.java" />
       </list>
     </option>
@@ -364,10 +350,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1592" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1096" />
+    <option name="width" value="1616" />
+    <option name="height" value="916" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -631,12 +617,12 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
-    <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -655,7 +641,7 @@
       <recent name="$PROJECT_DIR$/tmpl" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DatabaseTest">
+  <component name="RunManager" selected="Application.Main">
     <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="accountService.Main" />
       <option name="VM_PARAMETERS" />
@@ -740,8 +726,40 @@
       </option>
       <envs />
       <patterns />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="DatabaseTest.testDeleted" type="JUnit" factoryName="JUnit" temporary="true">
+      <module name="project_name" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="source" />
+      <option name="MAIN_CLASS_NAME" value="source.DatabaseTest" />
+      <option name="METHOD_NAME" value="testDeleted" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <ConfigurationWrapper RunnerId="Debug" />
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -780,6 +798,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -805,19 +836,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -854,18 +872,20 @@
       <patterns />
       <method />
     </configuration>
-    <list size="4">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Application.Main" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.FrontendTest" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.FrontendTest.testSetId" />
       <item index="3" class="java.lang.String" itemvalue="JUnit.DatabaseTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.DatabaseTest.testDeleted" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.DatabaseTest" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Main" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.DatabaseTest" />
         <item index="2" class="java.lang.String" itemvalue="JUnit.FrontendTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.FrontendTest.testSetId" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.DatabaseTest.testDeleted" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.FrontendTest.testSetId" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -920,27 +940,27 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1592" y="-8" width="1936" height="1096" extended-state="6" />
+    <frame x="-8" y="-8" width="1616" height="916" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32674572" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49002492" sideWeight="0.4995958" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44268775" sideWeight="0.4995958" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.312" sideWeight="0.5004042" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3054863" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3030303" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32917705" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24919957" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1949807" sideWeight="0.7201592" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18569905" sideWeight="0.7369542" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2630458" sideWeight="0.7493937" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22393823" sideWeight="0.71805006" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28194994" sideWeight="0.7493937" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32686567" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1010,88 +1030,88 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/gameMech/UserSession.java">
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.10.jar!/org/junit/runners/model/FrameworkMethod.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="55" selection-start="1552" selection-end="1552" vertical-scroll-proportion="0.0">
+        <state line="13" column="28" selection-start="504" selection-end="504" vertical-scroll-proportion="-4.2">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.1.17/mysql-connector-java-5.1.17.jar!/com/mysql/jdbc/ResultSetImpl.class">
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.7.0_40/src.zip!/java/lang/reflect/Method.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="589" column="19" selection-start="34105" selection-end="34105" vertical-scroll-proportion="-5.48" />
+        <state line="605" column="0" selection-start="24861" selection-end="24861" vertical-scroll-proportion="0.226">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.1.17/mysql-connector-java-5.1.17.jar!/com/mysql/jdbc/ConnectionImpl.class">
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.10.jar!/org/junit/internal/runners/statements/RunAfters.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="421" column="38" selection-start="22259" selection-end="22259" vertical-scroll-proportion="0.34285715" />
+        <state line="13" column="16" selection-start="612" selection-end="612" vertical-scroll-proportion="0.44155845">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.1.17/mysql-connector-java-5.1.17.jar!/com/mysql/jdbc/RowDataStatic.class">
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.10.jar!/org/junit/runners/ParentRunner.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="15" selection-start="1766" selection-end="1766" vertical-scroll-proportion="0.4641834" />
+        <state line="50" column="16" selection-start="2766" selection-end="2766" vertical-scroll-proportion="0.20910972">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.1.17/mysql-connector-java-5.1.17.jar!/com/mysql/jdbc/Messages.class">
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.10.jar!/org/junit/runners/BlockJUnit4ClassRunner.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="35" selection-start="368" selection-end="368" vertical-scroll-proportion="-6.12" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-servlet/9.0.5.v20130815/jetty-servlet-9.0.5.v20130815.jar!/org/eclipse/jetty/servlet/ServletHolder.class">
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.10.jar!/org/junit/internal/runners/statements/RunBefores.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="16" selection-start="4756" selection-end="4756" vertical-scroll-proportion="-4.92" />
+        <state line="13" column="16" selection-start="616" selection-end="616" vertical-scroll-proportion="0.42236024">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.10.jar!/org/junit/internal/runners/statements/InvokeMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="16" selection-start="489" selection-end="489" vertical-scroll-proportion="0.37701613">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/base/Frontend.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="16" selection-start="177" selection-end="177" vertical-scroll-proportion="0.35051546">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/frontend/MsgUpdateUserId.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="19" selection-start="531" selection-end="531" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/frontend/FrontendImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="134" column="0" selection-start="4145" selection-end="4145" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.1.17/mysql-connector-java-5.1.17.jar!/com/mysql/jdbc/PreparedStatement.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="102" column="43" selection-start="5997" selection-end="5997" vertical-scroll-proportion="0.2555066" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/gameMech/UserSession.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="55" selection-start="1552" selection-end="1552" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="31" selection-start="1831" selection-end="1831" vertical-scroll-proportion="0.0">
+        <state line="79" column="35" selection-start="2196" selection-end="2196" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/source/FrontendTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="163" column="0" selection-start="5953" selection-end="5953" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/base/AccountService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="17" selection-start="115" selection-end="115" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="100" column="10" selection-start="2898" selection-end="2903" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/database/Database.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="18" selection-start="2929" selection-end="2934" vertical-scroll-proportion="-46.72">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/accountService/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="45" selection-start="1054" selection-end="1054" vertical-scroll-proportion="0.0">
+        <state line="37" column="64" selection-start="1157" selection-end="1157" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1100,16 +1120,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/source/DatabaseTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="66" selection-start="1141" selection-end="1141" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#698#712#0" expanded="true" />
-          </folding>
+        <state line="23" column="40" selection-start="528" selection-end="528" vertical-scroll-proportion="-3.76">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/gameMech/UserSession.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="78" selection-start="1493" selection-end="1519" vertical-scroll-proportion="-12.48">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/accountService/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="45" selection-start="1054" selection-end="1054" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/accountService/AccountServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="55" selection-start="1459" selection-end="1459" vertical-scroll-proportion="1.2252252">
+        <state line="56" column="44" selection-start="1461" selection-end="1461" vertical-scroll-proportion="0.6917148">
           <folding />
         </state>
       </provider>

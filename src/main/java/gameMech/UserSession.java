@@ -63,9 +63,8 @@ public class UserSession {
 	}
 
 	public Long getUserId(){
-
-        Connection connection = Database.getConnect();
-        return Database.get(connection, name, "javabase");
+        Connection connection = Database.getConnect("tp_query", "root", "1234");
+        return Database.get(connection, name);
 	}
 
 	public String getUsername(){

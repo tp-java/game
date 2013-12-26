@@ -19,11 +19,9 @@ import java.sql.PreparedStatement;
  * To change this template use File | Settings | File Templates.
  */
 public class Database {
-    public static Connection getConnect() {
-        String dbUrl = "jdbc:mysql://localhost/tp_query";
+    public static Connection getConnect(String dbName, String username, String password) {
+        String dbUrl = "jdbc:mysql://localhost/" + dbName;
         String dbClass = "com.mysql.jdbc.Driver";
-        String username = "root";
-        String password = "1234";
         try {
             Class.forName(dbClass);
             Connection connection = DriverManager.getConnection(dbUrl,
@@ -37,22 +35,20 @@ public class Database {
             return null;
         }
     }
-    public static int set(Connection connection, Map<String, Long> idToName, String tableName) {
+    public static int set(Connection connection, String username) {
+        String tableName = "javabase";
         try{
-            String update = "insert into " + tableName + " values (?, ?)";
+            String update = "insert into " + tableName + " (`name`) values (?)";
             PreparedStatement stmt = connection.prepareStatement(update);
             int updated = 0;
-            for(String id: idToName.keySet()){
-                try {
-                    stmt.setString(2, id);
-                    stmt.setLong(1, idToName.get(id));
-                    stmt.executeUpdate();
-                    updated++;
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                    continue;
-                }
+            try {
+                stmt.setString(1, username);
+                stmt.executeUpdate();
+                updated++;
+            } catch (SQLException e) {
+                e.printStackTrace();
             }
+
             stmt.close();
             return updated;
         } catch (SQLException e) {
@@ -61,7 +57,8 @@ public class Database {
         }
     }
 
-    public static long get(Connection connection, String param, String tableName) {
+    public static long get(Connection connection, String param) {
+        String tableName = "javabase";
         String query = "SELECT * FROM " + tableName + " WHERE name = ?";
         try {
             PreparedStatement statement = connection.prepareStatement(query);
@@ -77,6 +74,21 @@ public class Database {
         } catch (SQLException e) {
             e.printStackTrace();
             return -1;
+        }
+    }
+
+    public static boolean getTable(Connection connection, String tableName) {
+        String query = "SHOW COLUMNS FROM `" + tableName + "`";
+        boolean created = false;
+        try {
+            PreparedStatement statement = connection.prepareStatement(query);
+            ResultSet result = statement.executeQuery();
+            while (result.next()) {
+                created = true;
+            }
+            return created;
+        } catch (SQLException e) {
+            return false;
         }
     }
 
