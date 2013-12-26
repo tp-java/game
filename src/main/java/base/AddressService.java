@@ -8,4 +8,6 @@ package base;
 public interface AddressService {
 	public void setAccountService(Address accountService);
 	public Address getAccountService();
+	public void setGameMech(Address gameMech);
+	public Address getGameMech();
 }

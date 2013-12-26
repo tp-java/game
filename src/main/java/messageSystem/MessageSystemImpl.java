@@ -1,6 +1,7 @@
 package messageSystem;
 
 import base.*;
+import gameMech.GameMech;
 import messageSystem.AddressServiceImpl;
 
 import java.util.HashMap;

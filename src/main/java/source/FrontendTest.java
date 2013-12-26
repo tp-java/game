@@ -7,6 +7,7 @@ import base.Address;
 import base.Msg;
 import frontend.FrontendImpl;
 import frontend.MsgUpdateUserId;
+import gameMech.UserSession;
 import messageSystem.AddressServiceImpl;
 import messageSystem.MessageSystemImpl;
 import org.junit.After;
