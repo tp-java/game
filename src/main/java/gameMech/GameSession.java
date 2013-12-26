@@ -1,6 +1,7 @@
 package gameMech;
 
 import frontend.GameSessionReplica;
+import resourceSystem.PlaneFactory;
 
 /**
  * User: maxim
@@ -14,8 +15,8 @@ public class GameSession {
 	Plane planeR;
 
 	public GameSession(){
-		planeL = new Plane(true);
-		planeR = new Plane(false);
+		planeL = PlaneFactory.getLeftPlane();
+		planeR = PlaneFactory.getRightPlane();
 	}
 
 	public void setState(Position pos, Boolean left){

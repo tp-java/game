@@ -2,17 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="691c52f7-7e8c-47d9-898e-644776978d33" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/la-2_small.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/la-2_small_left.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/frontend/FrontendImpl.java" afterPath="$PROJECT_DIR$/src/main/java/frontend/FrontendImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tests/FrontendTest.java" afterPath="$PROJECT_DIR$/src/main/java/tests/FrontendTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/gameMech/GameMech.java" afterPath="$PROJECT_DIR$/src/main/java/gameMech/GameMech.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tests/GameMechTest.java" afterPath="$PROJECT_DIR$/src/main/java/tests/GameMechTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/gameMech/GameSessionFactory.java" afterPath="$PROJECT_DIR$/src/main/java/gameMech/GameSessionFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/frontend/GameSessionReplica.java" afterPath="$PROJECT_DIR$/src/main/java/frontend/GameSessionReplica.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/gameMech/Plane.java" afterPath="$PROJECT_DIR$/src/main/java/gameMech/Plane.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmpl/greeting.html" afterPath="$PROJECT_DIR$/tmpl/greeting.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmpl/index1.html" afterPath="$PROJECT_DIR$/tmpl/index1.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/resourceSystem/ObjectFactory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/resourceSystem/PlaneFactory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/resourceSystem/ReadXMLFileSAX.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/resourceSystem/ReflectionHelper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/resourceSystem/SaxHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/left_plane.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/right_plane.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/gameMech/GameSession.java" afterPath="$PROJECT_DIR$/src/main/java/gameMech/GameSession.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project_name.iml" afterPath="$PROJECT_DIR$/project_name.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="project_name.iws" />
@@ -291,7 +289,7 @@
           <file leaf-file-name="GameSession.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/gameMech/GameSession.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="24" column="27" selection-start="572" selection-end="572" vertical-scroll-proportion="0.0">
+                <state line="25" column="27" selection-start="632" selection-end="632" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -1171,7 +1169,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/gameMech/GameSession.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="27" selection-start="572" selection-end="572" vertical-scroll-proportion="0.0">
+        <state line="25" column="27" selection-start="632" selection-end="632" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
