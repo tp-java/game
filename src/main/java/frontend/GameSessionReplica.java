@@ -54,14 +54,14 @@ public class GameSessionReplica {
 
 	public String getJSON(){
 		String result = "{";
-		result += "L:{";
-		result += "X:" + this.getPositionL().getX() + ",";
-		result += "Y:" + this.getPositionL().getY() + ",";
-		result += "R:" + this.getRotationL() + "},";
-		result += "R:{";
-		result += "X:" + this.getPositionR().getX() + ",";
-		result += "Y:" + this.getPositionR().getY() + ",";
-		result += "R:" + this.getRotationR() + "}";
+		result += "\"L\":{";
+		result += "\"X\":" + this.getPositionL().getX() + ",";
+		result += "\"Y\":" + this.getPositionL().getY() + ",";
+		result += "\"R\":" + this.getRotationL() + "},";
+		result += "\"R\":{";
+		result += "\"X\":" + this.getPositionR().getX() + ",";
+		result += "\"Y\":" + this.getPositionR().getY() + ",";
+		result += "\"R\":" + this.getRotationR() + "}";
 		result += "}";
 
 		return result;

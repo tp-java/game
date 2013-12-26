@@ -40,7 +40,6 @@
         var planeRCoord
 
         var text;
-        var timer;
 		/*function handleTick(event) {
 		 image.x = (image.x == canvas.width)? 0 : image.x+5;
 		 //image.y +=10;
@@ -81,7 +80,7 @@
 			planeRCoord = {'X':0,'Y':0,'R':0};*/
 			buffer = {'r':0, 'l':0, 'u':0, 'd':0,
 				isEmpty: function () {
-					if ((buffer['r'] == 0) && (buffer['u'] == 0) && (buffer['d'] == 0) && (buffer['l'] == 0)) {
+					if ((buffer['r'] == 0) && (buffer['r'] == 0) && (buffer['d'] == 0) && (buffer['l'] == 0)) {
 						return 1;
 					} else{
 						return 0;
@@ -94,8 +93,7 @@
 			var socket = new WebSocket("ws://localhost:8078/game");
 			socket.onopen = function () {
 			  console.log("Соединение открылось");
-			  // socket.send("{r:5,l:0,u:0,d:0}");
-			  // socket.send("{r:0,l:0,u:60,d:0}");
+			  socket.send("{r:10,l:0,u:10,d:0}");
 			  initKeyListener();
 			};
 			socket.onclose = function () {
@@ -108,19 +106,17 @@
 			  changePosition(planeL, planeLCoord);
 			  changePosition(planeR, planeRCoord);
 			  //console.log("event.data");
-			};	
-
-			timer = setInterval(function() { 
-				if (!buffer.isEmpty()) {
-					socket.send(JSON.stringify(buffer));
-					console.log(JSON.stringify(buffer));
-				}
-			}, 100);	
+			};		
 		}
 
 		
 
-		
+		var timer = setInterval(function() { 
+			if (!buffer.isEmpty()) {
+				socket.send(JSON.stringify(buffer));
+				console.log(JSON.stringify(buffer));
+			}
+		}, 100);
 
 	</script>
 	<script type="text/javascript">
@@ -136,9 +132,7 @@
 					buffer['d'] = 1;
 				} else if (kCode == 38) {
 					buffer['u'] = 1;
-				} else{
-					console.log("not identificated keyCode. Code:", keyCode);
-				}
+				};
 			}
 			document.onkeyup = function (e) {
 				e = e || window.event;
@@ -151,17 +145,14 @@
 					buffer['d'] = 0;
 				} else if (kCode == 38) {
 					buffer['u'] = 0;
-				} else{
-					console.log("not identificated keyCode. Code:", keyCode);
-				}
+				};
 			}
 		}
 
 		function changePosition (plane, pos, left) {
 			plane.x = pos.X;
 			plane.y = screen_height - pos.Y;
-			plane.rotation = (left) ? pos.R : pos.R;
-			//console.log("rotation:", plane.rotation);
+			plane.rotation = (left) ? -pos.R : pos.R;
 			stage.update();
 		}
 	</script>
@@ -172,6 +163,5 @@
         Your browser doesn't support canvas. Please download IE9+ on <a href="http://ie.microsoft.com/testdrive">IE Test Drive</a>
     </canvas>
     <p id="text">dfdf</p>
-    <a href="/index">на главную</a>
 </body>
 </html>

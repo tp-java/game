@@ -100,10 +100,10 @@ public class GameMech implements Runnable, Abonent{
 	public static double findAngle(double aX, double aY, double bX, double bY) { //aX=1 aY=0        тест на параметры 1 0 0 0
 		double cos = ((aX * bX) + (aY * bY))/(Math.pow((Math.pow(aX, 2)) + (Math.pow(aY, 2)), 0.5) *
 				(Math.pow((Math.pow(bX, 2)) + (Math.pow(bY, 2)), 0.5)));
-		if (bX < 0 || bY < 0){
-			return Math.round(Math.toDegrees(Math.acos(cos)));
-		}else{
-			return Math.round(Math.toDegrees(Math.acos(cos)));
+		if ((aX < 0 && bY > 0) || aX > 0 && bY < 0){
+			return Math.round(Math.toDegrees(Math.acos(cos))) - 360;
+		} else{
+			return -Math.round(Math.toDegrees(Math.acos(cos)));
 		}
 	}
 
@@ -126,24 +126,32 @@ public class GameMech implements Runnable, Abonent{
 		System.out.println("GM.setToQueue is working. userId= " + userId);
 		if (usersQueue.size() == 0){
 			System.out.println("usersQueue.size==0");
-			usersQueue.add(new MsgSetGameReady(gameMech, frontendAddr, userId));
-			System.out.println("msg added to usersQueue. MsgSetGameReady(userId), userId= " + userId);
+
 			ms.sendMessage(new MsgSetLeft(gameMech, frontendAddr, userId, true));
 			System.out.println("MsgSetLeft has been sent. MsgSetLeft(userId, true), userId= " + userId);
+
 			GameSession gameSession = gameSessionFactory.getGameSession();
 			System.out.println("gameSession has been created");
+
 			Integer gameSessionId = gameSessionFactory.getLastNumber();
 			System.out.println("gameSessionId= " + gameSessionId);
+
 			gameSessionIdToGameSession.put(gameSessionId, gameSession);
 			frontend.setGameSessionReplica(gameSessionId, gameSession.getReplica());
 			System.out.println("put()'ed gsIdToGS ");
+
 			ms.sendMessage(new MsgSetGameSessionId(gameMech, frontendAddr, userId, gameSessionId));
 			System.out.println("MsgSetGameSessionId has been sent. userId= " + userId + "gameSessionId= " + gameSessionId);
+
+			usersQueue.add(new MsgSetGameReady(gameMech, frontendAddr, userId));
+			System.out.println("msg added to usersQueue. MsgSetGameReady(userId), userId= " + userId);
 		} else {
 			System.out.println("usersQueue.size!=0");
+
 			ms.sendMessage(new MsgSetLeft(gameMech, frontendAddr, userId, false));
 			System.out.println("MsgSetLeft(userId, false) has been sent. userId= " + userId);
 			System.out.println("usersQueue.size() before remove()" + usersQueue.size());
+
 			MsgSetGameReady msg = usersQueue.remove();
 			System.out.println("usersQueue.size() after remove()" + usersQueue.size());
 
@@ -156,8 +164,12 @@ public class GameMech implements Runnable, Abonent{
 			System.out.println("frontend.getUserSession(userId1).getGameSessionId(); gameSessionId = " + gameSessionId);
 			ms.sendMessage(new MsgSetGameSessionId(gameMech, frontendAddr, userId, gameSessionId));
 			System.out.println("ms.sendMessage(new MsgSetGameSessionId(userId, gameSessionId)); userId= " + userId + "gameSessionId = " + gameSessionId);
+
 			ms.sendMessage(new MsgSetGameReady(gameMech, frontendAddr, userId));
 			System.out.println("ms.sendMessage(new MsgSetGameReady(userId)); userId" + userId);
+
+			gameSessionIdToGameSession.put(gameSessionId, new GameSession());	//выставили чистую сессию
+			frontend.setGameSessionReplica(gameSessionId, getGameSession(gameSessionId).getReplica()); //отправили чистую реплику
 		}
 	}
 

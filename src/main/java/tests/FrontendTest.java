@@ -88,8 +88,7 @@ public class FrontendTest {
 		mockedRequestGetIndex = mock(HttpServletRequest.class);
 		when(mockedRequestGetIndex.getRequestURI()).thenReturn("");
 
-		//testSetId
-		mockedUserSession = mock(UserSession.class);
+
 
 		//testRun
 		from = mock(Address.class);
@@ -119,6 +118,10 @@ public class FrontendTest {
 	@Test
 	public void testSetId() throws Exception {
 		FrontendImpl frontendSet = spy(frontend);
+		//testSetId
+		frontendSet.addUserSession("5mn7m7bgm38t16e769b6thqyr", "user" );
+		UserSession userSession1 =  frontendSet.getUserSession("5mn7m7bgm38t16e769b6thqyr");
+		mockedUserSession = spy(userSession1);
 
 		//нормальный вариант
 		when(frontendSet.getUserSession(sessionId)).thenReturn(mockedUserSession);

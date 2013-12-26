@@ -65,9 +65,9 @@ public class Plane {
 				}
 			} else {
 				if (left){
-					newX = 1.0;
+					newX = 0.0 + x;
 				} else {
-					newX = -1.0;
+					newX = -1.0 + x;
 				}
 				newY = 0.0;
 			}

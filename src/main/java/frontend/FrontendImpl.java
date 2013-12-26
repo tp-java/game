@@ -61,6 +61,22 @@ public class FrontendImpl extends WebSocketServlet implements Runnable, Abonent,
 	public void run(){
 		while(true){
 			ms.execForAbonent(this);
+			if (!userIdToUserSession.isEmpty()){
+				for (Long i=1L; i <= userIdToUserSession.size(); i++){
+					UserSession userSession = userIdToUserSession.get(i);
+					Long userId = userSession.getUserId();
+					if ((!userIdToSocket.isEmpty()) && (userIdToSocket.get(userId)!=null)){
+						if (userId != 1){
+							//System.out.println("sss");
+						}
+						SocketConnect socket = userIdToSocket.get(userId);
+						String message = gameSessionIdToReplica.get(userSession.getGameSessionId()).getJSON();
+						socket.sendMessage(message);
+					}
+					//System.out.println("whiletrue");
+				}
+			}
+
 			try {
 				Thread.sleep(10);
 			} catch (Exception e){}
@@ -227,6 +243,7 @@ public class FrontendImpl extends WebSocketServlet implements Runnable, Abonent,
 
 
 			try {
+				System.out.println("message\n\n");
 				JSONObject jsonObject = new JSONObject(message);
 
 				double r = Double.parseDouble(jsonObject.getString("r")),
@@ -305,16 +322,27 @@ public class FrontendImpl extends WebSocketServlet implements Runnable, Abonent,
 				System.out.println("state requested. gameSessionIdToReplica.get(userSession.getGameSessionId()).getJSON()");
 				Writter.print(response, gameSessionIdToReplica.get(userSession.getGameSessionId()).getJSON());
 			} else	if (requestURI.equals("/index")){
-				if( (userSession == null) || (userSession.getUserId() == -1L)) {
+				if(userSession == null)  {
+
 					data.put("sessionId", sessionId);
 					response.setContentType("text/html;charset=utf-8");
 					Writter.print(response, PageGenerator.getPage("index1.html", data));
-				} else {
-					response.sendRedirect("/greeting");
+
+				} else if (userSession.getUserId() == -1L){
+					data.put("sessionId", sessionId);
+					response.setContentType("text/html;charset=utf-8");
+					Writter.print(response, PageGenerator.getPage("index1.html", data));
+				}  else	{
+						response.sendRedirect("/greeting");
 				}
 			}
         } catch (Exception e){System.out.println(e.toString()); e.printStackTrace();}
     }
+
+	public void addUserSession(String requestSessionId, String requestUsername){
+		UserSession userSession = new UserSession(requestSessionId, requestUsername, ms.getAddresService());
+		sessionIdToUserSession.put(requestSessionId, userSession);
+	}
 
     public void doPost(HttpServletRequest request, HttpServletResponse response){
 		String requestURI = request.getRequestURI();

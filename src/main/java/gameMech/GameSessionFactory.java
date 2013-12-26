@@ -13,7 +13,7 @@ public class GameSessionFactory {
 		return new GameSession();
 	}
 
-	public Integer getLastNumber(){
+	public static 	Integer getLastNumber(){
 		return nextGameSessionNumber-1;
 	}
 }
