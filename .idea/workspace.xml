@@ -2,37 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="691c52f7-7e8c-47d9-898e-644776978d33" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/base/AddressService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/base/Frontend.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/base/MessageSystem.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/source/Abonent.java" afterPath="$PROJECT_DIR$/src/main/java/base/Abonent.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/source/AccountService.java" afterPath="$PROJECT_DIR$/src/main/java/accountService/AccountServiceImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/source/Address.java" afterPath="$PROJECT_DIR$/src/main/java/base/Address.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/source/AddressService.java" afterPath="$PROJECT_DIR$/src/main/java/messageSystem/AddressServiceImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/source/Frontend.java" afterPath="$PROJECT_DIR$/src/main/java/frontend/FrontendImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/source/Main.java" afterPath="$PROJECT_DIR$/src/main/java/accountService/Main.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/source/MessageSystem.java" afterPath="$PROJECT_DIR$/src/main/java/messageSystem/MessageSystemImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/source/Msg.java" afterPath="$PROJECT_DIR$/src/main/java/base/Msg.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/source/MsgGetUserId.java" afterPath="$PROJECT_DIR$/src/main/java/frontend/MsgGetUserId.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/source/MsgToAS.java" afterPath="$PROJECT_DIR$/src/main/java/messageSystem/MsgToAS.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/source/MsgToFrontend.java" afterPath="$PROJECT_DIR$/src/main/java/messageSystem/MsgToFrontend.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/source/MsgUpdateUserId.java" afterPath="$PROJECT_DIR$/src/main/java/frontend/MsgUpdateUserId.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/source/FrontendTest.java" afterPath="$PROJECT_DIR$/src/main/java/source/FrontendTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/source/UserSession.java" afterPath="$PROJECT_DIR$/src/main/java/source/UserSession.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hs_err_pid6970.log" afterPath="$PROJECT_DIR$/hs_err_pid6970.log" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/la-2_small.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/la-2_small_left.png" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/frontend/FrontendImpl.java" afterPath="$PROJECT_DIR$/src/main/java/frontend/FrontendImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tests/FrontendTest.java" afterPath="$PROJECT_DIR$/src/main/java/tests/FrontendTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/gameMech/GameMech.java" afterPath="$PROJECT_DIR$/src/main/java/gameMech/GameMech.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tests/GameMechTest.java" afterPath="$PROJECT_DIR$/src/main/java/tests/GameMechTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/gameMech/GameSessionFactory.java" afterPath="$PROJECT_DIR$/src/main/java/gameMech/GameSessionFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/frontend/GameSessionReplica.java" afterPath="$PROJECT_DIR$/src/main/java/frontend/GameSessionReplica.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/gameMech/Plane.java" afterPath="$PROJECT_DIR$/src/main/java/gameMech/Plane.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmpl/greeting.html" afterPath="$PROJECT_DIR$/tmpl/greeting.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmpl/index1.html" afterPath="$PROJECT_DIR$/tmpl/index1.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="project_name.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1385757977326" ignored="false" />
-    <file path="/Main.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1385759946453" ignored="false" />
-    <file path="/Frontend.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1385760306238" ignored="false" />
+    <file path="/Dummy.txt" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1388089017750" ignored="false" />
+    <file path="/Main.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387613485256" ignored="false" />
+    <file path="/Frontend.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387478306179" ignored="false" />
     <file path="/JettyServer.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1379746592289" ignored="false" />
     <file path="/PageGenerator.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1379745594490" ignored="false" />
     <file path="/index.html" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1381007930553" ignored="false" />
     <file path="/login.html" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1381007971782" ignored="false" />
-    <file path="/fragment.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1384454093278" ignored="false" />
-    <file path="/UserSession.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1385772539415" ignored="false" />
+    <file path="/fragment.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1388097059142" ignored="false" />
+    <file path="/UserSession.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387626396762" ignored="false" />
     <file path="/SessionIdGenerator.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1381601630200" ignored="false" />
     <file path="/Adress.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1382196235069" ignored="false" />
     <file path="/Abonent.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1382196387434" ignored="false" />
@@ -45,11 +38,35 @@
     <file path="/MessageSystem.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1385761559583" ignored="false" />
     <file path="/AdressService.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1382196275898" ignored="false" />
     <file path="/pom.xml" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1384457065024" ignored="false" />
-    <file path="/FrontendTest.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1385759844030" ignored="false" />
+    <file path="/FrontendTest.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1388094269175" ignored="false" />
     <file path="/Writter.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1384706165088" ignored="false" />
-    <file path="/AddressService.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1385761230181" ignored="false" />
-    <file path="/FrontendImpl.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1385772416132" ignored="false" />
+    <file path="/AddressService.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387481895267" ignored="false" />
+    <file path="/FrontendImpl.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1388097535909" ignored="false" />
     <file path="/AccountServiceImpl.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1385766327151" ignored="false" />
+    <file path="/GameMech.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1388092032035" ignored="false" />
+    <file path="/MsgToGM.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1385773399010" ignored="false" />
+    <file path="/MsgUpdateState.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387538847700" ignored="false" />
+    <file path="/Plane.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1388082013546" ignored="false" />
+    <file path="/Position.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387628436702" ignored="false" />
+    <file path="/Direction.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387669767051" ignored="false" />
+    <file path="/GameSession.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387620274398" ignored="false" />
+    <file path="/MsgChangeState.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387538705283" ignored="false" />
+    <file path="/MsgSetState.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387302319290" ignored="false" />
+    <file path="/MsgGetState.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387302870162" ignored="false" />
+    <file path="/GameSessionReplica.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387621878854" ignored="false" />
+    <file path="/MsgStandToQueue.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387488828833" ignored="false" />
+    <file path="/MsgSetGameSession.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387396083769" ignored="false" />
+    <file path="/MessageSystemImpl.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387395303845" ignored="false" />
+    <file path="/MsgSetGameReady.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387924153997" ignored="false" />
+    <file path="/MsgSetLeft.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387482997981" ignored="false" />
+    <file path="/GameSessionFactory.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387975413948" ignored="false" />
+    <file path="/MsgSetGameSessionId.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387479254719" ignored="false" />
+    <file path="/AddressServiceImpl.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387481965030" ignored="false" />
+    <file path="/greeting.html" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387482812799" ignored="false" />
+    <file path="/a.dummy" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387632998418" ignored="false" />
+    <file path="/GameMechTest.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387975540425" ignored="false" />
+    <file path="/a.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387826577660" ignored="false" />
+    <file path="/PlaneTest.java" changelist="691c52f7-7e8c-47d9-898e-644776978d33" time="1387911550014" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +81,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -101,7 +118,68 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/accountService/Main.java" line="0" class="Main.java" package="">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/accountService/Main.java" line="24" class="accountService.Main" package="accountService">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/frontend/FrontendImpl.java" line="405" class="frontend.FrontendImpl" package="frontend">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/tests/FrontendTest.java" line="127" class="tests.FrontendTest" package="tests">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -110,63 +188,80 @@
     <favorites_list name="project_name" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.45019922">
       <split-first>
         <leaf>
-          <file leaf-file-name="MessageSystem.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/base/MessageSystem.java">
+          <file leaf-file-name="MsgSetGameReady.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/frontend/MsgSetGameReady.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="17" column="0" selection-start="297" selection-end="297" vertical-scroll-proportion="0.0">
+                <state line="15" column="64" selection-start="313" selection-end="313" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="MsgToAS.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/messageSystem/MsgToAS.java">
+          <file leaf-file-name="MsgUpdateState.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/frontend/MsgUpdateState.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="24" column="11" selection-start="545" selection-end="545" vertical-scroll-proportion="0.0">
+                <state line="39" column="24" selection-start="1041" selection-end="1041" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="AccountServiceImpl.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/accountService/AccountServiceImpl.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="52" column="0" selection-start="1155" selection-end="1155" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="FrontendImpl.java" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/java/frontend/FrontendImpl.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="199" column="12" selection-start="6240" selection-end="6240" vertical-scroll-proportion="0.2857143">
                   <folding>
-                    <element signature="imports" expanded="true" />
+                    <element signature="e#4317#5325#0" expanded="true" />
+                    <element signature="e#5320#5321#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/accountService/Main.java">
+          <file leaf-file-name="GameSessionReplica.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/frontend/GameSessionReplica.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="19" column="32" selection-start="547" selection-end="547" vertical-scroll-proportion="0.0">
+                <state line="61" column="24" selection-start="1378" selection-end="1378" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Abonent.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/base/Abonent.java">
+          <file leaf-file-name="MsgUpdateUserId.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/frontend/MsgUpdateUserId.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="9" column="17" selection-start="184" selection-end="184" vertical-scroll-proportion="0.0">
+                <state line="23" column="0" selection-start="518" selection-end="518" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Msg.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/base/Msg.java">
+          <file leaf-file-name="MsgSetGameSessionId.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/frontend/MsgSetGameSessionId.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="19" column="10" selection-start="381" selection-end="381" vertical-scroll-proportion="0.0">
+                <state line="23" column="31" selection-start="579" selection-end="579" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="MsgToFrontend.java" pinned="false" current="true" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/messageSystem/MsgToFrontend.java">
+          <file leaf-file-name="GameMech.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/gameMech/GameMech.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="13" column="22" selection-start="241" selection-end="241" vertical-scroll-proportion="0.49744898">
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
+                <state line="125" column="0" selection-start="4541" selection-end="4541" vertical-scroll-proportion="0.0">
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -175,13 +270,38 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="UserSession.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/source/UserSession.java">
+          <file leaf-file-name="Plane.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/gameMech/Plane.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="37" column="11" selection-start="775" selection-end="775" vertical-scroll-proportion="-14.16">
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
+                <state line="45" column="31" selection-start="1104" selection-end="1104" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="MsgChangeState.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/gameMech/MsgChangeState.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="44" column="4" selection-start="1012" selection-end="1012" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="GameSession.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/gameMech/GameSession.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="24" column="27" selection-start="572" selection-end="572" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="MsgStandToQueue.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/gameMech/MsgStandToQueue.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="23" column="0" selection-start="506" selection-end="506" vertical-scroll-proportion="0.0">
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -189,27 +309,16 @@
           <file leaf-file-name="MessageSystemImpl.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/messageSystem/MessageSystemImpl.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="24" column="62" selection-start="709" selection-end="709" vertical-scroll-proportion="0.0">
-                  <folding>
-                    <element signature="e#454#491#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="MsgUpdateUserId.java" pinned="false" current="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/frontend/MsgUpdateUserId.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="22" column="11" selection-start="488" selection-end="488" vertical-scroll-proportion="0.80862534">
+                <state line="26" column="0" selection-start="738" selection-end="738" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="FrontendImpl.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/frontend/FrontendImpl.java">
+          <file leaf-file-name="MsgSetLeft.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/frontend/MsgSetLeft.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="89" column="61" selection-start="2513" selection-end="2513" vertical-scroll-proportion="-4.32">
+                <state line="16" column="11" selection-start="270" selection-end="270" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -218,18 +327,16 @@
           <file leaf-file-name="MsgGetUserId.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/frontend/MsgGetUserId.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="24" column="11" selection-start="522" selection-end="522" vertical-scroll-proportion="0.0">
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
+                <state line="25" column="0" selection-start="564" selection-end="564" vertical-scroll-proportion="0.0">
+                  <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="AccountServiceImpl.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/accountService/AccountServiceImpl.java">
+          <file leaf-file-name="UserSession.java" pinned="false" current="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/java/gameMech/UserSession.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="26" column="13" selection-start="630" selection-end="630" vertical-scroll-proportion="0.0">
+                <state line="50" column="0" selection-start="1212" selection-end="1212" vertical-scroll-proportion="0.33142856">
                   <folding />
                 </state>
               </provider>
@@ -255,22 +362,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/source/MessageSystemImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/source/MsgUpdateUserId.java" />
-        <option value="$PROJECT_DIR$/src/main/java/source/Frontend.java" />
-        <option value="$PROJECT_DIR$/src/main/java/source/MsgGetUserId.java" />
-        <option value="$PROJECT_DIR$/src/main/java/source/AccountService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/source/AccountServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/source/MessageSystem.java" />
-        <option value="$PROJECT_DIR$/src/main/java/source/FrontendImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/source/MsgToFrontend.java" />
-        <option value="$PROJECT_DIR$/src/main/java/source/MsgToAS.java" />
-        <option value="$PROJECT_DIR$/src/main/java/base/Msg.java" />
-        <option value="$PROJECT_DIR$/src/main/java/source/UserSession.java" />
-        <option value="$PROJECT_DIR$/src/main/java/messageSystem/MsgToAS.java" />
-        <option value="$PROJECT_DIR$/src/main/java/frontend/MsgGetUserId.java" />
-        <option value="$PROJECT_DIR$/src/main/java/messageSystem/MsgToFrontend.java" />
-        <option value="$PROJECT_DIR$/src/main/java/frontend/MsgUpdateUserId.java" />
+        <option value="$PROJECT_DIR$/src/main/java/gameMech/Position.java" />
+        <option value="$PROJECT_DIR$/src/main/java/gameMech/UserSession.java" />
+        <option value="$PROJECT_DIR$/src/main/java/gameMech/Direction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/accountService/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/gameMech/GameMechTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/GameMechTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/gameMech/PlaneTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tests/PlaneTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/frontend/MsgSetGameReady.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tests/GameMechTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/gameMech/GameSessionFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/frontend/GameSessionReplica.java" />
+        <option value="$PROJECT_DIR$/src/main/java/gameMech/Plane.java" />
+        <option value="$PROJECT_DIR$/src/main/java/gameMech/GameMech.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tests/FrontendTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/frontend/FrontendImpl.java" />
       </list>
     </option>
   </component>
@@ -296,10 +403,87 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="64" />
-    <option name="y" value="-4" />
+    <option name="x" value="1984" />
+    <option name="y" value="308" />
     <option name="width" value="1303" />
     <option name="height" value="773" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Abstraction issues</id>
+          </State>
+          <State>
+            <id>Android Lint</id>
+          </State>
+          <State>
+            <id>Class structure</id>
+          </State>
+          <State>
+            <id>Code style issues</id>
+          </State>
+          <State>
+            <id>Concurrency annotation issues</id>
+          </State>
+          <State>
+            <id>Control flow issues</id>
+          </State>
+          <State>
+            <id>Data flow issues</id>
+          </State>
+          <State>
+            <id>Declaration redundancy</id>
+          </State>
+          <State>
+            <id>Dependency issues</id>
+          </State>
+          <State>
+            <id>Error handling</id>
+          </State>
+          <State>
+            <id>General</id>
+          </State>
+          <State>
+            <id>Groovy</id>
+          </State>
+          <State>
+            <id>Imports</id>
+          </State>
+          <State>
+            <id>Internationalization issues</id>
+          </State>
+          <State>
+            <id>Performance issues</id>
+          </State>
+          <State>
+            <id>Probable bugs</id>
+          </State>
+          <State>
+            <id>RELAX NG</id>
+          </State>
+          <State>
+            <id>Serialization issues</id>
+          </State>
+          <State>
+            <id>Threading issues</id>
+          </State>
+          <State>
+            <id>Threading issuesGroovy</id>
+          </State>
+          <State>
+            <id>XPath</id>
+          </State>
+          <State>
+            <id>XSLT</id>
+          </State>
+        </expanded-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -327,6 +511,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -343,6 +528,34 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="project_name" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project_name" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project_name" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tmpl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project_name" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project_name" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -385,22 +598,177 @@
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project_name" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project_name" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="source" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project_name" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project_name" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project_name" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project_name" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gameMech" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project_name" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project_name" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project_name" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project_name" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="base" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project_name" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project_name" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="accountService" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/source" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/gameMech" />
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="options.lastSelected" value="editor" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -414,15 +782,19 @@
     <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="source" />
-      <recent name="tests" />
-    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="gameMech" />
+      <recent name="tests" />
+      <recent name="source" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/static" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/tmpl" />
@@ -455,10 +827,66 @@
       <module name="project_name" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="source" />
-      <option name="MAIN_CLASS_NAME" value="source.FrontendTest" />
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.FrontendTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="GameMechTest" type="JUnit" factoryName="JUnit" temporary="true">
+      <module name="project_name" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.GameMechTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="GameMechTest.testFindAngle" type="JUnit" factoryName="JUnit" temporary="true">
+      <module name="project_name" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.GameMechTest" />
+      <option name="METHOD_NAME" value="testFindAngle" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -473,14 +901,14 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="FrontendTest.testSetId" type="JUnit" factoryName="JUnit" temporary="true">
+    <configuration default="false" name="PlaneTest" type="JUnit" factoryName="JUnit" temporary="true">
       <module name="project_name" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="source" />
-      <option name="MAIN_CLASS_NAME" value="source.FrontendTest" />
-      <option name="METHOD_NAME" value="testSetId" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.PlaneTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -491,7 +919,13 @@
       </option>
       <envs />
       <patterns />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -583,16 +1017,20 @@
       <patterns />
       <method />
     </configuration>
-    <list size="3">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Application.Main" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.FrontendTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.FrontendTest.testSetId" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.GameMechTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.GameMechTest.testFindAngle" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.PlaneTest" />
     </list>
     <recent_temporary>
-      <list size="3">
+      <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Application.Main" />
         <item index="1" class="java.lang.String" itemvalue="JUnit.FrontendTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.FrontendTest.testSetId" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.PlaneTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.GameMechTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.GameMechTest.testFindAngle" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -627,25 +1065,25 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="-4" width="1303" height="773" extended-state="6" />
+    <frame x="1984" y="308" width="1303" height="773" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3248" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3136" sideWeight="0.4996016" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27805695" sideWeight="0.25059855" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.344" sideWeight="0.4995958" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.312" sideWeight="0.5004042" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.312" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3056" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988048" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24940239" sideWeight="0.656" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295362" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21673307" sideWeight="0.7232" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2768" sideWeight="0.74940145" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25737053" sideWeight="0.6912" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3088" sideWeight="0.7493937" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -717,124 +1155,117 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/base/Frontend.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/gameMech/Direction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="11" selection-start="108" selection-end="108" vertical-scroll-proportion="0.2003339">
+        <state line="10" column="11" selection-start="145" selection-end="154" vertical-scroll-proportion="0.3322884">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/messageSystem/AddressServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/frontend/MsgSetGameSessionId.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="26" selection-start="223" selection-end="223" vertical-scroll-proportion="0.25951558">
+        <state line="23" column="31" selection-start="579" selection-end="579" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/base/AccountService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/gameMech/GameSession.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="39" selection-start="187" selection-end="187" vertical-scroll-proportion="0.2754591">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/base/AddressService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="40" selection-start="198" selection-end="198" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/base/MessageSystem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="297" selection-end="297" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/base/Abonent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="17" selection-start="184" selection-end="184" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/accountService/AccountServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="13" selection-start="630" selection-end="630" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/accountService/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="32" selection-start="547" selection-end="547" vertical-scroll-proportion="0.0">
+        <state line="24" column="27" selection-start="572" selection-end="572" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/messageSystem/MessageSystemImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="62" selection-start="709" selection-end="709" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#454#491#0" expanded="true" />
-          </folding>
+        <state line="26" column="0" selection-start="738" selection-end="738" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/base/Msg.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tests/FrontendTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="10" selection-start="381" selection-end="381" vertical-scroll-proportion="0.0">
+        <state line="127" column="0" selection-start="3656" selection-end="3656" vertical-scroll-proportion="0.20530973">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/base/Frontend.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="16" selection-start="177" selection-end="177" vertical-scroll-proportion="0.40729484">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/frontend/MsgSetGameReady.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="64" selection-start="313" selection-end="313" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/gameMech/MsgChangeState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="4" selection-start="1012" selection-end="1012" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/gameMech/Plane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="31" selection-start="1104" selection-end="1104" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/frontend/MsgSetLeft.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="11" selection-start="270" selection-end="270" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/frontend/MsgGetUserId.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="0" selection-start="564" selection-end="564" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/frontend/MsgUpdateUserId.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="0" selection-start="518" selection-end="518" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/gameMech/MsgStandToQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="0" selection-start="506" selection-end="506" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/gameMech/UserSession.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="0" selection-start="1212" selection-end="1212" vertical-scroll-proportion="0.33142856">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/gameMech/GameMech.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="125" column="0" selection-start="4541" selection-end="4541" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/frontend/FrontendImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="61" selection-start="2513" selection-end="2513" vertical-scroll-proportion="-4.32">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/source/UserSession.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="11" selection-start="775" selection-end="775" vertical-scroll-proportion="-14.16">
+        <state line="199" column="12" selection-start="6240" selection-end="6240" vertical-scroll-proportion="0.2857143">
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/messageSystem/MsgToAS.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="11" selection-start="545" selection-end="545" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/frontend/MsgGetUserId.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="11" selection-start="522" selection-end="522" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/frontend/MsgUpdateUserId.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="11" selection-start="488" selection-end="488" vertical-scroll-proportion="0.80862534">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/messageSystem/MsgToFrontend.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="22" selection-start="241" selection-end="241" vertical-scroll-proportion="0.49744898">
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#4317#5325#0" expanded="true" />
+            <element signature="e#5320#5321#0" expanded="true" />
           </folding>
         </state>
       </provider>

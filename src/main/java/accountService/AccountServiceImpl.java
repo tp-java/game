@@ -37,6 +37,9 @@ public class AccountServiceImpl implements Abonent, Runnable, AccountService {
 	public void run(){
 		while (true){
 			ms.execForAbonent(this);
+			try {
+				Thread.sleep(10);
+			} catch (Exception e){}
 		}
 	}
 
