@@ -3,7 +3,10 @@ package gameMech;
 import base.Address;
 import base.AddressService;
 import base.Frontend;
+import database.Database;
 import frontend.GameSessionReplica;
+
+import java.sql.Connection;
 
 /**
  * Created with IntelliJ IDEA.
@@ -60,7 +63,8 @@ public class UserSession {
 	}
 
 	public Long getUserId(){
-		return userId;
+        Connection connection = Database.getConnect("tp_query", "root", "1234");
+        return Database.get(connection, name);
 	}
 
 	public String getUsername(){

@@ -4,10 +4,11 @@ import base.Abonent;
 import base.AccountService;
 import base.Address;
 import base.MessageSystem;
+import database.Database;
 import messageSystem.MessageSystemImpl;
-
 import java.util.HashMap;
 import java.util.Map;
+import java.sql.Connection;
 
 /**
  * Created with IntelliJ IDEA.
@@ -18,17 +19,17 @@ import java.util.Map;
  */
 public class AccountServiceImpl implements Abonent, Runnable, AccountService {
 
-	Map<String, Long> nameToUserId = new HashMap<String, Long>();
-	Address address;
-	MessageSystemImpl ms;
 
+	private final Address address;
+	private final MessageSystemImpl ms;
+    private final Connection connection;
 	AccountServiceImpl(MessageSystem ms){
 		this.ms = (MessageSystemImpl)ms;
 		this.address = new Address();
 		ms.addService(this);
 		ms.getAddresService().setAccountService(address);
-		nameToUserId.put("user", 1L);
-		nameToUserId.put("user2", 2L);
+        Map<String, Long> nameToUserId = new HashMap<String, Long>();
+        connection = Database.getConnect("tp_query", "root", "1234");
 	}
 
 	public Address getAddress(){
@@ -50,9 +51,11 @@ public class AccountServiceImpl implements Abonent, Runnable, AccountService {
 			Thread.sleep(3000);
 		} catch (Exception e){}
 		System.out.println("wake");
-		System.out.println(	nameToUserId.get(name));
-		return nameToUserId.get(name);
+		return Database.get(connection, name);
 	}
+    public int setUserName (Connection connection, String name, String tableName) {
+        return Database.set(connection, name);
+    }
 	public MessageSystem getMessageSystem(){
 		 return ms;
 	}

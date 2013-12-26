@@ -141,7 +141,8 @@ public class FrontendImpl extends HttpServlet implements Runnable, Abonent, Fron
 				System.out.println("state requested. gameSessionIdToReplica.get(userSession.getGameSessionId()).getJSON()");
 				Writter.print(response, gameSessionIdToReplica.get(userSession.getGameSessionId()).getJSON());
 			} else	{
-				if( (userSession == null) || (userSession.getUserId() == -1L)) {
+				if( (userSession == null) || (userSession.getUserId() == -1L)) { //вынести в ф-ю, тесты на user session == null(4 варианта)
+
 					data.put("sessionId", sessionId);
 					response.setContentType("text/html;charset=utf-8");
 					Writter.print(response, PageGenerator.getPage("index1.html", data));
