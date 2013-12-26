@@ -1,0 +1,84 @@
+/usr/java/jdk1.7.0_40/bin/java -Didea.launcher.port=7532 -Didea.launcher.bin.path=/home/maxim/idea-IC-129.713/bin -Dfile.encoding=UTF-8 -classpath /usr/java/jdk1.7.0_40/jre/lib/charsets.jar:/usr/java/jdk1.7.0_40/jre/lib/plugin.jar:/usr/java/jdk1.7.0_40/jre/lib/deploy.jar:/usr/java/jdk1.7.0_40/jre/lib/javaws.jar:/usr/java/jdk1.7.0_40/jre/lib/resources.jar:/usr/java/jdk1.7.0_40/jre/lib/jfxrt.jar:/usr/java/jdk1.7.0_40/jre/lib/jsse.jar:/usr/java/jdk1.7.0_40/jre/lib/jce.jar:/usr/java/jdk1.7.0_40/jre/lib/management-agent.jar:/usr/java/jdk1.7.0_40/jre/lib/rt.jar:/usr/java/jdk1.7.0_40/jre/lib/jfr.jar:/usr/java/jdk1.7.0_40/jre/lib/ext/localedata.jar:/usr/java/jdk1.7.0_40/jre/lib/ext/sunjce_provider.jar:/usr/java/jdk1.7.0_40/jre/lib/ext/sunpkcs11.jar:/usr/java/jdk1.7.0_40/jre/lib/ext/zipfs.jar:/usr/java/jdk1.7.0_40/jre/lib/ext/sunec.jar:/usr/java/jdk1.7.0_40/jre/lib/ext/dnsns.jar:/home/maxim/IdeaProjects/project_name/target/classes:/home/maxim/idea-IC-129.713/lib/junit-4.10.jar:/home/maxim/.m2/repository/org/eclipse/jetty/jetty-server/9.0.5.v20130815/jetty-server-9.0.5.v20130815.jar:/home/maxim/.m2/repository/org/eclipse/jetty/orbit/javax.servlet/3.0.0.v201112011016/javax.servlet-3.0.0.v201112011016.jar:/home/maxim/.m2/repository/org/eclipse/jetty/jetty-http/9.0.5.v20130815/jetty-http-9.0.5.v20130815.jar:/home/maxim/.m2/repository/org/eclipse/jetty/jetty-util/9.0.5.v20130815/jetty-util-9.0.5.v20130815.jar:/home/maxim/.m2/repository/org/eclipse/jetty/jetty-io/9.0.5.v20130815/jetty-io-9.0.5.v20130815.jar:/home/maxim/.m2/repository/org/freemarker/freemarker/2.3.19/freemarker-2.3.19.jar:/home/maxim/.m2/repository/org/eclipse/jetty/jetty-webapp/9.0.5.v20130815/jetty-webapp-9.0.5.v20130815.jar:/home/maxim/.m2/repository/org/eclipse/jetty/jetty-xml/9.0.5.v20130815/jetty-xml-9.0.5.v20130815.jar:/home/maxim/.m2/repository/org/eclipse/jetty/jetty-servlet/9.0.5.v20130815/jetty-servlet-9.0.5.v20130815.jar:/home/maxim/.m2/repository/org/eclipse/jetty/jetty-security/9.0.5.v20130815/jetty-security-9.0.5.v20130815.jar:/home/maxim/.m2/repository/org/mockito/mockito-all/1.8.4/mockito-all-1.8.4.jar:/home/maxim/.m2/repository/org/seleniumhq/selenium/selenium-java/2.4.0/selenium-java-2.4.0.jar:/home/maxim/.m2/repository/org/seleniumhq/selenium/selenium-android-driver/2.4.0/selenium-android-driver-2.4.0.jar:/home/maxim/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/2.4.0/selenium-remote-driver-2.4.0.jar:/home/maxim/.m2/repository/cglib/cglib-nodep/2.1_3/cglib-nodep-2.1_3.jar:/home/maxim/.m2/repository/org/json/json/20080701/json-20080701.jar:/home/maxim/.m2/repository/org/seleniumhq/selenium/selenium-api/2.4.0/selenium-api-2.4.0.jar:/home/maxim/.m2/repository/com/google/guava/guava/r09/guava-r09.jar:/home/maxim/.m2/repository/org/apache/httpcomponents/httpclient/4.0.2/httpclient-4.0.2.jar:/home/maxim/.m2/repository/org/apache/httpcomponents/httpcore/4.0.1/httpcore-4.0.1.jar:/home/maxim/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar:/home/maxim/.m2/repository/commons-codec/commons-codec/1.4/commons-codec-1.4.jar:/home/maxim/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/2.4.0/selenium-chrome-driver-2.4.0.jar:/home/maxim/.m2/repository/org/seleniumhq/selenium/selenium-htmlunit-driver/2.4.0/selenium-htmlunit-driver-2.4.0.jar:/home/maxim/.m2/repository/net/sourceforge/htmlunit/htmlunit/2.8/htmlunit-2.8.jar:/home/maxim/.m2/repository/xalan/xalan/2.7.1/xalan-2.7.1.jar:/home/maxim/.m2/repository/xalan/serializer/2.7.1/serializer-2.7.1.jar:/home/maxim/.m2/repository/xml-apis/xml-apis/1.3.04/xml-apis-1.3.04.jar:/home/maxim/.m2/repository/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1.jar:/home/maxim/.m2/repository/commons-lang/commons-lang/2.4/commons-lang-2.4.jar:/home/maxim/.m2/repository/org/apache/httpcomponents/httpmime/4.0.1/httpmime-4.0.1.jar:/home/maxim/.m2/repository/org/apache/james/apache-mime4j/0.6/apache-mime4j-0.6.jar:/home/maxim/.m2/repository/net/sourceforge/htmlunit/htmlunit-core-js/2.8/htmlunit-core-js-2.8.jar:/home/maxim/.m2/repository/xerces/xercesImpl/2.9.1/xercesImpl-2.9.1.jar:/home/maxim/.m2/repository/net/sourceforge/nekohtml/nekohtml/1.9.14/nekohtml-1.9.14.jar:/home/maxim/.m2/repository/net/sourceforge/cssparser/cssparser/0.9.5/cssparser-0.9.5.jar:/home/maxim/.m2/repository/org/w3c/css/sac/1.3/sac-1.3.jar:/home/maxim/.m2/repository/commons-io/commons-io/2.0.1/commons-io-2.0.1.jar:/home/maxim/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/2.4.0/selenium-firefox-driver-2.4.0.jar:/home/maxim/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/2.4.0/selenium-ie-driver-2.4.0.jar:/home/maxim/.m2/repository/net/java/dev/jna/jna/3.2.3/jna-3.2.3.jar:/home/maxim/.m2/repository/org/seleniumhq/selenium/selenium-iphone-driver/2.4.0/selenium-iphone-driver-2.4.0.jar:/home/maxim/.m2/repository/org/seleniumhq/selenium/selenium-support/2.4.0/selenium-support-2.4.0.jar:/home/maxim/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/maxim/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/maxim/.m2/repository/org/codehaus/jackson/jackson-jaxrs/1.9.13/jackson-jaxrs-1.9.13.jar:/home/maxim/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.13/jackson-core-asl-1.9.13.jar:/home/maxim/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.13/jackson-mapper-asl-1.9.13.jar:/home/maxim/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.3.0/jackson-core-2.3.0.jar:/home/maxim/idea-IC-129.713/lib/idea_rt.jar com.intellij.rt.execution.application.AppMain accountService.Main
+2013-12-20 02:11:14.884:INFO:oejs.Server:main: jetty-9.0.5.v20130815
+2013-12-20 02:11:14.922:INFO:oejsh.ContextHandler:main: Started o.e.j.s.ServletContextHandler@3cde8a82{/,null,AVAILABLE}
+2013-12-20 02:11:14.932:INFO:oejs.ServerConnector:main: Started ServerConnector@5be470fd{HTTP/1.1}{0.0.0.0:8078}
+sleep
+java.lang.NullPointerException
+	at frontend.FrontendImpl.doGet(FrontendImpl.java:138)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:735)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:848)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:698)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:505)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:211)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1096)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:432)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:175)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1030)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:136)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97)
+	at org.eclipse.jetty.server.Server.handle(Server.java:445)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:268)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:229)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.run(AbstractConnection.java:358)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:601)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:532)
+	at java.lang.Thread.run(Thread.java:724)
+java.lang.NullPointerException
+wake
+1
+frontend.setId(){
+public MsgStandToQueue() : MsgStandToQueue was created
+ms.sendMessage(new MsgStandToQueue), userId= 1
+GM.setToQueue is working. userId= 1
+usersQueue.size==0
+MsgSetGameReady has been created, userId = 1
+msg added to usersQueue. MsgSetGameReady(userId), userId= 1
+MsgSetLeft has been sent. MsgSetLeft(userId, true), userId= 1
+gameSession has been created
+gameSessionId= 0
+put()'ed gsIdToGS
+MsgSetGameSessionId has been sent. userId= 1gameSessionId= 0
+MsgStandToQueue was executed, gameMech.setToQueue(userId) called, userId= 1
+sleep
+java.lang.NullPointerException
+	at frontend.FrontendImpl.doGet(FrontendImpl.java:138)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:735)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:848)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:698)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:505)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:211)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1096)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:432)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:175)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1030)
+java.lang.NullPointerException
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:136)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97)
+	at org.eclipse.jetty.server.Server.handle(Server.java:445)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:268)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:229)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.run(AbstractConnection.java:358)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:601)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:532)
+	at java.lang.Thread.run(Thread.java:724)
+wake
+2
+frontend.setId(){
+public MsgStandToQueue() : MsgStandToQueue was created
+ms.sendMessage(new MsgStandToQueue), userId= 2
+GM.setToQueue is working. userId= 2
+usersQueue.size!=0
+MsgSetLeft(userId, false) has been sent. userId= 2
+usersQueue.size() before remove()1
+usersQueue.size() after remove()0
+MsgSetGameReady hes been sent. userId = 1
+Long userId1 = msg.getUserId(); userId1 = 1
+frontend.getUserSession(userId1).getGameSessionId(); gameSessionId = 0
+ms.sendMessage(new MsgSetGameSessionId(userId, gameSessionId)); userId= 2gameSessionId = 0
+MsgSetGameReady has been created, userId = 2
+ms.sendMessage(new MsgSetGameReady(userId)); userId2
+MsgStandToQueue was executed, gameMech.setToQueue(userId) called, userId= 2
+userSession.ready = true zaglushechka called.
+userSession.setGameReady(userId,frontend) has been called. userId = 1
+userSession.ready = true zaglushechka called.
+userSession.setGameReady(userId,frontend) has been called. userId = 2
