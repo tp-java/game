@@ -43,13 +43,13 @@ public class MsgChangeState extends MsgToGM {
 
 	public void exec(GameMech gameMech){
 		GameSession gameSession = gameMech.getGameSession(gameSessionId);
-		System.out.println("gameSession = gameMech.getGameSession(gameSessionId) gameSessionId: " + gameSessionId);
+		//System.out.println("gameSession = gameMech.getGameSession(gameSessionId) gameSessionId: " + gameSessionId);
 		gameSession.setState(pos, usLeft);
-		System.out.println("gameSession.setState(pos, usLeft);");
-		System.out.println(gameSession.toString());
+		//System.out.println("gameSession.setState(pos, usLeft);");
+		//System.out.println(gameSession.toString());
 		GameSessionReplica gameSessionReplica = gameSession.getReplica();
-		System.out.println("gameSessionReplica = gameSession.getReplica();");
-		System.out.println("gameSessionReplica: " + gameSessionReplica.toString());
+		//System.out.println("gameSessionReplica = gameSession.getReplica();");
+		//System.out.println("gameSessionReplica: " + gameSessionReplica.toString());
 		Msg back = new MsgUpdateState(getTo(), getFrom(), gameSessionId, gameSessionReplica );
 		gameMech.getMessageSystem().sendMessage(back);
 

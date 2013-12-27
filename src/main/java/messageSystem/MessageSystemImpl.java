@@ -38,4 +38,8 @@ public class MessageSystemImpl implements MessageSystem {
 	public AddressService getAddresService(){
 		return addressService;
 	}
+
+	public Queue<Msg> getQueue(Address address){
+		return messages.get(address);
+	}
 }

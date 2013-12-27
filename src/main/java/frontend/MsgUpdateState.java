@@ -22,8 +22,8 @@ public class MsgUpdateState extends MsgToFrontend{
 		super(from, to);
 		this.gameSessionId = gameSessionId;
 		this.gameSessionReplica = gameSessionReplica;
-		System.out.println("MsgUpdateState has been created.");
-		System.out.println(toString());
+		//System.out.println("MsgUpdateState has been created.");
+		//System.out.println(toString());
 	}
 
 	@Override
@@ -38,6 +38,6 @@ public class MsgUpdateState extends MsgToFrontend{
 		//UserSession userSession = frontend.getUserSession(userId);
 		//userSession.setRotate(left, rotate);
 		frontend.setGameSessionReplica(gameSessionId, gameSessionReplica);
-		System.out.println("frontend.setGameSessionReplica(gameSessionId, gameSessionReplica); gameSessionId= " + gameSessionId + "gameSessionReplica" + gameSessionReplica);
+		//System.out.println("frontend.setGameSessionReplica(gameSessionId, gameSessionReplica); gameSessionId= " + gameSessionId + "gameSessionReplica" + gameSessionReplica);
 	}
 }

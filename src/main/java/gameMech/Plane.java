@@ -39,7 +39,7 @@ public class Plane {
 	}
 
 	public void changeDirection(double x, double y){
-		System.out.println("changeDirection(double x, double y) x= " + Math.round(x) + " y= " + Math.round(y));
+		//System.out.println("changeDirection(double x, double y) x= " + Math.round(x) + " y= " + Math.round(y));
 //		double rotate;
 //		if (left){
 //			rotate = GameMech.findAngle(1.0, 0.0, direction.getX(), direction.getY());
@@ -78,12 +78,12 @@ public class Plane {
 
 			Direction newDirection = new Direction(newX, newY);
 			if (this.left){
-				newDirection = GameMech.getVector(newDirection.getX(), newDirection.getY(), y, true);
+				newDirection = GameMech.getVector(newDirection.getX(), newDirection.getY(), y*4, true);
 			} else {
-				newDirection = GameMech.getVector(newDirection.getX(), newDirection.getY(), y, false);
+				newDirection = GameMech.getVector(newDirection.getX(), newDirection.getY(), y*4, false);
 			}
 
-			System.out.println("new Direction: " + newDirection);
+			//System.out.println("new Direction: " + newDirection);
 			direction = newDirection;
 		}
 	}
@@ -121,6 +121,10 @@ public class Plane {
 			d = GameMech.findAngle(-1.0, 0.0, direction.getX(), direction.getY());
 		}
 		return d;
+	}
+
+	public Boolean getLeft(){
+		return left;
 	}
 
 	//	public void damage(Integer minusHealth){

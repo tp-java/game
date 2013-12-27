@@ -125,50 +125,50 @@ public class GameMech implements Runnable, Abonent{
 	public void setToQueue(Long userId, Address gameMech, Address frontendAddr, Frontend frontend){
 		System.out.println("GM.setToQueue is working. userId= " + userId);
 		if (usersQueue.size() == 0){
-			System.out.println("usersQueue.size==0");
+			//System.out.println("usersQueue.size==0");
 
 			ms.sendMessage(new MsgSetLeft(gameMech, frontendAddr, userId, true));
-			System.out.println("MsgSetLeft has been sent. MsgSetLeft(userId, true), userId= " + userId);
+			//System.out.println("MsgSetLeft has been sent. MsgSetLeft(userId, true), userId= " + userId);
 
 			GameSession gameSession = gameSessionFactory.getGameSession();
-			System.out.println("gameSession has been created");
+			//System.out.println("gameSession has been created");
 
 			Integer gameSessionId = gameSessionFactory.getLastNumber();
 			System.out.println("gameSessionId= " + gameSessionId);
 
 			gameSessionIdToGameSession.put(gameSessionId, gameSession);
 			frontend.setGameSessionReplica(gameSessionId, gameSession.getReplica());
-			System.out.println("put()'ed gsIdToGS ");
+			//System.out.println("put()'ed gsIdToGS ");
 
 			ms.sendMessage(new MsgSetGameSessionId(gameMech, frontendAddr, userId, gameSessionId));
-			System.out.println("MsgSetGameSessionId has been sent. userId= " + userId + "gameSessionId= " + gameSessionId);
+			//System.out.println("MsgSetGameSessionId has been sent. userId= " + userId + "gameSessionId= " + gameSessionId);
 
 			usersQueue.add(new MsgSetGameReady(gameMech, frontendAddr, userId));
-			System.out.println("msg added to usersQueue. MsgSetGameReady(userId), userId= " + userId);
+			//System.out.println("msg added to usersQueue. MsgSetGameReady(userId), userId= " + userId);
 		} else {
-			System.out.println("usersQueue.size!=0");
+			//System.out.println("usersQueue.size!=0");
 
 			ms.sendMessage(new MsgSetLeft(gameMech, frontendAddr, userId, false));
-			System.out.println("MsgSetLeft(userId, false) has been sent. userId= " + userId);
-			System.out.println("usersQueue.size() before remove()" + usersQueue.size());
+			//System.out.println("MsgSetLeft(userId, false) has been sent. userId= " + userId);
+			//System.out.println("usersQueue.size() before remove()" + usersQueue.size());
 
 			MsgSetGameReady msg = usersQueue.remove();
-			System.out.println("usersQueue.size() after remove()" + usersQueue.size());
+			//System.out.println("usersQueue.size() after remove()" + usersQueue.size());
 
 			ms.sendMessage(msg);
-			System.out.println("MsgSetGameReady hes been sent. userId = " + msg.getUserId());
+			//System.out.println("MsgSetGameReady hes been sent. userId = " + msg.getUserId());
 
 			Long userId1 = msg.getUserId();
-			System.out.println("Long userId1 = msg.getUserId(); userId1 = " + userId1);
+			//System.out.println("Long userId1 = msg.getUserId(); userId1 = " + userId1);
 			Integer gameSessionId = frontend.getUserSession(userId1).getGameSessionId();
-			System.out.println("frontend.getUserSession(userId1).getGameSessionId(); gameSessionId = " + gameSessionId);
+		//	System.out.println("frontend.getUserSession(userId1).getGameSessionId(); gameSessionId = " + gameSessionId);
 			ms.sendMessage(new MsgSetGameSessionId(gameMech, frontendAddr, userId, gameSessionId));
-			System.out.println("ms.sendMessage(new MsgSetGameSessionId(userId, gameSessionId)); userId= " + userId + "gameSessionId = " + gameSessionId);
+		//	System.out.println("ms.sendMessage(new MsgSetGameSessionId(userId, gameSessionId)); userId= " + userId + "gameSessionId = " + gameSessionId);
 
 			ms.sendMessage(new MsgSetGameReady(gameMech, frontendAddr, userId));
-			System.out.println("ms.sendMessage(new MsgSetGameReady(userId)); userId" + userId);
+		//	System.out.println("ms.sendMessage(new MsgSetGameReady(userId)); userId" + userId);
 
-			gameSessionIdToGameSession.put(gameSessionId, new GameSession());	//выставили чистую сессию
+		//	gameSessionIdToGameSession.put(gameSessionId, new GameSession());	//выставили чистую сессию
 			frontend.setGameSessionReplica(gameSessionId, getGameSession(gameSessionId).getReplica()); //отправили чистую реплику
 		}
 	}

@@ -20,17 +20,17 @@ public class GameSession {
 	}
 
 	public void setState(Position pos, Boolean left){
-		System.out.println("GameSession.setState(Position pos, Boolean left) called. pos= " + pos + " left= " + left);
+		//System.out.println("GameSession.setState(Position pos, Boolean left) called. pos= " + pos + " left= " + left);
 		if(left){
-			System.out.println("planeL.getDirection().toString(): " + planeL.getDirection().toString());
+		//	System.out.println("planeL.getDirection().toString(): " + planeL.getDirection().toString());
 			planeL.changeDirection(pos.getX(), pos.getY());
-			System.out.println("planeL.changeDirection(pos.getX(), pos.getY());");
-			System.out.println("planeL.getDirection().toString(): " + planeL.getDirection().toString());
+		//	System.out.println("planeL.changeDirection(pos.getX(), pos.getY());");
+		//	System.out.println("planeL.getDirection().toString(): " + planeL.getDirection().toString());
 		} else {
-			System.out.println("planeR.getDirection().toString(): " + planeR.getDirection().toString());
+		//	System.out.println("planeR.getDirection().toString(): " + planeR.getDirection().toString());
 			planeR.changeDirection(pos.getX(), pos.getY());
-			System.out.println("planeR.changeDirection(pos.getX(), pos.getY());");
-			System.out.println("planeR.getDirection().toString(): " + planeR.getDirection().toString());
+		//	System.out.println("planeR.changeDirection(pos.getX(), pos.getY());");
+		//	System.out.println("planeR.getDirection().toString(): " + planeR.getDirection().toString());
 		}
 	}
 

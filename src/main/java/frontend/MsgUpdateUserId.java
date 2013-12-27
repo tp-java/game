@@ -23,4 +23,12 @@ public class MsgUpdateUserId extends MsgToFrontend {
 	public void exec(Frontend frontend){
 		frontend.setId(sessionId, id);
 	}
+
+	public Long getId(){
+		return id;
+	}
+
+	public String getSessionId(){
+		return sessionId;
+	}
 }
