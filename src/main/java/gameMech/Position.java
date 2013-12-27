@@ -6,20 +6,20 @@ package gameMech;
  * Time: 5:37
  */
 public class Position {
-	Integer X;
-	Integer Y;
-	public Position(Integer X, Integer Y){
+	double X;
+	double Y;
+	public Position(double X, double Y){
 		this.X = X;
 		this.Y = Y;
 	}
 	public void move(Direction direction){
 		this.X += direction.getX();
-		this.Y +=direction.getY();
+		this.Y += direction.getY();
 	}
-	public Integer getX(){
+	public double getX(){
 		return X;
 	}
-	public Integer getY(){
+	public double getY(){
 		return Y;
 	}
 
