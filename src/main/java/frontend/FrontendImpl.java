@@ -66,14 +66,10 @@ public class FrontendImpl extends WebSocketServlet implements Runnable, Abonent,
 					UserSession userSession = userIdToUserSession.get(i);
 					Long userId = userSession.getUserId();
 					if ((!userIdToSocket.isEmpty()) && (userIdToSocket.get(userId)!=null)){
-						if (userId != 1){
-							//System.out.println("sss");
-						}
 						SocketConnect socket = userIdToSocket.get(userId);
 						String message = gameSessionIdToReplica.get(userSession.getGameSessionId()).getJSON();
 						socket.sendMessage(message);
 					}
-					//System.out.println("whiletrue");
 				}
 			}
 
@@ -336,7 +332,7 @@ public class FrontendImpl extends WebSocketServlet implements Runnable, Abonent,
 						response.sendRedirect("/greeting");
 				}
 			}
-        } catch (Exception e){System.out.println(e.toString()); e.printStackTrace();}
+        } catch (Exception e){/*System.out.println(e.toString()); */e.printStackTrace();}
     }
 
 	public void addUserSession(String requestSessionId, String requestUsername){

@@ -56,7 +56,7 @@ public class GameMech implements Runnable, Abonent{
 			ms.execForAbonent(this);
 			move();
 			try {
-				Thread.sleep(1000);
+				Thread.sleep(10);
 			} catch (Exception e){}
 		}
 	}
