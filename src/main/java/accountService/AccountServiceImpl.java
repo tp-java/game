@@ -23,7 +23,7 @@ public class AccountServiceImpl implements Abonent, Runnable, AccountService {
 	private final Address address;
 	private final MessageSystemImpl ms;
     private final Connection connection;
-	AccountServiceImpl(MessageSystem ms){
+	public AccountServiceImpl(MessageSystem ms){
 		this.ms = (MessageSystemImpl)ms;
 		this.address = new Address();
 		ms.addService(this);

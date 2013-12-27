@@ -26,6 +26,9 @@ public class MessageSystemImpl implements MessageSystem {
 		Queue<Msg> messageQueue = messages.get(message.getTo());
 		messageQueue.add(message);
 	}
+    public Queue<Msg> getQueue(Address address) {
+        return messages.get(address);
+    }
 
 	public void execForAbonent(Abonent abonent){
 		Queue<Msg> messageQueue = messages.get(abonent.getAddress());

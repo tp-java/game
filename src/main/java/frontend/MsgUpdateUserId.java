@@ -19,8 +19,16 @@ public class MsgUpdateUserId extends MsgToFrontend {
 		this.id = id;
 		this.sessionId = sessionId;
 	}
+    public Long getId() {
+        return this.id;
+    }
+
+    public String getSessionId() {
+        return this.sessionId;
+    }
 
 	public void exec(Frontend frontend){
 		frontend.setId(sessionId, id);
 	}
+    //get'-ы
 }
