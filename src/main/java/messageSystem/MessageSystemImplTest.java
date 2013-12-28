@@ -30,7 +30,7 @@ public class MessageSystemImplTest {
 	}
 
 	@Test
-	public void checkMsgQueue() throws Exception {
+	public void checkMsgQueue() throws Exception {//TODO в фронтенде гет юзер айди
 		Msg msg = new MsgUpdateUserId(accountService.getAddress(), frontend.getAddress(), "wlkejrvslkjfd234lkjvc", 1L);
 		messageSystem.sendMessage(msg);
 		Queue<Msg> queue = messageSystem.getQueue(frontend.getAddress());

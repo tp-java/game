@@ -56,7 +56,7 @@ public class GameMech implements Runnable, Abonent{
 			ms.execForAbonent(this);
 			move();
 			try {
-				Thread.sleep(10);
+				Thread.sleep(25);
 			} catch (Exception e){}
 		}
 	}
@@ -96,7 +96,10 @@ public class GameMech implements Runnable, Abonent{
 	public MessageSystem getMessageSystem(){
 		return ms;
 	}
-
+	//TODO вынести статические методы в отдельный класс
+	//TODO сделать выброс своего исключения, если неправильные параметры передаются, в тестах проверить это исключение
+	//TODO смена положения вперед-назад
+	//TODO немного переделать, чтоб тесты прошла
 	public static double findAngle(double aX, double aY, double bX, double bY) { //aX=1 aY=0        тест на параметры 1 0 0 0
 		double cos = ((aX * bX) + (aY * bY))/(Math.pow((Math.pow(aX, 2)) + (Math.pow(aY, 2)), 0.5) *
 				(Math.pow((Math.pow(bX, 2)) + (Math.pow(bY, 2)), 0.5)));
@@ -168,7 +171,7 @@ public class GameMech implements Runnable, Abonent{
 			ms.sendMessage(new MsgSetGameReady(gameMech, frontendAddr, userId));
 		//	System.out.println("ms.sendMessage(new MsgSetGameReady(userId)); userId" + userId);
 
-		//	gameSessionIdToGameSession.put(gameSessionId, new GameSession());	//выставили чистую сессию
+			gameSessionIdToGameSession.put(gameSessionId, new GameSession());	//выставили чистую сессию
 			frontend.setGameSessionReplica(gameSessionId, getGameSession(gameSessionId).getReplica()); //отправили чистую реплику
 		}
 	}

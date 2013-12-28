@@ -19,14 +19,14 @@ import java.sql.PreparedStatement;
  * To change this template use File | Settings | File Templates.
  */
 public class Database {
-	public static Connection getConnect(String dbName, String username, String password) {
+	public static Connection getConnect(String dbName, String username, String password) { //TODO в экземпляре класса поле с коннектом держать
+		//TODO передавать в конструкторе
 		String dbUrl = "jdbc:mysql://localhost/" + dbName;
 		String dbClass = "com.mysql.jdbc.Driver";
 		try {
 			Class.forName(dbClass);
-			Connection connection = DriverManager.getConnection(dbUrl,
+			return DriverManager.getConnection(dbUrl,
 					username, password);
-			return connection;
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 			return null;
@@ -35,6 +35,7 @@ public class Database {
 			return null;
 		}
 	}
+
 	public static int set(Connection connection, String username) {
 		String tableName = "javabase";
 		try{

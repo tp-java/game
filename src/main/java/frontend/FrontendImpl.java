@@ -18,10 +18,7 @@ import source.*;
 import javax.servlet.http.*;
 import java.io.IOException;
 import java.net.HttpCookie;
-import java.util.Calendar;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import org.eclipse.jetty.websocket.api.Session;
 import org.eclipse.jetty.websocket.api.WebSocketListener;
@@ -44,6 +41,7 @@ public class FrontendImpl extends WebSocketServlet implements Runnable, Abonent,
 	private Map<Long, UserSession> userIdToUserSession = new HashMap<>();
 	private Map<Integer, GameSessionReplica> gameSessionIdToReplica = new HashMap<>();
 	private Map<Long, SocketConnect> userIdToSocket = new HashMap<>();
+	private ArrayList<Long> connectedUsers = new ArrayList<>();
 
     Map<String, Object> data = new HashMap<String, Object>();
     Calendar date;
@@ -62,19 +60,21 @@ public class FrontendImpl extends WebSocketServlet implements Runnable, Abonent,
 		while(true){
 			ms.execForAbonent(this);
 			if (!userIdToUserSession.isEmpty()){
-				for (Long i=1L; i <= userIdToUserSession.size(); i++){
-					UserSession userSession = userIdToUserSession.get(i);
-					Long userId = userSession.getUserId();
-					if ((!userIdToSocket.isEmpty()) && (userIdToSocket.get(userId)!=null)){
-						SocketConnect socket = userIdToSocket.get(userId);
-						String message = gameSessionIdToReplica.get(userSession.getGameSessionId()).getJSON();
-						socket.sendMessage(message);
+				for (int i=0; i < connectedUsers.size(); i++){
+					UserSession userSession = userIdToUserSession.get(connectedUsers.get(i));
+					if(userSession!=null){
+						Long userId = userSession.getUserId();
+						if ((!userIdToSocket.isEmpty()) && (userIdToSocket.get(userId)!=null) && (gameSessionIdToReplica.get(userSession.getGameSessionId()).isChanged())){
+							SocketConnect socket = userIdToSocket.get(userId);
+							String message = gameSessionIdToReplica.get(userSession.getGameSessionId()).getJSON();
+							socket.sendMessage(message);
+						}
 					}
 				}
 			}
 
 			try {
-				Thread.sleep(10);
+				Thread.sleep(25);
 			} catch (Exception e){}
 		}
 	}
@@ -192,7 +192,7 @@ public class FrontendImpl extends WebSocketServlet implements Runnable, Abonent,
 		public void onWebSocketConnect(Session session) {
 			this.session = session;
 			userIdToSocket.put(userId, this);
-//			messageSystem.sendMessage(new MsgUserAdded(messageSystem.getAddressService().getAddressFE(), messageSystem.getAddressService().getAddressGM(), roomName, userId));
+			connectedUsers.add(userId);
 			System.out.println("Socket opened. userId= " + userId);
 		}
 
@@ -315,6 +315,7 @@ public class FrontendImpl extends WebSocketServlet implements Runnable, Abonent,
 				Writter.print(response, PageGenerator.getPage("greeting.html", data));
 			//первый приход юзера
 			} else if (requestURI.equals("/getstate")){
+				//не работает теперь
 				System.out.println("state requested. gameSessionIdToReplica.get(userSession.getGameSessionId()).getJSON()");
 				Writter.print(response, gameSessionIdToReplica.get(userSession.getGameSessionId()).getJSON());
 			} else	if (requestURI.equals("/index")){

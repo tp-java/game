@@ -23,7 +23,7 @@ public class DatabaseTest {
 	private Connection connection;
 	private String tableName = "javabase";
 	private String username =  "TestUserName";
-
+	//TODO сдулать тестовую базу, одинаковую с боевой базой
 
 	@Before
 	public void setUp() {
@@ -68,5 +68,5 @@ public class DatabaseTest {
 		Database.deleteTable(this.connection, this.tableName);
 		assertEquals(Database.getTable(connection, this.tableName), false);
 		this.connection.close();
-	}
+	}//TODO отдельный класс
 }

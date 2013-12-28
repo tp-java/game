@@ -23,7 +23,7 @@ public class PlaneFactoryTest {
 	}
 
 	@Test
-	public void testGetLeftPlane() throws Exception {
+	public void testGetLeftPlane() throws Exception { //TODO читать не боевой ресурс
 		Plane plane = PlaneFactory.getLeftPlane();
 		assertEquals(true, plane.getLeft());
 		Plane plane1 = PlaneFactory.getRightPlane();

@@ -42,4 +42,5 @@ public class MessageSystemImpl implements MessageSystem {
 	public Queue<Msg> getQueue(Address address){
 		return messages.get(address);
 	}
+	//TODO сделать рефлекшн
 }

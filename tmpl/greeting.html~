@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="/createjs/events/Event.js"></script>
+	<script type="text/javascript" src="/createjs/events/EventDispatcher.js"></script>
+	<script type="text/javascript" src="/createjs/utils/IndexOf.js"></script>
+	<script type="text/javascript" src="/easeljs/utils/UID.js"></script>
+	<script type="text/javascript" src="/easeljs/utils/Ticker.js"></script>
+	<script type="text/javascript" src="/easeljs/geom/Matrix2D.js"></script>
+	<script type="text/javascript" src="/easeljs/geom/Point.js"></script>
+	<script type="text/javascript" src="/easeljs/geom/Rectangle.js"></script>
+	<script type="text/javascript" src="/easeljs/display/Shadow.js"></script>
+	<script type="text/javascript" src="/easeljs/display/SpriteSheet.js"></script>
+	<script type="text/javascript" src="/easeljs/display/Graphics.js"></script>
+	<script type="text/javascript" src="/easeljs/display/DisplayObject.js"></script>
+	<script type="text/javascript" src="/easeljs/display/Container.js"></script>
+	<script type="text/javascript" src="/easeljs/display/Stage.js"></script>
+	<script type="text/javascript" src="/easeljs/display/Bitmap.js"></script>
+	<script type="text/javascript" src="/easeljs/display/Sprite.js"></script>
+	<script type="text/javascript" src="/easeljs/display/BitmapAnimation.js"></script>
+	<script type="text/javascript" src="/easeljs/display/BitmapText.js"></script>
+	<script type="text/javascript" src="/easeljs/display/Shape.js"></script>
+	<script type="text/javascript" src="/easeljs/display/Text.js"></script>
+	<script type="text/javascript" src="/easeljs/display/DOMElement.js"></script>
+	<script type="text/javascript" src="/easeljs/events/MouseEvent.js"></script>
+	<script type="text/javascript" src="/easeljs/filters/Filter.js"></script>
+	<script type="text/javascript" src="/easeljs/ui/ButtonHelper.js"></script>
+	<script type="text/javascript" src="/easeljs/ui/Touch.js"></script>
+	<script type="text/javascript" src="/easeljs/utils/SpriteSheetUtils.js"></script>
+	<script type="text/javascript" src="/easeljs/utils/SpriteSheetBuilder.js"></script>
+	<script type="text/javascript">
+		var stage;
+		var planeL, planeR;
+		var canvas;
+		var screen_width;
+        var screen_height;
+
+        var buffer;
+        var planeLCoord;
+        var planeRCoord
+
+        var text;
+        var timer;
+		/*function handleTick(event) {
+		 image.x = (image.x == canvas.width)? 0 : image.x+5;
+		 //image.y +=10;
+		 image.rotation = (image.rotation == 360) ? 2 : image.rotation+2;
+		 //console.log(image.rotation);
+		 stage.update();
+		}*/
+
+		function init() {
+			text = document.getElementById("text");
+			canvas = document.getElementById("testCanvas");
+			screen_width = canvas.width;
+        	screen_height = canvas.height;
+			//stageL = new createjs.Stage(canvas);
+			stage = new createjs.Stage(canvas);			
+			
+			planeL = new createjs.Bitmap("la-2_left.png");
+			planeR = new createjs.Bitmap("la-2_right.png");
+			planeL.x = 150;
+			planeL.y = screen_height - 70;
+			planeR.x = screen_width - 150;
+			planeR.y = screen_height - 70;
+			planeL.regX = 78;//image.image.width/2;
+			planeL.regY = 27;//image.image.height/2;
+			planeR.regX = 78;//image.image.width/2;
+			planeR.regY = 27;//image.image.height/2;
+
+			stage.addChild(planeL);
+			stage.addChild(planeR);
+
+			stage.update();
+			stage.update();
+
+			//createjs.Ticker.addEventListener("tick", handleTick);
+
+			
+			/*planeLCoord = {'X':0,'Y':0,'R':0};
+			planeRCoord = {'X':0,'Y':0,'R':0};*/
+			buffer = {'r':0, 'l':0, 'u':0, 'd':0,
+				isEmpty: function () {
+					if ((buffer['r'] == 0) && (buffer['u'] == 0) && (buffer['d'] == 0) && (buffer['l'] == 0)) {
+						return 1;
+					} else{
+						return 0;
+					}
+				}
+			}
+
+
+			//WebSockets
+			var socket = new WebSocket("ws://10.42.0.1:8078/game");
+			socket.onopen = function () {
+			  console.log("Соединение открылось");
+			  // socket.send("{r:5,l:0,u:0,d:0}");
+			  // socket.send("{r:0,l:0,u:60,d:0}");
+			  initKeyListener();
+			};
+			socket.onclose = function () {
+			  console.log ("Соединение закрылось");
+			};
+			socket.onmessage = function (event) {
+			  //text.innerHTML += ", " + event.data + "\n";
+			  planeLCoord = JSON.parse(event.data).L;
+			  planeRCoord = JSON.parse(event.data).R;
+			  changePosition(planeL, planeLCoord);
+			  changePosition(planeR, planeRCoord);
+			  console.log("event.data");
+			};	
+
+			timer = setInterval(function() { 
+				if (!buffer.isEmpty()) {
+					socket.send(JSON.stringify(buffer));
+					console.log(JSON.stringify(buffer));
+				}
+			}, 100);	
+		}
+
+		
+
+		
+
+	</script>
+	<script type="text/javascript">
+		function initKeyListener () {
+			document.onkeydown = function (e) {
+				e = e || window.event;
+				var kCode = e.keyCode;
+				if (kCode == 39) {
+					buffer['r'] = 1;
+				} else if (kCode == 37) {
+					buffer['l'] = 1;
+				} else if (kCode == 40) {
+					buffer['d'] = 1;
+				} else if (kCode == 38) {
+					buffer['u'] = 1;
+				} else{
+					console.log("not identificated keyCode. Code:", keyCode);
+				}
+			}
+			document.onkeyup = function (e) {
+				e = e || window.event;
+				var kCode = e.keyCode;
+				if (kCode == 39) {
+					buffer['r'] = 0;
+				} else if (kCode == 37) {
+					buffer['l'] = 0;
+				} else if (kCode == 40) {
+					buffer['d'] = 0;
+				} else if (kCode == 38) {
+					buffer['u'] = 0;
+				} else{
+					console.log("not identificated keyCode. Code:", keyCode);
+				}
+			}
+		}
+
+		function changePosition (plane, pos, left) {
+			plane.x = pos.X;
+			plane.y = screen_height - pos.Y;
+			plane.rotation = (left) ? pos.R : pos.R;
+			//console.log("rotation:", plane.rotation);
+			stage.update();
+		}
+	</script>
+	<script type="text/javascript" src="control_system.js"></script>
+</head>
+<body onload="init();">
+	<canvas id="testCanvas" width="900" height="700" style="background-color:#607559">
+        Your browser doesn't support canvas. Please download IE9+ on <a href="http://ie.microsoft.com/testdrive">IE Test Drive</a>
+    </canvas>
+    <p id="text">dfdf</p>
+    <a href="/index">на главную</a>
+</body>
+</html>

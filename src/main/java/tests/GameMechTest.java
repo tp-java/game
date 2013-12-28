@@ -36,7 +36,7 @@ public class GameMechTest {
 				actual;
 
 		actual =  GameMech.findAngle(0.0, 1.0, 1.0, 1.0);
-		expected = 45.0;
+		expected = -45.0;
 		assertEquals(expected, actual, delta);
 
 		actual = GameMech.findAngle(-1.0, 0.0, 0.0, 1.0);

@@ -8,6 +8,10 @@ package gameMech;
 public class Position {
 	double X;
 	double Y;
+	public Position(){
+		this.X = 0.0;
+		this.Y = 0.0;
+	}
 	public Position(double X, double Y){
 		this.X = X;
 		this.Y = Y;
@@ -23,11 +27,28 @@ public class Position {
 		return Y;
 	}
 
+	public void setX(double x){
+		this.X = x;
+	}
+
+	public void setY(double y){
+		this.Y = y;
+	}
+
 	@Override
 	public String toString() {
 		return "Position{" +
 				"X=" + X +
 				", Y=" + Y +
 				'}';
+	}
+	public Boolean equals(Position position){
+		if (this.X == position.getX() && this.Y == position.getY()){
+			return true;
+		} else {
+			return false;
+		}
+
+
 	}
 }

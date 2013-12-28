@@ -13,6 +13,14 @@ public class GameSessionReplica {
 	private Position positionL, positionR;
 	private double rotationL, rotationR;
 	//private Integer healthL, healthR;
+	private Boolean isChanged = true;
+
+
+	private Position lastPositionL = new Position(), lastPositionR = new Position();
+
+
+
+
 
 	public GameSessionReplica(/*TODO написать  конструктор не по умолчанию*/){
 		this.positionL = new Position(0.0, 0.0);
@@ -26,6 +34,12 @@ public class GameSessionReplica {
 		this.positionR = positionR;
 		this.rotationR = rotationR;
 		this.rotationL = rotationL;
+
+	}
+
+	public Boolean isChanged(){
+
+		return !(positionL.equals(lastPositionL)&&positionR.equals(lastPositionR));
 	}
 
 	public void setRotate(Boolean left, double degree){
@@ -63,7 +77,16 @@ public class GameSessionReplica {
 		result += "\"Y\":" + this.getPositionR().getY() + ",";
 		result += "\"R\":" + this.getRotationR() + "}";
 		result += "}";
+		lastPositionL.setX(positionL.getX());
+		lastPositionL.setY(positionL.getY());
 
+		lastPositionR.setX(positionR.getX());
+		lastPositionR.setY(positionR.getY());
+
+		if (!(positionR.equals(lastPositionR)&& positionL.equals(lastPositionL))) {
+			System.out.println("a\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\n");
+		}
 		return result;
 	}
+
 }

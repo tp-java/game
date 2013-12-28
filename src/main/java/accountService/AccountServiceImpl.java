@@ -52,10 +52,10 @@ public class AccountServiceImpl implements Abonent, Runnable, AccountService {
 		//TODO: sleep!!!
 		try {
 			System.out.println("sleep");
-			Thread.sleep(3000);
+			Thread.sleep(1000);
 		} catch (Exception e){}
 		System.out.println("wake");
-		System.out.println(	nameToUserId.get(name));
+		System.out.println(	Database.get(connection, name));
 		return Database.get(connection, name);
 	}
 	public MessageSystem getMessageSystem(){
