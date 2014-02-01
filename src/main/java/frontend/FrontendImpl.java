@@ -333,7 +333,9 @@ public class FrontendImpl extends WebSocketServlet implements Runnable, Abonent,
 						response.sendRedirect("/greeting");
 				}
 			}
-        } catch (Exception e){/*System.out.println(e.toString()); */e.printStackTrace();}
+        } catch (Exception e){
+        	//System.out.println(e.toString());
+			e.printStackTrace();}
     }
 
 	public void addUserSession(String requestSessionId, String requestUsername){

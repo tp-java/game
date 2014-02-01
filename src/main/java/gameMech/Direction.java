@@ -8,6 +8,7 @@ package gameMech;
 public class Direction {
 	private double X;
 	private double Y;
+
 	public Direction(double X, double Y){
 		this.X = X;
 		this.Y = Y;
@@ -19,6 +20,11 @@ public class Direction {
 
 	public double getY(){
 		return Y;
+	}
+
+	public void setDirection(double x, double y){
+		this.X = x;
+		this.Y = y;
 	}
 
 	public void changeY(double y){

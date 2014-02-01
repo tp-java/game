@@ -38,8 +38,8 @@ public class GameSessionReplica {
 	}
 
 	public Boolean isChanged(){
-
-		return !(positionL.equals(lastPositionL)&&positionR.equals(lastPositionR));
+		//отдается 2м клиентам => 2 раза должно отдаться
+		return !(positionL.equals(lastPositionL)&&positionR.equals(lastPositionR)) || isChanged;
 	}
 
 	public void setRotate(Boolean left, double degree){
@@ -83,9 +83,6 @@ public class GameSessionReplica {
 		lastPositionR.setX(positionR.getX());
 		lastPositionR.setY(positionR.getY());
 
-		if (!(positionR.equals(lastPositionR)&& positionL.equals(lastPositionL))) {
-			System.out.println("a\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\n");
-		}
 		return result;
 	}
 

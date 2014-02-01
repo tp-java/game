@@ -105,8 +105,8 @@
 			  //text.innerHTML += ", " + event.data + "\n";
 			  planeLCoord = JSON.parse(event.data).L;
 			  planeRCoord = JSON.parse(event.data).R;
-			  changePosition(planeL, planeLCoord);
-			  changePosition(planeR, planeRCoord);
+			  changePosition(planeL, planeLCoord, true);
+			  changePosition(planeR, planeRCoord, false);
 			  console.log(event.data);
 
 			};	
@@ -161,7 +161,7 @@
 		function changePosition (plane, pos, left) {
 			plane.x = pos.X;
 			plane.y = screen_height - pos.Y;
-			plane.rotation = (left) ? pos.R : pos.R;
+			plane.rotation = (left) ? (-pos.R) : pos.R;
 			//console.log("rotation:", plane.rotation);
 			stage.update();
 		}
@@ -169,7 +169,7 @@
 	<script type="text/javascript" src="control_system.js"></script>
 </head>
 <body onload="init();">
-	<canvas id="testCanvas" width="900" height="700" style="background-color:#607559">
+	<canvas id="testCanvas" width="1200" height="600" style="background-color:#607559">
         Your browser doesn't support canvas. Please download IE9+ on <a href="http://ie.microsoft.com/testdrive">IE Test Drive</a>
     </canvas>
     <p id="text">dfdf</p>

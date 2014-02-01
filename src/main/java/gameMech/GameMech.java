@@ -31,7 +31,7 @@ public class GameMech implements Runnable, Abonent{
 //	private Map<Long,Direction> userIdToDirection;
 
 	//тригонометрическо-округляющая магия
-	public static final MathContext myMathContext = new MathContext(6, RoundingMode.HALF_UP);
+	public static final MathContext myMathContext = new MathContext(7, RoundingMode.HALF_UP);
 
 	private GameSessionFactory gameSessionFactory;
 
@@ -100,13 +100,16 @@ public class GameMech implements Runnable, Abonent{
 	//TODO сделать выброс своего исключения, если неправильные параметры передаются, в тестах проверить это исключение
 	//TODO смена положения вперед-назад
 	//TODO немного переделать, чтоб тесты прошла
-	public static double findAngle(double aX, double aY, double bX, double bY) { //aX=1 aY=0        тест на параметры 1 0 0 0
+	public static double findAngle(double aX, double aY, double bX, double bY) throws CalculateNullVectorAngleException{ //aX=1 aY=0        тест на параметры 1 0 0 0
+		if ((aX==0 && aY==0) || (bX == 0 && bY == 0)){
+			throw new CalculateNullVectorAngleException(aX, aY, bX, bY);
+		}
 		double cos = ((aX * bX) + (aY * bY))/(Math.pow((Math.pow(aX, 2)) + (Math.pow(aY, 2)), 0.5) *
 				(Math.pow((Math.pow(bX, 2)) + (Math.pow(bY, 2)), 0.5)));
 		if ((aX < 0 && bY > 0) || aX > 0 && bY < 0){
 			return Math.round(Math.toDegrees(Math.acos(cos))) - 360;
 		} else{
-			return -Math.round(Math.toDegrees(Math.acos(cos)));
+			return Math.round(Math.toDegrees(Math.acos(cos)));
 		}
 	}
 
@@ -122,7 +125,18 @@ public class GameMech implements Runnable, Abonent{
 			newX = new BigDecimal(aX * Math.cos(Math.toRadians(degree)) + aY * Math.sin(Math.toRadians(degree)), myMathContext);
 			newY = new BigDecimal(-aX * Math.sin(Math.toRadians(degree)) + aY * Math.cos(Math.toRadians(degree)), myMathContext);
 		}
-		return new Direction(newX.setScale(4, RoundingMode.HALF_UP).doubleValue(), newY.setScale(4, RoundingMode.HALF_UP).doubleValue());
+		return new Direction(newX.setScale(5, RoundingMode.HALF_UP).doubleValue(), newY.setScale(5, RoundingMode.HALF_UP).doubleValue());
+	}
+
+	/*public static double myDegreeCos(double degree){
+		new BigDecimal(aX * Math.cos(Math.toRadians(degree)) - aY * Math.sin(Math.toRadians(degree)), myMathContext);
+	} */
+
+	public static Direction getAbsoluteVector(double degree){
+		BigDecimal newX = new BigDecimal(1.0 * Math.cos(Math.toRadians(degree)), myMathContext);
+		BigDecimal newY = new BigDecimal(1.0 * Math.sin(Math.toRadians(degree)), myMathContext);
+
+		return new Direction(newX.setScale(5, RoundingMode.HALF_UP).doubleValue(), newY.setScale(5, RoundingMode.HALF_UP).doubleValue());
 	}
 
 	public void setToQueue(Long userId, Address gameMech, Address frontendAddr, Frontend frontend){
